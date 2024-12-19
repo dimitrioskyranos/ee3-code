@@ -1,0 +1,14 @@
+Digital Signal Processing: 
+
+
+Chapter 4: 
+
+Continuous Fourier Transform is applied to aperiodic continuous time signal to result in an aperiodic continuous time signal.
+
+Fourier series is intended for periodic continuous signals.
+
+DFT:
+
+DTFT: Signal x(t) is first digitized and sampled at frequency fs, creates discrete signal x[k]. DTFT creates a freq. spectrum of x[k], Xd(f), which is continuous and periodic and for frequencies[ -fs/2,fs/2] -->  Xd(f) = X(f) of the continuous signal. Xd(f) is periodic with period fs.
+
+FFT:

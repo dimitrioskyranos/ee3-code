@@ -1,0 +1,1179 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"65 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/spi/src/spi1.c
+[e E17195 . `uc
+SPI_RESET 0
+SPI_IDLE 129
+SPI_BUSY 66
+]
+"162 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\main.c
+[e E17162 . `uc
+HOST_CONFIG 0
+SPI1_DEFAULT 1
+]
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"60 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\main.c
+[v _main main `(i  1 e 2 0 ]
+"79 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"99
+[v _SPI1_Deinitialize SPI1_Deinitialize `(v  1 e 1 0 ]
+"105
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+"128
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"137
+[v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
+"168
+[v _SPI1_BufferWrite SPI1_BufferWrite `(v  1 e 1 0 ]
+"198
+[v _SPI1_BufferRead SPI1_BufferRead `(v  1 e 1 0 ]
+"228
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+"262
+[v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+[v i2_SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+"281
+[v _SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+[v i2_SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+"299
+[v _SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+[v i2_SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+"313
+[v _SPI1_IsRxReady SPI1_IsRxReady `(a  1 e 1 0 ]
+"327
+[v _SPI1_RxCompleteCallbackRegister SPI1_RxCompleteCallbackRegister `(v  1 e 1 0 ]
+"332
+[v _SPI1_TxCompleteCallbackRegister SPI1_TxCompleteCallbackRegister `(v  1 e 1 0 ]
+"337
+[v _SPI1_Receive_ISR SPI1_Receive_ISR `IIH(v  1 e 1 0 ]
+"389
+[v _SPI1_Transmit_ISR SPI1_Transmit_ISR `IIH(v  1 e 1 0 ]
+"429
+[v _SPI1_ISR SPI1_ISR `IIH(v  1 e 1 0 ]
+"39 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"42 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"94
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+"107
+[v _INT0_ISR INT0_ISR `IIH(v  1 e 1 0 ]
+"116
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"125
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"129
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"141
+[v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
+"150
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"159
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"163
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"175
+[v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
+"184
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"193
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"38 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"52 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"145
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+"162
+[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
+"50 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"102
+[v _TMR1_Stop TMR1_Stop `(v  1 e 1 0 ]
+"121
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+"180
+[v _TMR1_OverflowISR TMR1_OverflowISR `IIH(v  1 e 1 0 ]
+"203
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+"208
+[v _TMR1_DefaultGateCallback TMR1_DefaultGateCallback `(v  1 s 1 TMR1_DefaultGateCallback ]
+"28 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\nrf24l01.c
+[v _nrf24l01_initialize nrf24l01_initialize `(v  1 e 1 0 ]
+"256
+[v _nrf24l01_power_up_param nrf24l01_power_up_param `(v  1 e 1 0 ]
+"301
+[v _nrf24l01_power_down_param nrf24l01_power_down_param `(v  1 e 1 0 ]
+"410
+[v _nrf24l01_write_register nrf24l01_write_register `(uc  1 e 1 0 ]
+"424
+[v _nrf24l01_read_register nrf24l01_read_register `(uc  1 e 1 0 ]
+"436
+[v _nrf24l01_write_tx_payload nrf24l01_write_tx_payload `(uc  1 e 1 0 ]
+[v i2_nrf24l01_write_tx_payload nrf24l01_write_tx_payload `(uc  1 e 1 0 ]
+"469
+[v _nrf24l01_flush_tx nrf24l01_flush_tx `(uc  1 e 1 0 ]
+"477
+[v _nrf24l01_flush_rx nrf24l01_flush_rx `(uc  1 e 1 0 ]
+"493
+[v _nrf24l01_nop nrf24l01_nop `(uc  1 e 1 0 ]
+"499
+[v _nrf24l01_transmit nrf24l01_transmit `(v  1 e 1 0 ]
+[v i2_nrf24l01_transmit nrf24l01_transmit `(v  1 e 1 0 ]
+"507
+[v _nrf24l01_clear_ce nrf24l01_clear_ce `(v  1 e 1 0 ]
+[v i2_nrf24l01_clear_ce nrf24l01_clear_ce `(v  1 e 1 0 ]
+"513
+[v _nrf24l01_set_ce nrf24l01_set_ce `(v  1 e 1 0 ]
+[v i2_nrf24l01_set_ce nrf24l01_set_ce `(v  1 e 1 0 ]
+"528
+[v _nrf24l01_clear_csn nrf24l01_clear_csn `(v  1 e 1 0 ]
+[v i2_nrf24l01_clear_csn nrf24l01_clear_csn `(v  1 e 1 0 ]
+"534
+[v _nrf24l01_set_csn nrf24l01_set_csn `(v  1 e 1 0 ]
+[v i2_nrf24l01_set_csn nrf24l01_set_csn `(v  1 e 1 0 ]
+"553
+[v _nrf24l01_set_tx_addr nrf24l01_set_tx_addr `(v  1 e 1 0 ]
+"566
+[v _nrf24l01_set_rx_addr nrf24l01_set_rx_addr `(v  1 e 1 0 ]
+"826
+[v _nrf24l01_get_status nrf24l01_get_status `(uc  1 e 1 0 ]
+"911
+[v _nrf24l01_irq_clear_all nrf24l01_irq_clear_all `(v  1 e 1 0 ]
+"948
+[v _nrf24l01_get_rx_pipe_from_status nrf24l01_get_rx_pipe_from_status `(uc  1 e 1 0 ]
+"986
+[v _nrf24l01_execute_command nrf24l01_execute_command `(uc  1 e 1 0 ]
+[v i2_nrf24l01_execute_command nrf24l01_execute_command `(uc  1 e 1 0 ]
+"1005
+[v _nrf24l01_spi_send_read nrf24l01_spi_send_read `(v  1 e 1 0 ]
+[v i2_nrf24l01_spi_send_read nrf24l01_spi_send_read `(v  1 e 1 0 ]
+"91 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\SPILibrary16F886.c
+[v _writeSPIByte writeSPIByte `(uc  1 e 1 0 ]
+[v i2_writeSPIByte writeSPIByte `(uc  1 e 1 0 ]
+"3338 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[v _SPI1RXB SPI1RXB `VEuc  1 e 1 @128 ]
+"3408
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @129 ]
+"3485
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @130 ]
+"3505
+[v _SPI1TCNTH SPI1TCNTH `VEuc  1 e 1 @131 ]
+"3525
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @132 ]
+[s S245 . 1 `uc 1 BMODE 1 0 :1:0 
+`uc 1 MST 1 0 :1:1 
+`uc 1 LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"3546
+[s S251 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
+`uc 1 SPI1MST 1 0 :1:1 
+`uc 1 SPI1LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 SPI1SPIEN 1 0 :1:7 
+]
+[u S257 . 1 `S245 1 . 1 0 `S251 1 . 1 0 ]
+[v _SPI1CON0bits SPI1CON0bits `VES257  1 e 1 @132 ]
+"3591
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @133 ]
+"3693
+[v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @134 ]
+[s S1310 . 1 `uc 1 RXR 1 0 :1:0 
+`uc 1 TXR 1 0 :1:1 
+`uc 1 SSET 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 SSFLT 1 0 :1:6 
+`uc 1 BUSY 1 0 :1:7 
+]
+"3716
+[s S1317 . 1 `uc 1 SPI1RXR 1 0 :1:0 
+`uc 1 SPI1TXR 1 0 :1:1 
+`uc 1 SPI1SSET 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 SPI1SSFLT 1 0 :1:6 
+`uc 1 SPI1BUSY 1 0 :1:7 
+]
+[u S1324 . 1 `S1310 1 . 1 0 `S1317 1 . 1 0 ]
+[v _SPI1CON2bits SPI1CON2bits `VES1324  1 e 1 @134 ]
+[s S203 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 CLRBF 1 0 :1:2 
+`uc 1 RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 TXWE 1 0 :1:7 
+]
+"3798
+[s S212 . 1 `uc 1 SPI1RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 SPI1CLRBF 1 0 :1:2 
+`uc 1 SPI1RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 SPI1TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 SPI1TXWE 1 0 :1:7 
+]
+[u S221 . 1 `S203 1 . 1 0 `S212 1 . 1 0 ]
+[v _SPI1STATUSbits SPI1STATUSbits `VES221  1 e 1 @135 ]
+"3893
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @137 ]
+"4147
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @140 ]
+"5140
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"9764
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @533 ]
+"9876
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @535 ]
+"14250
+[v _SPI1SCKPPS SPI1SCKPPS `VEuc  1 e 1 @618 ]
+"14316
+[v _SPI1SDIPPS SPI1SDIPPS `VEuc  1 e 1 @619 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"23298
+[v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23436
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+"23690
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+[s S822 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23724
+[s S828 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S834 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[s S840 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S845 . 1 `S822 1 . 1 0 `S828 1 . 1 0 `S834 1 . 1 0 `S840 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES845  1 e 1 @794 ]
+"23814
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
+"23963
+[v _TMR1L TMR1L `VEuc  1 e 1 @796 ]
+"24083
+[v _TMR1H TMR1H `VEuc  1 e 1 @797 ]
+"24203
+[v _T1CON T1CON `VEuc  1 e 1 @798 ]
+[s S938 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 NOT_SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+]
+"24245
+[s S944 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S951 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+[s S957 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[s S960 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nT1SYNC 1 0 :1:2 
+]
+[u S963 . 1 `S938 1 . 1 0 `S944 1 . 1 0 `S951 1 . 1 0 `S957 1 . 1 0 `S960 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES963  1 e 1 @798 ]
+"24425
+[v _T1GCON T1GCON `VEuc  1 e 1 @799 ]
+[s S1033 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GVAL 1 0 :1:2 
+`uc 1 GGO 1 0 :1:3 
+`uc 1 GSPM 1 0 :1:4 
+`uc 1 GTM 1 0 :1:5 
+`uc 1 GPOL 1 0 :1:6 
+`uc 1 GE 1 0 :1:7 
+]
+"24479
+[s S1041 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 T1GE 1 0 :1:7 
+]
+[s S1049 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_DONE 1 0 :1:3 
+]
+[s S1052 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_T1DONE 1 0 :1:3 
+]
+[s S1055 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 GGO_NOT_DONE 1 0 :1:3 
+]
+[s S1058 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 GGO_nDONE 1 0 :1:3 
+]
+[s S1061 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_NOT_DONE 1 0 :1:3 
+]
+[s S1064 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+]
+[u S1067 . 1 `S1033 1 . 1 0 `S1041 1 . 1 0 `S1049 1 . 1 0 `S1052 1 . 1 0 `S1055 1 . 1 0 `S1058 1 . 1 0 `S1061 1 . 1 0 `S1064 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES1067  1 e 1 @799 ]
+"24711
+[v _T1GATE T1GATE `VEuc  1 e 1 @800 ]
+"24901
+[v _T1CLK T1CLK `VEuc  1 e 1 @801 ]
+[s S490 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+`uc 1 SPI1TXIP 1 0 :1:1 
+`uc 1 SPI1IP 1 0 :1:2 
+`uc 1 TMR2IP 1 0 :1:3 
+`uc 1 TMR1IP 1 0 :1:4 
+`uc 1 TMR1GIP 1 0 :1:5 
+`uc 1 CCP1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"32039
+[u S499 . 1 `S490 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES499  1 e 1 @869 ]
+"40015
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"40077
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"40139
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"40201
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"40263
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"40325
+[v _IOCAP IOCAP `VEuc  1 e 1 @1029 ]
+"40387
+[v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
+"40449
+[v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
+"40511
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"40573
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"40635
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"40697
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"40759
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40821
+[v _IOCBP IOCBP `VEuc  1 e 1 @1037 ]
+"40883
+[v _IOCBN IOCBN `VEuc  1 e 1 @1038 ]
+"40945
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"41007
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"41069
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"41131
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"41193
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"41255
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"41317
+[v _IOCCP IOCCP `VEuc  1 e 1 @1045 ]
+"41379
+[v _IOCCN IOCCN `VEuc  1 e 1 @1046 ]
+"41441
+[v _IOCCF IOCCF `VEuc  1 e 1 @1047 ]
+"41503
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"41565
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41627
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"41689
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"41751
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"41813
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"41845
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"41883
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41915
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41947
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41985
+[v _IOCEP IOCEP `VEuc  1 e 1 @1061 ]
+"42006
+[v _IOCEN IOCEN `VEuc  1 e 1 @1062 ]
+"42027
+[v _IOCEF IOCEF `VEuc  1 e 1 @1063 ]
+"42048
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"42110
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"42172
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"42234
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"42296
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"45052
+[v _IVTLOCK IVTLOCK `VEuc  1 e 1 @1113 ]
+[s S480 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
+]
+"45062
+[u S482 . 1 `S480 1 . 1 0 ]
+"45062
+"45062
+[v _IVTLOCKbits IVTLOCKbits `VES482  1 e 1 @1113 ]
+"45258
+[v _IVTBASEL IVTBASEL `VEuc  1 e 1 @1117 ]
+"45320
+[v _IVTBASEH IVTBASEH `VEuc  1 e 1 @1118 ]
+"45382
+[v _IVTBASEU IVTBASEU `VEuc  1 e 1 @1119 ]
+[s S177 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"47289
+[u S186 . 1 `S177 1 . 1 0 ]
+"47289
+"47289
+[v _PIE3bits PIE3bits `VES186  1 e 1 @1185 ]
+[s S511 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"48056
+[u S520 . 1 `S511 1 . 1 0 ]
+"48056
+"48056
+[v _PIR1bits PIR1bits `VES520  1 e 1 @1199 ]
+[s S298 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"48163
+[u S307 . 1 `S298 1 . 1 0 ]
+"48163
+"48163
+[v _PIR3bits PIR3bits `VES307  1 e 1 @1201 ]
+[s S542 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"48333
+[u S551 . 1 `S542 1 . 1 0 ]
+"48333
+"48333
+[v _PIR6bits PIR6bits `VES551  1 e 1 @1204 ]
+[s S573 . 1 `uc 1 INT2IF 1 0 :1:0 
+`uc 1 CLC5IF 1 0 :1:1 
+`uc 1 CWG2IF 1 0 :1:2 
+`uc 1 NCO2IF 1 0 :1:3 
+`uc 1 DMA3SCNTIF 1 0 :1:4 
+`uc 1 DMA3DCNTIF 1 0 :1:5 
+`uc 1 DMA3ORIF 1 0 :1:6 
+`uc 1 DMA3AIF 1 0 :1:7 
+]
+"48559
+[u S582 . 1 `S573 1 . 1 0 ]
+"48559
+"48559
+[v _PIR10bits PIR10bits `VES582  1 e 1 @1208 ]
+"48861
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"48923
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"48985
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"49047
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"49109
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"49141
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"49203
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"49265
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"49327
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+[s S273 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"49344
+[u S282 . 1 `S273 1 . 1 0 ]
+"49344
+"49344
+[v _TRISCbits TRISCbits `VES282  1 e 1 @1224 ]
+"49389
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"49451
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"49483
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+"49669
+[v _PORTC PORTC `VEuc  1 e 1 @1232 ]
+"49731
+[v _PORTD PORTD `VEuc  1 e 1 @1233 ]
+[s S452 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"49913
+[s S460 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"49913
+[u S463 . 1 `S452 1 . 1 0 `S460 1 . 1 0 ]
+"49913
+"49913
+[v _INTCON0bits INTCON0bits `VES463  1 e 1 @1238 ]
+"55087
+[v _GIE GIE `VEb  1 e 0 @9911 ]
+"55849
+[v _LATA0 LATA0 `VEb  1 e 0 @9712 ]
+"55852
+[v _LATA1 LATA1 `VEb  1 e 0 @9713 ]
+"55963
+[v _LATF3 LATF3 `VEb  1 e 0 @9755 ]
+"57694
+[v _RB0 RB0 `VEb  1 e 0 @9848 ]
+"57886
+[v _RC0 RC0 `VEb  1 e 0 @9856 ]
+"61408
+[v _TRISA0 TRISA0 `VEb  1 e 0 @9776 ]
+"61411
+[v _TRISA1 TRISA1 `VEb  1 e 0 @9777 ]
+"61522
+[v _TRISF3 TRISF3 `VEb  1 e 0 @9819 ]
+"471 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\nrf24l01.h
+[v _test test `VEuc  1 s 1 test ]
+[v _test@nrf24l01$F1121 test `VEuc  1 s 1 test ]
+[v _test@nrf24l01$F1275 test `VEuc  1 s 1 test ]
+[v _test@nrf24l01$F1430 test `VEuc  1 s 1 test ]
+"62 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_RxCompleteCallback SPI1_RxCompleteCallback `*.38(v  1 s 3 SPI1_RxCompleteCallback ]
+"63
+[v _SPI1_TxCompleteCallback SPI1_TxCompleteCallback `*.38(v  1 s 3 SPI1_TxCompleteCallback ]
+[s S165 . 9 `*.39uc 1 transmitBuffer 2 0 `*.39uc 1 receiveBuffer 2 2 `ui 1 bytesToTransmit 2 4 `ui 1 bytesToReceive 2 6 `E17195 1 status 1 8 ]
+"65
+[v _spi1_descriptor spi1_descriptor `S165  1 s 9 spi1_descriptor ]
+[s S171 . 5 `uc 1 con0 1 0 `uc 1 con1 1 1 `uc 1 con2 1 2 `uc 1 baud 1 3 `uc 1 clksel 1 4 ]
+"74
+[v _spi1_configuration spi1_configuration `C[2]S171  1 s 10 spi1_configuration ]
+"38 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/interrupt.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"39
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"43 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr0.c
+[v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
+"44
+[v _TMR0_OverflowCallback TMR0_OverflowCallback `*.38(v  1 s 3 TMR0_OverflowCallback ]
+"44 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 s 2 timer1ReloadVal ]
+"45
+[v _TMR1_OverflowCallback TMR1_OverflowCallback `*.38(v  1 s 3 TMR1_OverflowCallback ]
+"46
+[v _TMR1_GateCallback TMR1_GateCallback `*.38(v  1 s 3 TMR1_GateCallback ]
+"60 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"177
+[v main@payload payload `[32]uc  1 a 32 0 ]
+"110
+[v main@tx_addr tx_addr `[5]uc  1 a 5 42 ]
+"109
+[v main@rx_addr_p1 rx_addr_p1 `[5]uc  1 a 5 37 ]
+"108
+[v main@rx_addr_p0 rx_addr_p0 `[5]uc  1 a 5 32 ]
+"106
+[v main@F17917 F17917 `[5]uc  1 s 5 F17917 ]
+"108
+[v main@F17919 F17919 `[5]uc  1 s 5 F17919 ]
+"109
+[v main@F17921 F17921 `[5]uc  1 s 5 F17921 ]
+"170
+[v main@F17933 F17933 `[32]uc  1 s 32 F17933 ]
+"182
+} 0
+"436 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\nrf24l01.c
+[v _nrf24l01_write_tx_payload nrf24l01_write_tx_payload `(uc  1 e 1 0 ]
+{
+[v nrf24l01_write_tx_payload@data data `*.39uc  1 p 2 53 ]
+[v nrf24l01_write_tx_payload@len len `ui  1 p 2 55 ]
+"445
+} 0
+"499
+[v _nrf24l01_transmit nrf24l01_transmit `(v  1 e 1 0 ]
+{
+"504
+} 0
+"911
+[v _nrf24l01_irq_clear_all nrf24l01_irq_clear_all `(v  1 e 1 0 ]
+{
+"913
+[v nrf24l01_irq_clear_all@data data `uc  1 a 1 58 ]
+"916
+} 0
+"28
+[v _nrf24l01_initialize nrf24l01_initialize `(v  1 e 1 0 ]
+{
+[v nrf24l01_initialize@config config `uc  1 p 1 wreg ]
+"50
+[v nrf24l01_initialize@data data `[5]uc  1 a 5 87 ]
+"28
+[v nrf24l01_initialize@config config `uc  1 p 1 wreg ]
+"29
+[v nrf24l01_initialize@opt_rx_active_mode opt_rx_active_mode `uc  1 p 1 63 ]
+"30
+[v nrf24l01_initialize@en_aa en_aa `uc  1 p 1 64 ]
+"31
+[v nrf24l01_initialize@en_rxaddr en_rxaddr `uc  1 p 1 65 ]
+"32
+[v nrf24l01_initialize@setup_aw setup_aw `uc  1 p 1 66 ]
+"33
+[v nrf24l01_initialize@setup_retr setup_retr `uc  1 p 1 67 ]
+"34
+[v nrf24l01_initialize@rf_ch rf_ch `uc  1 p 1 68 ]
+"35
+[v nrf24l01_initialize@rf_setup rf_setup `uc  1 p 1 69 ]
+"36
+[v nrf24l01_initialize@rx_addr_p0 rx_addr_p0 `*.39uc  1 p 2 70 ]
+"37
+[v nrf24l01_initialize@rx_addr_p1 rx_addr_p1 `*.39uc  1 p 2 72 ]
+"38
+[v nrf24l01_initialize@rx_addr_p2 rx_addr_p2 `uc  1 p 1 74 ]
+"39
+[v nrf24l01_initialize@rx_addr_p3 rx_addr_p3 `uc  1 p 1 75 ]
+"40
+[v nrf24l01_initialize@rx_addr_p4 rx_addr_p4 `uc  1 p 1 76 ]
+"41
+[v nrf24l01_initialize@rx_addr_p5 rx_addr_p5 `uc  1 p 1 77 ]
+"42
+[v nrf24l01_initialize@tx_addr tx_addr `*.39uc  1 p 2 78 ]
+"43
+[v nrf24l01_initialize@rx_pw_p0 rx_pw_p0 `uc  1 p 1 80 ]
+"44
+[v nrf24l01_initialize@rx_pw_p1 rx_pw_p1 `uc  1 p 1 81 ]
+"45
+[v nrf24l01_initialize@rx_pw_p2 rx_pw_p2 `uc  1 p 1 82 ]
+"46
+[v nrf24l01_initialize@rx_pw_p3 rx_pw_p3 `uc  1 p 1 83 ]
+"47
+[v nrf24l01_initialize@rx_pw_p4 rx_pw_p4 `uc  1 p 1 84 ]
+"48
+[v nrf24l01_initialize@rx_pw_p5 rx_pw_p5 `uc  1 p 1 85 ]
+"52
+[v nrf24l01_initialize@config config `uc  1 p 1 86 ]
+"143
+} 0
+"553
+[v _nrf24l01_set_tx_addr nrf24l01_set_tx_addr `(v  1 e 1 0 ]
+{
+[v nrf24l01_set_tx_addr@address address `*.39uc  1 p 2 58 ]
+[v nrf24l01_set_tx_addr@len len `ui  1 p 2 60 ]
+"556
+} 0
+"566
+[v _nrf24l01_set_rx_addr nrf24l01_set_rx_addr `(v  1 e 1 0 ]
+{
+[v nrf24l01_set_rx_addr@address address `*.39uc  1 p 2 58 ]
+[v nrf24l01_set_rx_addr@len len `ui  1 p 2 60 ]
+[v nrf24l01_set_rx_addr@rxpipenum rxpipenum `uc  1 p 1 62 ]
+"572
+} 0
+"256
+[v _nrf24l01_power_up_param nrf24l01_power_up_param `(v  1 e 1 0 ]
+{
+[v nrf24l01_power_up_param@rx_active_mode rx_active_mode `a  1 p 1 wreg ]
+[v nrf24l01_power_up_param@rx_active_mode rx_active_mode `a  1 p 1 wreg ]
+[v nrf24l01_power_up_param@config config `uc  1 p 1 58 ]
+"260
+[v nrf24l01_power_up_param@rx_active_mode rx_active_mode `a  1 p 1 60 ]
+"275
+} 0
+"513
+[v _nrf24l01_set_ce nrf24l01_set_ce `(v  1 e 1 0 ]
+{
+"516
+} 0
+"301
+[v _nrf24l01_power_down_param nrf24l01_power_down_param `(v  1 e 1 0 ]
+{
+[v nrf24l01_power_down_param@config config `uc  1 p 1 wreg ]
+[v nrf24l01_power_down_param@config config `uc  1 p 1 wreg ]
+"303
+[v nrf24l01_power_down_param@config config `uc  1 p 1 58 ]
+"308
+} 0
+"410
+[v _nrf24l01_write_register nrf24l01_write_register `(uc  1 e 1 0 ]
+{
+[v nrf24l01_write_register@regnumber regnumber `uc  1 p 1 wreg ]
+[v nrf24l01_write_register@regnumber regnumber `uc  1 p 1 wreg ]
+[v nrf24l01_write_register@data data `*.39uc  1 p 2 53 ]
+[v nrf24l01_write_register@len len `ui  1 p 2 55 ]
+"412
+[v nrf24l01_write_register@regnumber regnumber `uc  1 p 1 57 ]
+"413
+} 0
+"507
+[v _nrf24l01_clear_ce nrf24l01_clear_ce `(v  1 e 1 0 ]
+{
+"510
+} 0
+"469
+[v _nrf24l01_flush_tx nrf24l01_flush_tx `(uc  1 e 1 0 ]
+{
+"472
+} 0
+"986
+[v _nrf24l01_execute_command nrf24l01_execute_command `(uc  1 e 1 0 ]
+{
+[v nrf24l01_execute_command@instruction instruction `uc  1 p 1 wreg ]
+"988
+[v nrf24l01_execute_command@status status `uc  1 a 1 52 ]
+"986
+[v nrf24l01_execute_command@instruction instruction `uc  1 p 1 wreg ]
+[v nrf24l01_execute_command@data data `*.39uc  1 p 2 46 ]
+[v nrf24l01_execute_command@len len `ui  1 p 2 48 ]
+[v nrf24l01_execute_command@copydata copydata `a  1 p 1 50 ]
+"990
+[v nrf24l01_execute_command@instruction instruction `uc  1 p 1 51 ]
+"1001
+} 0
+"1005
+[v _nrf24l01_spi_send_read nrf24l01_spi_send_read `(v  1 e 1 0 ]
+{
+"1007
+[v nrf24l01_spi_send_read@count count `ui  1 a 2 44 ]
+"1008
+[v nrf24l01_spi_send_read@tempbyte tempbyte `uc  1 a 1 43 ]
+"1005
+[v nrf24l01_spi_send_read@data data `*.39uc  1 p 2 38 ]
+[v nrf24l01_spi_send_read@len len `ui  1 p 2 40 ]
+[v nrf24l01_spi_send_read@copydata copydata `a  1 p 1 42 ]
+"1020
+} 0
+"91 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\SPILibrary16F886.c
+[v _writeSPIByte writeSPIByte `(uc  1 e 1 0 ]
+{
+[v writeSPIByte@data data `uc  1 p 1 wreg ]
+"102
+[v writeSPIByte@received received `uc  1 a 1 37 ]
+"91
+[v writeSPIByte@data data `uc  1 p 1 wreg ]
+"95
+[v writeSPIByte@data data `uc  1 p 1 36 ]
+"105
+} 0
+"299 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+{
+"301
+[v SPI1_IsTxReady@returnValue returnValue `a  1 a 1 35 ]
+"311
+} 0
+"262
+[v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+{
+[v SPI1_ByteWrite@byteData byteData `uc  1 p 1 wreg ]
+[v SPI1_ByteWrite@byteData byteData `uc  1 p 1 wreg ]
+"264
+[v SPI1_ByteWrite@byteData byteData `uc  1 p 1 35 ]
+"279
+} 0
+"281
+[v _SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+{
+"283
+[v SPI1_ByteRead@returnValue returnValue `uc  1 a 1 35 ]
+"297
+} 0
+"534 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\nrf24l01.c
+[v _nrf24l01_set_csn nrf24l01_set_csn `(v  1 e 1 0 ]
+{
+"537
+} 0
+"528
+[v _nrf24l01_clear_csn nrf24l01_clear_csn `(v  1 e 1 0 ]
+{
+"531
+} 0
+"38 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"46
+} 0
+"50 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"78
+} 0
+"52 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"79 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"332
+[v _SPI1_TxCompleteCallbackRegister SPI1_TxCompleteCallbackRegister `(v  1 e 1 0 ]
+{
+[v SPI1_TxCompleteCallbackRegister@txCompleteCallbackHandler txCompleteCallbackHandler `*.38(v  1 p 3 35 ]
+"335
+} 0
+"327
+[v _SPI1_RxCompleteCallbackRegister SPI1_RxCompleteCallbackRegister `(v  1 e 1 0 ]
+{
+[v SPI1_RxCompleteCallbackRegister@rxCompleteCallbackHandler rxCompleteCallbackHandler `*.38(v  1 p 3 35 ]
+"330
+} 0
+"38 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"142
+} 0
+"42 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"46
+[v INTERRUPT_Initialize@state state `a  1 a 1 38 ]
+"92
+} 0
+"193
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 35 ]
+"195
+} 0
+"159
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 35 ]
+"161
+} 0
+"125
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 35 ]
+"127
+} 0
+"39 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"105 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+{
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 wreg ]
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 wreg ]
+"108
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 37 ]
+"126
+} 0
+"337
+[v _SPI1_Receive_ISR SPI1_Receive_ISR `IIH(v  1 e 1 0 ]
+{
+"387
+} 0
+"389
+[v _SPI1_Transmit_ISR SPI1_Transmit_ISR `IIH(v  1 e 1 0 ]
+{
+"428
+} 0
+"429
+[v _SPI1_ISR SPI1_ISR `IIH(v  1 e 1 0 ]
+{
+"432
+} 0
+"94 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/system/src/interrupt.c
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+{
+"96
+} 0
+"107
+[v _INT0_ISR INT0_ISR `IIH(v  1 e 1 0 ]
+{
+"113
+} 0
+"116
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+{
+"123
+} 0
+"129
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"132
+} 0
+"141
+[v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
+{
+"147
+} 0
+"150
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+{
+"157
+} 0
+"163
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"166
+} 0
+"175
+[v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
+{
+"181
+} 0
+"184
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+{
+"191
+} 0
+"197
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"200
+} 0
+"145 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+{
+"155
+} 0
+"162
+[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
+{
+"169
+[v TMR0_DefaultCallback@payload payload `[32]uc  1 a 32 0 ]
+"173
+[v TMR0_DefaultCallback@received received `uc  1 a 1 32 ]
+"163
+[v TMR0_DefaultCallback@F17744 F17744 `[32]uc  1 s 32 F17744 ]
+"192
+} 0
+"436 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\nrf24l01.c
+[v i2_nrf24l01_write_tx_payload nrf24l01_write_tx_payload `(uc  1 e 1 0 ]
+{
+[v i2nrf24l01_write_tx_payload@data data `*.39uc  1 p 2 24 ]
+[v i2nrf24l01_write_tx_payload@len len `ui  1 p 2 26 ]
+"445
+} 0
+"499
+[v i2_nrf24l01_transmit nrf24l01_transmit `(v  1 e 1 0 ]
+{
+"504
+} 0
+"513
+[v i2_nrf24l01_set_ce nrf24l01_set_ce `(v  1 e 1 0 ]
+{
+"516
+} 0
+"507
+[v i2_nrf24l01_clear_ce nrf24l01_clear_ce `(v  1 e 1 0 ]
+{
+"510
+} 0
+"986
+[v i2_nrf24l01_execute_command nrf24l01_execute_command `(uc  1 e 1 0 ]
+{
+[v i2nrf24l01_execute_command@instruction instruction `uc  1 p 1 wreg ]
+"988
+[v i2nrf24l01_execute_command@status status `uc  1 a 1 23 ]
+"986
+[v i2nrf24l01_execute_command@instruction instruction `uc  1 p 1 wreg ]
+[v i2nrf24l01_execute_command@data data `*.39uc  1 p 2 17 ]
+[v i2nrf24l01_execute_command@len len `ui  1 p 2 19 ]
+[v i2nrf24l01_execute_command@copydata copydata `a  1 p 1 21 ]
+"990
+[v i2nrf24l01_execute_command@instruction instruction `uc  1 p 1 22 ]
+"1001
+} 0
+"1005
+[v i2_nrf24l01_spi_send_read nrf24l01_spi_send_read `(v  1 e 1 0 ]
+{
+"1007
+[v i2nrf24l01_spi_send_read@count count `ui  1 a 2 15 ]
+"1008
+[v i2nrf24l01_spi_send_read@tempbyte tempbyte `uc  1 a 1 14 ]
+"1005
+[v i2nrf24l01_spi_send_read@data data `*.39uc  1 p 2 9 ]
+[v i2nrf24l01_spi_send_read@len len `ui  1 p 2 11 ]
+[v i2nrf24l01_spi_send_read@copydata copydata `a  1 p 1 13 ]
+"1020
+} 0
+"91 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\SPILibrary16F886.c
+[v i2_writeSPIByte writeSPIByte `(uc  1 e 1 0 ]
+{
+[v i2writeSPIByte@data data `uc  1 p 1 wreg ]
+"102
+[v i2writeSPIByte@received received `uc  1 a 1 8 ]
+"91
+[v i2writeSPIByte@data data `uc  1 p 1 wreg ]
+"95
+[v i2writeSPIByte@data data `uc  1 p 1 7 ]
+"105
+} 0
+"299 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/spi/src/spi1.c
+[v i2_SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+{
+"301
+[v i2SPI1_IsTxReady@returnValue returnValue `a  1 a 1 6 ]
+"311
+} 0
+"262
+[v i2_SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+{
+[v i2SPI1_ByteWrite@byteData byteData `uc  1 p 1 wreg ]
+[v i2SPI1_ByteWrite@byteData byteData `uc  1 p 1 wreg ]
+"264
+[v i2SPI1_ByteWrite@byteData byteData `uc  1 p 1 6 ]
+"279
+} 0
+"281
+[v i2_SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+{
+"283
+[v i2SPI1_ByteRead@returnValue returnValue `uc  1 a 1 6 ]
+"297
+} 0
+"534 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\nrf24l01.c
+[v i2_nrf24l01_set_csn nrf24l01_set_csn `(v  1 e 1 0 ]
+{
+"537
+} 0
+"528
+[v i2_nrf24l01_clear_csn nrf24l01_clear_csn `(v  1 e 1 0 ]
+{
+"531
+} 0
+"180 C:\Users\dimk2\Desktop\EE3\pic_nrf_communication\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_OverflowISR TMR1_OverflowISR `IIH(v  1 e 1 0 ]
+{
+"191
+} 0
+"203
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+{
+"206
+} 0
+"121
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+{
+"125
+[v TMR1_CounterSet@onState onState `a  1 a 1 30 ]
+"121
+[v TMR1_CounterSet@timerVal timerVal `us  1 p 2 33 ]
+"137
+} 0
