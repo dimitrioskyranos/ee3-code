@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Debugging</title>
+</head>
+<body>
+  <h1>WebSocket Debugger</h1>
+  <pre id="output"></pre>
+  <script>
+    const output = document.getElementById("output");
+
+    const ws = new WebSocket("ws://172.20.10.3:81");
+    ws.binaryType = "arraybuffer";
+
+    ws.onopen = () => {
+      output.textContent += "WebSocket connected\n";
+    };
+
+    ws.onmessage = (event) => {
+      const bytes = new Uint8Array(event.data);
+      output.textContent += `Received ${bytes.length} bytes:\n${Array.from(bytes).map(b => "0x" + b.toString(16).padStart(2, '0')).join(' ')}\n`;
+    };
+
+    ws.onclose = () => {
+      output.textContent += "WebSocket disconnected\n";
+    };
+  </script>
+</body>
+</html>
