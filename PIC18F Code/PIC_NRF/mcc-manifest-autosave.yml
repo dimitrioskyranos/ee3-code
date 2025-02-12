@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: PIC_Assignment_Dimitrios_Kyranos
-creation_date: 2024-12-18T10:59:01.355+01:00[Europe/Paris]
+creation_date: 2025-02-11T20:58:11.558+01:00[Europe/Paris]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -15,7 +15,7 @@ is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.melody.Library, name: Melody, version: 2.8.0}
-packs: {name: PIC18F-Q_DFP, version: 1.26.442}
+packs: {name: PIC18F-Q_DFP, version: 1.27.449}
 modules:
 - {name: '@mchp-mcc/main-manager', type: MELODY, version: 3.1.2}
 - {name: '@mchp-mcc/pic-8bit', type: MELODY, version: 5.28.4}

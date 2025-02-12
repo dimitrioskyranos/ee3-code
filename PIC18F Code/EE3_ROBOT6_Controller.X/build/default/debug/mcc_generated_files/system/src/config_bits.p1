@@ -1,0 +1,13 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"4 mcc_generated_files/system/src/config_bits.c
+[p x FEXTOSC  =  OFF       ]
+"5
+[p x RSTOSC  =  HFINTOSC_64MHZ   ]
+"8
+[p x CLKOUTEN  =  OFF      ]
+"11
+[p x WDTE  =  OFF          ]
+"14
+[p x MCLRE  =  EXTMCLR     ]
+"17
+[p x BOREN  =  OFF         ]

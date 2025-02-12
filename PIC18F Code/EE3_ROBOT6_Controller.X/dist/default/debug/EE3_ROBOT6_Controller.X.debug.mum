@@ -1,0 +1,8 @@
+
+18F57Q43 Memory Summary:
+    Program space        used   3C6h (   966) of 20000h bytes   (  0.7%)
+    Data space           used    27h (    39) of  2000h bytes   (  0.5%)
+    Configuration bits   used     2h (     2) of     9h words   ( 22.2%)
+    EEPROM space         used     0h (     0) of   400h bytes   (  0.0%)
+    ID Location space    used     0h (     0) of    40h bytes   (  0.0%)
+

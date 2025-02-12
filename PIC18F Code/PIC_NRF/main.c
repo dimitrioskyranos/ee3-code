@@ -55,7 +55,7 @@
 //}
 
 uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
-uint8_t DataTx[32] = "Hello esp from pic\n";
+uint8_t DataTx[32] = "Hello from pic";
 
 
 int main(void)

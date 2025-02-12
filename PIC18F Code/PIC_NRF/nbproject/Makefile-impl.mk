@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PIC_Assignment_Dimitrios_Kyranos.X - Copy
+PROJECTNAME=PIC_NRF
 
 # Active Configuration
 DEFAULTCONF=default

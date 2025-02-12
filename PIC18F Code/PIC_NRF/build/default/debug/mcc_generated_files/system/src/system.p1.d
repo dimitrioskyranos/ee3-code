@@ -9,4 +9,4 @@ mcc_generated_files/system/src/../../spi/spi_interface.h  \
 mcc_generated_files/system/src/../../system/interrupt.h  \
 mcc_generated_files/system/src/../../timer/tmr0.h  \
 mcc_generated_files/system/src/../../timer/tmr0_deprecated.h  \
-C:/Users/dimk2/Desktop/PIC_Assignment_Dimitrios_Kyranos.X/nrf24.h 
+mcc_generated_files/system/src/../../../nrf24.h 
