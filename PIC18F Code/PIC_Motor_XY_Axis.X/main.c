@@ -113,53 +113,54 @@ uint16_t limit3 = 2000; // Extreme tilt (High speed)
     while(1)
     {
         LATFbits.LATF3 =0;
-          uint16_t y_axis = readADC(0x1e); // Joystick Y-axis connected to AN5
+          uint16_t x_axis = readADC(0x1e); // Joystick X-axis connected to D6
         __delay_ms(20);
-        uint16_t x_axis = readADC(0x1d); // Joystick X-axis connected to AN6
+        uint16_t y_axis = readADC(0x1d); // Joystick Y-axis connected to D5
         __delay_ms(20);
         
         
-        // Handle X-axis movement (LEFT and RIGHT)
- // Handle X-axis movement (LEFT and RIGHT)
-if (x_axis > x_neutral + limit3) {  
+        
+// Handle Y-axis movement (UP and DOWN)
+if (y_axis > y_neutral + limit3) {  
     DataTx[1] = 0xFF;  // High speed (right)
 }  
-else if (x_axis > x_neutral + limit2) {  
+else if (y_axis > y_neutral + limit2) {  
     DataTx[1] = 0xE0;  // Medium speed (right)
 }  
-else if (x_axis > x_neutral + limit1) {  
+else if (y_axis > y_neutral + limit1) {  
     DataTx[1] = 0xC0;  // Low speed (right)
 }  
-else if (x_axis < x_neutral - limit3) {  
+else if (y_axis < y_neutral - limit3) {  
     DataTx[1] = 0x00;  // High speed (left)
 }  
-else if (x_axis < x_neutral - limit2) {  
+else if (y_axis < y_neutral - limit2) {  
     DataTx[1] = 0x20;  // Medium speed (left)
 }  
-else if (x_axis < x_neutral - limit1) {  
+else if (y_axis < y_neutral - limit1) {  
     DataTx[1] = 0x40;  // Low speed (left)
 }  
 else {  
     DataTx[1] = 0x80;  // Neutral (no movement)
 }  
 
-// Handle Y-axis movement (UP and DOWN)
-if (y_axis > y_neutral + limit3) {  
+
+// Handle X-axis movement (LEFT and RIGHT)
+if (x_axis > x_neutral + limit3) {  
     DataTx[0] = 0xFF;  // High speed (up)
 }  
-else if (y_axis > y_neutral + limit2) {  
+else if (x_axis > x_neutral + limit2) {  
     DataTx[0] = 0xE0;  // Medium speed (up)
 }  
-else if (y_axis > y_neutral + limit1) {  
+else if (x_axis > x_neutral + limit1) {  
     DataTx[0] = 0xC0;  // Low speed (up)
 }  
-else if (y_axis < y_neutral - limit3) {  
+else if (x_axis < x_neutral - limit3) {  
     DataTx[0] = 0x00;  // High speed (down)
 }  
-else if (y_axis < y_neutral - limit2) {  
+else if (x_axis < x_neutral - limit2) {  
     DataTx[0] = 0x20;  // Medium speed (down)
 }  
-else if (y_axis < y_neutral - limit1) {  
+else if (x_axis < x_neutral - limit1) {  
     DataTx[0] = 0x40;  // Low speed (down)
 }  
 else {  

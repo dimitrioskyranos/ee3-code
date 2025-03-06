@@ -1,0 +1,161 @@
+#define NRF24L01_TX_EX  0
+#define NRF24L01_RX_EX  !NRF24L01_TX_EX
+
+//static volatile uint8_t test = 0;
+
+#define NRF24L01_TX_MODE  0
+#define NRF24L01_RX_MODE  1
+
+// Buffer for received data
+unsigned char rx_payload[32];
+
+// SPI Receive Complete Callback
+void SPI_ReceiveCompleteHandler()
+{
+    if (nrf24l01_irq_rx_dr_active()) {
+        // Read the RX payload
+        nrf24l01_read_rx_payload(rx_payload, sizeof(rx_payload));
+        
+        // Clear RX_DR flag
+        nrf24l01_irq_clear_rx_dr();
+        
+        // Output received data to PORTB (example: first byte of payload)
+        PORTB = rx_payload[0];
+    }
+
+    // Clear the SPI interrupt flag
+    (void)SPI1_ByteRead();
+}
+
+
+int main(void)
+{
+   
+    SYSTEM_Initialize();
+    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
+    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global Interrupts 
+    // Use the following macros to: 
+    TRISF3 = 0;
+    LATF3 = 1;// SPI power 3.3V 
+    
+    
+    
+    TRISA0 = 0 ; //CSN pin
+    TRISA1 = 0; //CE pin
+    LATA0 = 1; //IDLE CSN HIGH - pull low to select slave when communication starts 
+    LATA1 = 0; //IDLE CE LOW - pull high when communication starts
+    SPI1_RxCompleteCallbackRegister(SPI_ReceiveCompleteHandler);
+    
+    
+    
+    // Initialize parameters for nrf24l01_initialize
+unsigned char config = nrf24l01_CONFIG_PWR_UP | nrf24l01_CONFIG_EN_CRC;
+unsigned char opt_rx_standby_mode = 1;  // Use standby mode
+unsigned char en_aa = nrf24l01_EN_AA_ENAA_ALL;
+unsigned char en_rxaddr = nrf24l01_EN_RXADDR_ERX_ALL;
+unsigned char setup_aw = nrf24l01_SETUP_AW_5BYTES;
+unsigned char setup_retr = nrf24l01_SETUP_RETR_ARD_500 | nrf24l01_SETUP_RETR_ARC_10;
+unsigned char rf_ch = 76;  // Example RF channel (2.476 GHz)
+unsigned char rf_setup = nrf24l01_RF_SETUP_RF_PWR_0 | nrf24l01_RF_SETUP_LNA_HCURR;
+
+unsigned char rx_addr_p0[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};  // Example address
+unsigned char rx_addr_p1[5] = {0xC2, 0xC2, 0xC2, 0xC2, 0xC2};
+unsigned char tx_addr[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
+unsigned char rx_addr_p2 = 0xC3;
+unsigned char rx_addr_p3 = 0xC4;
+unsigned char rx_addr_p4 = 0xC5;
+unsigned char rx_addr_p5 = 0xC6;
+
+unsigned char rx_pw_p0 = 32;  // Payload width for pipe 0
+unsigned char rx_pw_p1 = 32;  // Payload width for pipe 1
+unsigned char rx_pw_p2 = 0;
+unsigned char rx_pw_p3 = 0;
+unsigned char rx_pw_p4 = 0;
+unsigned char rx_pw_p5 = 0;
+
+// Call nrf24l01_initialize with the parameters
+nrf24l01_initialize(config, opt_rx_standby_mode, en_aa, en_rxaddr, setup_aw, setup_retr,
+                    rf_ch, rf_setup, rx_addr_p0, rx_addr_p1, rx_addr_p2, rx_addr_p3,
+                    rx_addr_p4, rx_addr_p5, tx_addr, rx_pw_p0, rx_pw_p1, rx_pw_p2,
+                    rx_pw_p3, rx_pw_p4, rx_pw_p5);
+
+    
+    
+    
+    
+    nrf24l01_irq_clear_all();
+    nrf24l01_flush_tx();
+    test = 3; 
+    TMR1_Start();
+    
+
+    
+    INTERRUPT_GlobalInterruptHighEnable(); 
+    TMR0_Start();
+    TMR0_TMRInterruptEnable();
+    TMR1_TMRInterruptEnable();
+    SPI1_Initialize();
+    SPI1_Open(HOST_CONFIG);
+    TRISB = 0x00;  // Set all pins of PORTB as output
+    PORTB = 0x00;  // Initialize PORTB to 0
+    
+   
+    
+
+    while(1)
+    {
+        
+       //SPI1_BufferRead()..
+       // set a flag on the spi interrupt and check with a while loop when the data are ready to be read. the reading of vfthe portb out is updated on the interrupt.
+       // the buffer is already reading the buffer before i ask it to read
+        
+        
+    }    
+}
+
+
+
+
+
+
+static void TMR1_DefaultGateCallback(void)
+{
+    // Default Gate callback
+    if (test == 1){
+    LATA1 = 1;
+    TMR1_Stop();
+    }
+    
+    else if (test == 2){
+        LATA1 = 0;
+        TMR1_Stop();
+        
+    }
+    
+    else if (test == 3){
+        nrf24l01_flush_rx();
+        TMR1_Stop();
+    }
+    
+    
+}
+
+
+
+
+
+static void TMR0_DefaultCallback(void)
+{ 
+    LATA0 = 0;
+    test = 1; 
+    TMR1_Start();
+    
+    unsigned char payload[32] = "Hello, NRF24L01!";
+    nrf24l01_write_tx_payload(payload, sizeof(payload), true);
+    
+    LATA0 = 1;
+    test = 2; 
+    TMR1_Start();
+    
+    
+}

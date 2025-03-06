@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>PIC_Controller</name>
+            <name>PIC_Motor_XY_Axis</name>
             <creation-uuid>b7cf30cd-86a1-4b91-8330-4629d4fa5d8d</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>

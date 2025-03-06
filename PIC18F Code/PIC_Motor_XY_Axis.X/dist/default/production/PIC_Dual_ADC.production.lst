@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.50 build 20240725155939 
-                                                                                               Wed Feb 12 23:37:25 2025
+                                                                                               Thu Feb 13 16:53:49 2025
 
 Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1 
      1                           	processor	18F57Q43
@@ -9264,12 +9264,12 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9250                           
   9251                           ; 2 bytes @ 0x22
   9252   000523                     	ds	2
-  9253   000525                     main@y_axis:
+  9253   000525                     main@x_axis:
   9254                           	callstack 0
   9255                           
   9256                           ; 2 bytes @ 0x24
   9257   000525                     	ds	2
-  9258   000527                     main@x_axis:
+  9258   000527                     main@y_axis:
   9259                           	callstack 0
   9260                           
   9261                           ; 2 bytes @ 0x26
@@ -9284,8 +9284,8 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9270 ;; Parameters:    Size  Location     Type
   9271 ;;		None
   9272 ;; Auto vars:     Size  Location     Type
-  9273 ;;  x_axis          2   38[COMRAM] unsigned short 
-  9274 ;;  y_axis          2   36[COMRAM] unsigned short 
+  9273 ;;  y_axis          2   38[COMRAM] unsigned short 
+  9274 ;;  x_axis          2   36[COMRAM] unsigned short 
   9275 ;;  y_neutral       2   34[COMRAM] unsigned short 
   9276 ;;  x_neutral       2   32[COMRAM] unsigned short 
   9277 ;;  limit3          2   30[COMRAM] unsigned short 
@@ -9465,11 +9465,11 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9441                           ;main.c: 114:     {;main.c: 115:         LATFbits.LATF3 =0;
   9442   0026DE  96C3               	bcf	195,3,c	;volatile
   9443   0026E0                     
-  9444                           ;main.c: 116:           uint16_t y_axis = readADC(0x1e);
+  9444                           ;main.c: 116:           uint16_t x_axis = readADC(0x1e);
   9445   0026E0  0E1E               	movlw	30
   9446   0026E2  EC91  F017         	call	_readADC
-  9447   0026E6  C50A  F525         	movff	?_readADC,main@y_axis
-  9448   0026EA  C50B  F526         	movff	?_readADC+1,main@y_axis+1
+  9447   0026E6  C50A  F525         	movff	?_readADC,main@x_axis
+  9448   0026EA  C50B  F526         	movff	?_readADC+1,main@x_axis+1
   9449   0026EE                     
   9450                           ;main.c: 117:         _delay((unsigned long)((20)*(64000000U/4000.0)));
   9451   0026EE  0E02               	movlw	2
@@ -9486,11 +9486,11 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9462   002702  D7FA               	bra	u777
   9463   002704  D000               	nop2	
   9464   002706                     
-  9465                           ;main.c: 118:         uint16_t x_axis = readADC(0x1d);
+  9465                           ;main.c: 118:         uint16_t y_axis = readADC(0x1d);
   9466   002706  0E1D               	movlw	29
   9467   002708  EC91  F017         	call	_readADC
-  9468   00270C  C50A  F527         	movff	?_readADC,main@x_axis
-  9469   002710  C50B  F528         	movff	?_readADC+1,main@x_axis+1
+  9468   00270C  C50A  F527         	movff	?_readADC,main@y_axis
+  9469   002710  C50B  F528         	movff	?_readADC+1,main@y_axis+1
   9470   002714                     
   9471                           ;main.c: 119:         _delay((unsigned long)((20)*(64000000U/4000.0)));
   9472   002714  0E02               	movlw	2
@@ -9507,16 +9507,16 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9483   002728  D7FA               	bra	u787
   9484   00272A  D000               	nop2	
   9485   00272C                     
-  9486                           ;main.c: 124: if (x_axis > x_neutral + limit3) {
+  9486                           ;main.c: 124: if (y_axis > y_neutral + limit3) {
   9487   00272C  501F               	movf	main@limit3^(0+1280),w,c
-  9488   00272E  2421               	addwf	main@x_neutral^(0+1280),w,c
+  9488   00272E  2423               	addwf	main@y_neutral^(0+1280),w,c
   9489   002730  6E19               	movwf	??_main^(0+1280),c
   9490   002732  5020               	movf	(main@limit3+1)^(0+1280),w,c
-  9491   002734  2022               	addwfc	(main@x_neutral+1)^(0+1280),w,c
+  9491   002734  2024               	addwfc	(main@y_neutral+1)^(0+1280),w,c
   9492   002736  6E1A               	movwf	(??_main+1)^(0+1280),c
-  9493   002738  5027               	movf	main@x_axis^(0+1280),w,c
+  9493   002738  5027               	movf	main@y_axis^(0+1280),w,c
   9494   00273A  5C19               	subwf	??_main^(0+1280),w,c
-  9495   00273C  5028               	movf	(main@x_axis+1)^(0+1280),w,c
+  9495   00273C  5028               	movf	(main@y_axis+1)^(0+1280),w,c
   9496   00273E  581A               	subwfb	(??_main+1)^(0+1280),w,c
   9497   002740  B0D8               	btfsc	status,0,c
   9498   002742  EFA5  F013         	goto	u571
@@ -9533,14 +9533,14 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9509   002752  EF1B  F014         	goto	l2816
   9510   002756                     l2794:
   9511   002756  501D               	movf	main@limit2^(0+1280),w,c
-  9512   002758  2421               	addwf	main@x_neutral^(0+1280),w,c
+  9512   002758  2423               	addwf	main@y_neutral^(0+1280),w,c
   9513   00275A  6E19               	movwf	??_main^(0+1280),c
   9514   00275C  501E               	movf	(main@limit2+1)^(0+1280),w,c
-  9515   00275E  2022               	addwfc	(main@x_neutral+1)^(0+1280),w,c
+  9515   00275E  2024               	addwfc	(main@y_neutral+1)^(0+1280),w,c
   9516   002760  6E1A               	movwf	(??_main+1)^(0+1280),c
-  9517   002762  5027               	movf	main@x_axis^(0+1280),w,c
+  9517   002762  5027               	movf	main@y_axis^(0+1280),w,c
   9518   002764  5C19               	subwf	??_main^(0+1280),w,c
-  9519   002766  5028               	movf	(main@x_axis+1)^(0+1280),w,c
+  9519   002766  5028               	movf	(main@y_axis+1)^(0+1280),w,c
   9520   002768  581A               	subwfb	(??_main+1)^(0+1280),w,c
   9521   00276A  B0D8               	btfsc	status,0,c
   9522   00276C  EFBA  F013         	goto	u581
@@ -9558,14 +9558,14 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9534   00277E  EF1B  F014         	goto	l2816
   9535   002782                     l2798:
   9536   002782  501B               	movf	main@limit1^(0+1280),w,c
-  9537   002784  2421               	addwf	main@x_neutral^(0+1280),w,c
+  9537   002784  2423               	addwf	main@y_neutral^(0+1280),w,c
   9538   002786  6E19               	movwf	??_main^(0+1280),c
   9539   002788  501C               	movf	(main@limit1+1)^(0+1280),w,c
-  9540   00278A  2022               	addwfc	(main@x_neutral+1)^(0+1280),w,c
+  9540   00278A  2024               	addwfc	(main@y_neutral+1)^(0+1280),w,c
   9541   00278C  6E1A               	movwf	(??_main+1)^(0+1280),c
-  9542   00278E  5027               	movf	main@x_axis^(0+1280),w,c
+  9542   00278E  5027               	movf	main@y_axis^(0+1280),w,c
   9543   002790  5C19               	subwf	??_main^(0+1280),w,c
-  9544   002792  5028               	movf	(main@x_axis+1)^(0+1280),w,c
+  9544   002792  5028               	movf	(main@y_axis+1)^(0+1280),w,c
   9545   002794  581A               	subwfb	(??_main+1)^(0+1280),w,c
   9546   002796  B0D8               	btfsc	status,0,c
   9547   002798  EFD0  F013         	goto	u591
@@ -9583,15 +9583,15 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9559   0027AA  EF1B  F014         	goto	l2816
   9560   0027AE                     l2802:
   9561   0027AE  501F               	movf	main@limit3^(0+1280),w,c
-  9562   0027B0  5C21               	subwf	main@x_neutral^(0+1280),w,c
+  9562   0027B0  5C23               	subwf	main@y_neutral^(0+1280),w,c
   9563   0027B2  6E19               	movwf	??_main^(0+1280),c
   9564   0027B4  5020               	movf	(main@limit3+1)^(0+1280),w,c
-  9565   0027B6  5822               	subwfb	(main@x_neutral+1)^(0+1280),w,c
+  9565   0027B6  5824               	subwfb	(main@y_neutral+1)^(0+1280),w,c
   9566   0027B8  6E1A               	movwf	(??_main+1)^(0+1280),c
   9567   0027BA  5019               	movf	??_main^(0+1280),w,c
-  9568   0027BC  5C27               	subwf	main@x_axis^(0+1280),w,c
+  9568   0027BC  5C27               	subwf	main@y_axis^(0+1280),w,c
   9569   0027BE  501A               	movf	(??_main+1)^(0+1280),w,c
-  9570   0027C0  5828               	subwfb	(main@x_axis+1)^(0+1280),w,c
+  9570   0027C0  5828               	subwfb	(main@y_axis+1)^(0+1280),w,c
   9571   0027C2  B0D8               	btfsc	status,0,c
   9572   0027C4  EFE6  F013         	goto	u601
   9573   0027C8  EFE8  F013         	goto	u600
@@ -9607,15 +9607,15 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9583   0027D4  EF1B  F014         	goto	l2816
   9584   0027D8                     l2806:
   9585   0027D8  501D               	movf	main@limit2^(0+1280),w,c
-  9586   0027DA  5C21               	subwf	main@x_neutral^(0+1280),w,c
+  9586   0027DA  5C23               	subwf	main@y_neutral^(0+1280),w,c
   9587   0027DC  6E19               	movwf	??_main^(0+1280),c
   9588   0027DE  501E               	movf	(main@limit2+1)^(0+1280),w,c
-  9589   0027E0  5822               	subwfb	(main@x_neutral+1)^(0+1280),w,c
+  9589   0027E0  5824               	subwfb	(main@y_neutral+1)^(0+1280),w,c
   9590   0027E2  6E1A               	movwf	(??_main+1)^(0+1280),c
   9591   0027E4  5019               	movf	??_main^(0+1280),w,c
-  9592   0027E6  5C27               	subwf	main@x_axis^(0+1280),w,c
+  9592   0027E6  5C27               	subwf	main@y_axis^(0+1280),w,c
   9593   0027E8  501A               	movf	(??_main+1)^(0+1280),w,c
-  9594   0027EA  5828               	subwfb	(main@x_axis+1)^(0+1280),w,c
+  9594   0027EA  5828               	subwfb	(main@y_axis+1)^(0+1280),w,c
   9595   0027EC  B0D8               	btfsc	status,0,c
   9596   0027EE  EFFB  F013         	goto	u611
   9597   0027F2  EFFD  F013         	goto	u610
@@ -9632,15 +9632,15 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9608   002800  EF1B  F014         	goto	l2816
   9609   002804                     l2810:
   9610   002804  501B               	movf	main@limit1^(0+1280),w,c
-  9611   002806  5C21               	subwf	main@x_neutral^(0+1280),w,c
+  9611   002806  5C23               	subwf	main@y_neutral^(0+1280),w,c
   9612   002808  6E19               	movwf	??_main^(0+1280),c
   9613   00280A  501C               	movf	(main@limit1+1)^(0+1280),w,c
-  9614   00280C  5822               	subwfb	(main@x_neutral+1)^(0+1280),w,c
+  9614   00280C  5824               	subwfb	(main@y_neutral+1)^(0+1280),w,c
   9615   00280E  6E1A               	movwf	(??_main+1)^(0+1280),c
   9616   002810  5019               	movf	??_main^(0+1280),w,c
-  9617   002812  5C27               	subwf	main@x_axis^(0+1280),w,c
+  9617   002812  5C27               	subwf	main@y_axis^(0+1280),w,c
   9618   002814  501A               	movf	(??_main+1)^(0+1280),w,c
-  9619   002816  5828               	subwfb	(main@x_axis+1)^(0+1280),w,c
+  9619   002816  5828               	subwfb	(main@y_axis+1)^(0+1280),w,c
   9620   002818  B0D8               	btfsc	status,0,c
   9621   00281A  EF11  F014         	goto	u621
   9622   00281E  EF13  F014         	goto	u620
@@ -9664,16 +9664,16 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9640   002836                     l2816:
   9641                           
   9642                           ; BSR set to: 5
-  9643                           ;main.c: 147: if (y_axis > y_neutral + limit3) {
+  9643                           ;main.c: 148: if (x_axis > x_neutral + limit3) {
   9644   002836  501F               	movf	main@limit3^(0+1280),w,c
-  9645   002838  2423               	addwf	main@y_neutral^(0+1280),w,c
+  9645   002838  2421               	addwf	main@x_neutral^(0+1280),w,c
   9646   00283A  6E19               	movwf	??_main^(0+1280),c
   9647   00283C  5020               	movf	(main@limit3+1)^(0+1280),w,c
-  9648   00283E  2024               	addwfc	(main@y_neutral+1)^(0+1280),w,c
+  9648   00283E  2022               	addwfc	(main@x_neutral+1)^(0+1280),w,c
   9649   002840  6E1A               	movwf	(??_main+1)^(0+1280),c
-  9650   002842  5025               	movf	main@y_axis^(0+1280),w,c
+  9650   002842  5025               	movf	main@x_axis^(0+1280),w,c
   9651   002844  5C19               	subwf	??_main^(0+1280),w,c
-  9652   002846  5026               	movf	(main@y_axis+1)^(0+1280),w,c
+  9652   002846  5026               	movf	(main@x_axis+1)^(0+1280),w,c
   9653   002848  581A               	subwfb	(??_main+1)^(0+1280),w,c
   9654   00284A  B0D8               	btfsc	status,0,c
   9655   00284C  EF2A  F014         	goto	u631
@@ -9683,23 +9683,23 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9659   002858                     u630:
   9660   002858                     
   9661                           ; BSR set to: 5
-  9662                           ;main.c: 148:     DataTx[0] = 0xFF;
+  9662                           ;main.c: 149:     DataTx[0] = 0xFF;
   9663   002858  6960               	setf	_DataTx& (0+255),b
   9664                           
-  9665                           ;main.c: 149: }
+  9665                           ;main.c: 150: }
   9666   00285A  EF99  F014         	goto	l2842
   9667   00285E                     l2820:
   9668                           
   9669                           ; BSR set to: 5
   9670   00285E  501D               	movf	main@limit2^(0+1280),w,c
-  9671   002860  2423               	addwf	main@y_neutral^(0+1280),w,c
+  9671   002860  2421               	addwf	main@x_neutral^(0+1280),w,c
   9672   002862  6E19               	movwf	??_main^(0+1280),c
   9673   002864  501E               	movf	(main@limit2+1)^(0+1280),w,c
-  9674   002866  2024               	addwfc	(main@y_neutral+1)^(0+1280),w,c
+  9674   002866  2022               	addwfc	(main@x_neutral+1)^(0+1280),w,c
   9675   002868  6E1A               	movwf	(??_main+1)^(0+1280),c
-  9676   00286A  5025               	movf	main@y_axis^(0+1280),w,c
+  9676   00286A  5025               	movf	main@x_axis^(0+1280),w,c
   9677   00286C  5C19               	subwf	??_main^(0+1280),w,c
-  9678   00286E  5026               	movf	(main@y_axis+1)^(0+1280),w,c
+  9678   00286E  5026               	movf	(main@x_axis+1)^(0+1280),w,c
   9679   002870  581A               	subwfb	(??_main+1)^(0+1280),w,c
   9680   002872  B0D8               	btfsc	status,0,c
   9681   002874  EF3E  F014         	goto	u641
@@ -9709,24 +9709,24 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9685   002880                     u640:
   9686   002880                     
   9687                           ; BSR set to: 5
-  9688                           ;main.c: 151:     DataTx[0] = 0xE0;
+  9688                           ;main.c: 152:     DataTx[0] = 0xE0;
   9689   002880  0EE0               	movlw	224
   9690   002882  6F60               	movwf	_DataTx& (0+255),b
   9691                           
-  9692                           ;main.c: 152: }
+  9692                           ;main.c: 153: }
   9693   002884  EF99  F014         	goto	l2842
   9694   002888                     l2824:
   9695                           
   9696                           ; BSR set to: 5
   9697   002888  501B               	movf	main@limit1^(0+1280),w,c
-  9698   00288A  2423               	addwf	main@y_neutral^(0+1280),w,c
+  9698   00288A  2421               	addwf	main@x_neutral^(0+1280),w,c
   9699   00288C  6E19               	movwf	??_main^(0+1280),c
   9700   00288E  501C               	movf	(main@limit1+1)^(0+1280),w,c
-  9701   002890  2024               	addwfc	(main@y_neutral+1)^(0+1280),w,c
+  9701   002890  2022               	addwfc	(main@x_neutral+1)^(0+1280),w,c
   9702   002892  6E1A               	movwf	(??_main+1)^(0+1280),c
-  9703   002894  5025               	movf	main@y_axis^(0+1280),w,c
+  9703   002894  5025               	movf	main@x_axis^(0+1280),w,c
   9704   002896  5C19               	subwf	??_main^(0+1280),w,c
-  9705   002898  5026               	movf	(main@y_axis+1)^(0+1280),w,c
+  9705   002898  5026               	movf	(main@x_axis+1)^(0+1280),w,c
   9706   00289A  581A               	subwfb	(??_main+1)^(0+1280),w,c
   9707   00289C  B0D8               	btfsc	status,0,c
   9708   00289E  EF53  F014         	goto	u651
@@ -9736,25 +9736,25 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9712   0028AA                     u650:
   9713   0028AA                     
   9714                           ; BSR set to: 5
-  9715                           ;main.c: 154:     DataTx[0] = 0xC0;
+  9715                           ;main.c: 155:     DataTx[0] = 0xC0;
   9716   0028AA  0EC0               	movlw	192
   9717   0028AC  6F60               	movwf	_DataTx& (0+255),b
   9718                           
-  9719                           ;main.c: 155: }
+  9719                           ;main.c: 156: }
   9720   0028AE  EF99  F014         	goto	l2842
   9721   0028B2                     l2828:
   9722                           
   9723                           ; BSR set to: 5
   9724   0028B2  501F               	movf	main@limit3^(0+1280),w,c
-  9725   0028B4  5C23               	subwf	main@y_neutral^(0+1280),w,c
+  9725   0028B4  5C21               	subwf	main@x_neutral^(0+1280),w,c
   9726   0028B6  6E19               	movwf	??_main^(0+1280),c
   9727   0028B8  5020               	movf	(main@limit3+1)^(0+1280),w,c
-  9728   0028BA  5824               	subwfb	(main@y_neutral+1)^(0+1280),w,c
+  9728   0028BA  5822               	subwfb	(main@x_neutral+1)^(0+1280),w,c
   9729   0028BC  6E1A               	movwf	(??_main+1)^(0+1280),c
   9730   0028BE  5019               	movf	??_main^(0+1280),w,c
-  9731   0028C0  5C25               	subwf	main@y_axis^(0+1280),w,c
+  9731   0028C0  5C25               	subwf	main@x_axis^(0+1280),w,c
   9732   0028C2  501A               	movf	(??_main+1)^(0+1280),w,c
-  9733   0028C4  5826               	subwfb	(main@y_axis+1)^(0+1280),w,c
+  9733   0028C4  5826               	subwfb	(main@x_axis+1)^(0+1280),w,c
   9734   0028C6  B0D8               	btfsc	status,0,c
   9735   0028C8  EF68  F014         	goto	u661
   9736   0028CC  EF6A  F014         	goto	u660
@@ -9763,24 +9763,24 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9739   0028D4                     u660:
   9740   0028D4                     
   9741                           ; BSR set to: 5
-  9742                           ;main.c: 157:     DataTx[0] = 0x00;
+  9742                           ;main.c: 158:     DataTx[0] = 0x00;
   9743   0028D4  6B60               	clrf	_DataTx& (0+255),b
   9744                           
-  9745                           ;main.c: 158: }
+  9745                           ;main.c: 159: }
   9746   0028D6  EF99  F014         	goto	l2842
   9747   0028DA                     l2832:
   9748                           
   9749                           ; BSR set to: 5
   9750   0028DA  501D               	movf	main@limit2^(0+1280),w,c
-  9751   0028DC  5C23               	subwf	main@y_neutral^(0+1280),w,c
+  9751   0028DC  5C21               	subwf	main@x_neutral^(0+1280),w,c
   9752   0028DE  6E19               	movwf	??_main^(0+1280),c
   9753   0028E0  501E               	movf	(main@limit2+1)^(0+1280),w,c
-  9754   0028E2  5824               	subwfb	(main@y_neutral+1)^(0+1280),w,c
+  9754   0028E2  5822               	subwfb	(main@x_neutral+1)^(0+1280),w,c
   9755   0028E4  6E1A               	movwf	(??_main+1)^(0+1280),c
   9756   0028E6  5019               	movf	??_main^(0+1280),w,c
-  9757   0028E8  5C25               	subwf	main@y_axis^(0+1280),w,c
+  9757   0028E8  5C25               	subwf	main@x_axis^(0+1280),w,c
   9758   0028EA  501A               	movf	(??_main+1)^(0+1280),w,c
-  9759   0028EC  5826               	subwfb	(main@y_axis+1)^(0+1280),w,c
+  9759   0028EC  5826               	subwfb	(main@x_axis+1)^(0+1280),w,c
   9760   0028EE  B0D8               	btfsc	status,0,c
   9761   0028F0  EF7C  F014         	goto	u671
   9762   0028F4  EF7E  F014         	goto	u670
@@ -9789,25 +9789,25 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9765   0028FC                     u670:
   9766   0028FC                     
   9767                           ; BSR set to: 5
-  9768                           ;main.c: 160:     DataTx[0] = 0x20;
+  9768                           ;main.c: 161:     DataTx[0] = 0x20;
   9769   0028FC  0E20               	movlw	32
   9770   0028FE  6F60               	movwf	_DataTx& (0+255),b
   9771                           
-  9772                           ;main.c: 161: }
+  9772                           ;main.c: 162: }
   9773   002900  EF99  F014         	goto	l2842
   9774   002904                     l2836:
   9775                           
   9776                           ; BSR set to: 5
   9777   002904  501B               	movf	main@limit1^(0+1280),w,c
-  9778   002906  5C23               	subwf	main@y_neutral^(0+1280),w,c
+  9778   002906  5C21               	subwf	main@x_neutral^(0+1280),w,c
   9779   002908  6E19               	movwf	??_main^(0+1280),c
   9780   00290A  501C               	movf	(main@limit1+1)^(0+1280),w,c
-  9781   00290C  5824               	subwfb	(main@y_neutral+1)^(0+1280),w,c
+  9781   00290C  5822               	subwfb	(main@x_neutral+1)^(0+1280),w,c
   9782   00290E  6E1A               	movwf	(??_main+1)^(0+1280),c
   9783   002910  5019               	movf	??_main^(0+1280),w,c
-  9784   002912  5C25               	subwf	main@y_axis^(0+1280),w,c
+  9784   002912  5C25               	subwf	main@x_axis^(0+1280),w,c
   9785   002914  501A               	movf	(??_main+1)^(0+1280),w,c
-  9786   002916  5826               	subwfb	(main@y_axis+1)^(0+1280),w,c
+  9786   002916  5826               	subwfb	(main@x_axis+1)^(0+1280),w,c
   9787   002918  B0D8               	btfsc	status,0,c
   9788   00291A  EF91  F014         	goto	u681
   9789   00291E  EF93  F014         	goto	u680
@@ -9816,22 +9816,22 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9792   002926                     u680:
   9793   002926                     
   9794                           ; BSR set to: 5
-  9795                           ;main.c: 163:     DataTx[0] = 0x40;
+  9795                           ;main.c: 164:     DataTx[0] = 0x40;
   9796   002926  0E40               	movlw	64
   9797   002928  6F60               	movwf	_DataTx& (0+255),b
   9798                           
-  9799                           ;main.c: 164: }
+  9799                           ;main.c: 165: }
   9800   00292A  EF99  F014         	goto	l2842
   9801   00292E                     l2840:
   9802                           
   9803                           ; BSR set to: 5
-  9804                           ;main.c: 166:     DataTx[0] = 0x80;
+  9804                           ;main.c: 167:     DataTx[0] = 0x80;
   9805   00292E  0E80               	movlw	128
   9806   002930  6F60               	movwf	_DataTx& (0+255),b
   9807   002932                     l2842:
   9808                           
   9809                           ; BSR set to: 5
-  9810                           ;main.c: 171:         _delay((unsigned long)((50)*(64000000U/4000.0)));
+  9810                           ;main.c: 172:         _delay((unsigned long)((50)*(64000000U/4000.0)));
   9811   002932  0E05               	movlw	5
   9812   002934  6E1A               	movwf	(??_main+1)^(0+1280),c
   9813   002936  0E0F               	movlw	15
@@ -9846,7 +9846,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9822   002946  D7FA               	bra	u797
   9823   002948  0000               	nop	
   9824   00294A                     
-  9825                           ;main.c: 174:      if(nrf_send_data(DataTx) == 1)
+  9825                           ;main.c: 175:      if(nrf_send_data(DataTx) == 1)
   9826   00294A  0E60               	movlw	low _DataTx
   9827   00294C  6E0E               	movwf	nrf_send_data@data^(0+1280),c
   9828   00294E  0E05               	movlw	high _DataTx
@@ -9860,10 +9860,10 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   9836   002962  EF6F  F013         	goto	l2780
   9837   002966                     u690:
   9838   002966                     
-  9839                           ;main.c: 175:         {;main.c: 176:             LATFbits.LATF3 =1;
+  9839                           ;main.c: 176:         {;main.c: 177:             LATFbits.LATF3 =1;
   9840   002966  86C3               	bsf	195,3,c	;volatile
   9841   002968                     
-  9842                           ;main.c: 177:             _delay((unsigned long)((1000)*(64000000U/4000.0)));
+  9842                           ;main.c: 178:             _delay((unsigned long)((1000)*(64000000U/4000.0)));
   9843   002968  0E52               	movlw	82
   9844   00296A  6E1A               	movwf	(??_main+1)^(0+1280),c
   9845   00296C  0E2B               	movlw	43
@@ -10194,7 +10194,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  10140                           
  10141 ;; *************** function _initADC *****************
  10142 ;; Defined at:
- 10143 ;;		line 194 in file "main.c"
+ 10143 ;;		line 195 in file "main.c"
  10144 ;; Parameters:    Size  Location     Type
  10145 ;;		None
  10146 ;; Auto vars:     Size  Location     Type
@@ -10238,30 +10238,30 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  10174   002F4A                     _initADC:
  10175                           	callstack 122
  10176   002F4A                     
- 10177                           ;main.c: 195:     ADCON0 = 0x00;
+ 10177                           ;main.c: 196:     ADCON0 = 0x00;
  10178   002F4A  0103               	movlb	3	; () banked
  10179   002F4C  6BF3               	clrf	243,b	;volatile
  10180                           
- 10181                           ;main.c: 196:     ADREF = 0x00;
+ 10181                           ;main.c: 197:     ADREF = 0x00;
  10182   002F4E  6BF8               	clrf	248,b	;volatile
  10183   002F50                     
  10184                           ; BSR set to: 3
- 10185                           ;main.c: 197:     ADCLK = 0x3F;
+ 10185                           ;main.c: 198:     ADCLK = 0x3F;
  10186   002F50  0E3F               	movlw	63
  10187   002F52  6FFA               	movwf	250,b	;volatile
  10188                           
- 10189                           ;main.c: 198:     ADCON0bits.ADFM = 1;
+ 10189                           ;main.c: 199:     ADCON0bits.ADFM = 1;
  10190   002F54  51F3               	movf	243,w,b	;volatile
  10191   002F56  0BF3               	andlw	-13
  10192   002F58  0904               	iorlw	4
  10193   002F5A  6FF3               	movwf	243,b	;volatile
  10194   002F5C                     
  10195                           ; BSR set to: 3
- 10196                           ;main.c: 199:     ADCON0bits.ADON = 1;
+ 10196                           ;main.c: 200:     ADCON0bits.ADON = 1;
  10197   002F5C  8FF3               	bsf	243,7,b	;volatile
  10198   002F5E                     
  10199                           ; BSR set to: 3
- 10200                           ;main.c: 202:     baselineValue = readADC(0x1e);
+ 10200                           ;main.c: 203:     baselineValue = readADC(0x1e);
  10201   002F5E  0E1E               	movlw	30
  10202   002F60  EC91  F017         	call	_readADC
  10203   002F64  C50A  F54F         	movff	?_readADC,_baselineValue
@@ -10272,7 +10272,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  10208                           
  10209 ;; *************** function _readADC *****************
  10210 ;; Defined at:
- 10211 ;;		line 207 in file "main.c"
+ 10211 ;;		line 208 in file "main.c"
  10212 ;; Parameters:    Size  Location     Type
  10213 ;;  channel         1    wreg     unsigned char 
  10214 ;; Auto vars:     Size  Location     Type
@@ -10321,15 +10321,15 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  10247                           ;readADC@channel stored from wreg
  10248   002F22  6E0E               	movwf	readADC@channel^(0+1280),c
  10249   002F24                     
- 10250                           ;main.c: 208:     ADPCH = channel;
+ 10250                           ;main.c: 209:     ADPCH = channel;
  10251   002F24  C50E  F3EC         	movff	readADC@channel,1004	;volatile
  10252   002F28                     
- 10253                           ;main.c: 209:     ADCON0bits.ADCONT = 0;
+ 10253                           ;main.c: 210:     ADCON0bits.ADCONT = 0;
  10254   002F28  0103               	movlb	3	; () banked
  10255   002F2A  9DF3               	bcf	243,6,b	;volatile
  10256   002F2C                     
  10257                           ; BSR set to: 3
- 10258                           ;main.c: 210:     ADCON0bits.ADGO = 1;
+ 10258                           ;main.c: 211:     ADCON0bits.ADGO = 1;
  10259   002F2C  81F3               	bsf	243,0,b	;volatile
  10260   002F2E                     l819:
  10261                           
@@ -10342,7 +10342,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  10268   002F3C                     u510:
  10269   002F3C                     
  10270                           ; BSR set to: 3
- 10271                           ;main.c: 212:     return (uint16_t)(ADRESH << 8) | ADRESL;
+ 10271                           ;main.c: 213:     return (uint16_t)(ADRESH << 8) | ADRESL;
  10272   002F3C  51EB               	movf	235,w,b	;volatile
  10273   002F3E  6E0C               	movwf	??_readADC^(0+1280),c
  10274   002F40  51EA               	movf	234,w,b	;volatile
@@ -15364,7 +15364,7 @@ DATA                 0      0     116      0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.50 build 20240725155939 
-Symbol Table                                                                                   Wed Feb 12 23:37:25 2025
+Symbol Table                                                                                   Thu Feb 13 16:53:49 2025
 
                        _SPI1_ByteExchange 2EF6                                        l97 2CA6  
                       ?_SPI1_ByteExchange 0501                               ?_CE_disable 0501  
@@ -15710,7 +15710,7 @@ INT1_SetInterruptHandler@InterruptHandler 050A  INT0_SetInterruptHandler@Interru
                 ?_TMR0_TMRInterruptEnable 0501                                ?_CE_enable 0501  
                          _SPI1_Initialize 2FCA                                main@limit1 051B  
                               main@limit2 051D                                main@limit3 051F  
-                              main@x_axis 0527                                main@y_axis 0525  
+                              main@x_axis 0525                                main@y_axis 0527  
             __end_of_INTERRUPT_Initialize 2BE4                   nrf_send_data@fifostatus 0510  
     __end_of_INT0_DefaultInterruptHandler 30D0              _INT0_DefaultInterruptHandler 30CE  
                               ?_SPI1_Open 0501                                ?_CS_select 0501  

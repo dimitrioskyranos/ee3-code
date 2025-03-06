@@ -30066,30 +30066,30 @@ uint16_t limit3 = 2000;
     while(1)
     {
         LATFbits.LATF3 =0;
-          uint16_t y_axis = readADC(0x1e);
+          uint16_t x_axis = readADC(0x1e);
         _delay((unsigned long)((20)*(64000000U/4000.0)));
-        uint16_t x_axis = readADC(0x1d);
+        uint16_t y_axis = readADC(0x1d);
         _delay((unsigned long)((20)*(64000000U/4000.0)));
 
 
 
 
-if (x_axis > x_neutral + limit3) {
+if (y_axis > y_neutral + limit3) {
     DataTx[1] = 0xFF;
 }
-else if (x_axis > x_neutral + limit2) {
+else if (y_axis > y_neutral + limit2) {
     DataTx[1] = 0xE0;
 }
-else if (x_axis > x_neutral + limit1) {
+else if (y_axis > y_neutral + limit1) {
     DataTx[1] = 0xC0;
 }
-else if (x_axis < x_neutral - limit3) {
+else if (y_axis < y_neutral - limit3) {
     DataTx[1] = 0x00;
 }
-else if (x_axis < x_neutral - limit2) {
+else if (y_axis < y_neutral - limit2) {
     DataTx[1] = 0x20;
 }
-else if (x_axis < x_neutral - limit1) {
+else if (y_axis < y_neutral - limit1) {
     DataTx[1] = 0x40;
 }
 else {
@@ -30097,22 +30097,23 @@ else {
 }
 
 
-if (y_axis > y_neutral + limit3) {
+
+if (x_axis > x_neutral + limit3) {
     DataTx[0] = 0xFF;
 }
-else if (y_axis > y_neutral + limit2) {
+else if (x_axis > x_neutral + limit2) {
     DataTx[0] = 0xE0;
 }
-else if (y_axis > y_neutral + limit1) {
+else if (x_axis > x_neutral + limit1) {
     DataTx[0] = 0xC0;
 }
-else if (y_axis < y_neutral - limit3) {
+else if (x_axis < x_neutral - limit3) {
     DataTx[0] = 0x00;
 }
-else if (y_axis < y_neutral - limit2) {
+else if (x_axis < x_neutral - limit2) {
     DataTx[0] = 0x20;
 }
-else if (y_axis < y_neutral - limit1) {
+else if (x_axis < x_neutral - limit1) {
     DataTx[0] = 0x40;
 }
 else {

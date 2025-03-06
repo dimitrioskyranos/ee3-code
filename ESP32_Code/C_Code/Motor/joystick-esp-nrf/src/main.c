@@ -34,7 +34,7 @@
     #define MISO_PIN       12
     #define SCLK_PIN       14
     #define CS_PIN         11
-    #define CE_PIN         18 
+    #define CE_PIN         4 
 
 
     
@@ -155,59 +155,102 @@
     }
 
 
+// void control_motors(uint8_t x, uint8_t y) {
+    
+//     //old code
+//     /*
+    
+//     if (y > 135) {  // Forward
+//         set_motorA(true, (y - 135) * 2);
+//         set_motorB(true, (y - 135) * 2);
+//     } else if (y < 120) {  // Backward
+//         set_motorA(false, (120 - y) * 2);
+//         set_motorB(false, (120 - y) * 2);
+//     } else {
+//         set_motorA(true, 0);
+//         set_motorB(true, 0);
+//     }
+    
+//     if (x > 135) {  // Turn right
+//         set_motorA(true, MAX_DUTY_CYCLE / 2);
+//         set_motorB(true, 0);
+//     } else if (x < 120) {  // Turn left
+//         set_motorA(true, 0);
+//         set_motorB(true, MAX_DUTY_CYCLE / 2);
+//     }
+//     */
+
+
+//    //new code by tubi
+
+//    if(y > 135 && x > 150){
+//     set_motorA(true, sqrt(pow((y - 135)*16, 2) + pow((x-150)*16, 2)));
+//     set_motorB(true, (y - 135) * 16);
+//    } else if(y > 135 && x < 100){
+//     set_motorA(false, (y - 135) * 16);
+//     set_motorB(false, sqrt(pow((y - 135)*16, 2) + pow((x-150)*16, 2)));
+//    } else if(y < 120 && x > 150){
+//     set_motorA(true, sqrt(pow((120 - y)*16,2) + pow((x-150)*16,2)));
+//     set_motorB(true, (120 - y) * 16);
+//    } else if(y < 120 && x < 100){
+//     set_motorA(true, (120 - y) * 16);
+//     set_motorB(true, sqrt(pow((120 - y)*16,2) + pow((x-150)*16,2)));
+//    } else if(y > 135){
+//     set_motorA(true, (y - 135) * 16);
+//     set_motorB(true, (y - 135) * 16);
+//    } else if(y < 120){
+//     set_motorA(false, (120 - y) * 16);
+//     set_motorB(false, (120 - y) * 16);
+//    } else {
+//     set_motorA(true, 0);
+//     set_motorB(true, 0);
+//    }
+// }
+
 void control_motors(uint8_t x, uint8_t y) {
-    
-    //old code
-    /*
-    
-    if (y > 135) {  // Forward
-        set_motorA(true, (y - 135) * 2);
-        set_motorB(true, (y - 135) * 2);
-    } else if (y < 120) {  // Backward
-        set_motorA(false, (120 - y) * 2);
-        set_motorB(false, (120 - y) * 2);
-    } else {
-        set_motorA(true, 0);
-        set_motorB(true, 0);
+    int speedA = 0;
+    int speedB = 0;
+    bool forwardA = true;
+    bool forwardB = true;
+
+    // Forward/Backward logic
+    if (y < 0x80) {
+        // Joystick Up: Both motors move forward
+        speedA = (0x80 - y) * 2; // Speed increases as y decreases
+        speedB = (0x80 - y) * 2;
+        forwardA = true;
+        forwardB = true;
+    } else if (y > 0x80) {
+        // Joystick Down: Both motors move backward
+        speedA = (y - 0x80) * 2; // Speed increases as y increases
+        speedB = (y - 0x80) * 2;
+        forwardA = false;
+        forwardB = false;
     }
-    
-    if (x > 135) {  // Turn right
-        set_motorA(true, MAX_DUTY_CYCLE / 2);
-        set_motorB(true, 0);
-    } else if (x < 120) {  // Turn left
-        set_motorA(true, 0);
-        set_motorB(true, MAX_DUTY_CYCLE / 2);
+
+    // Left/Right logic
+    if (x < 0x80) {
+        // Joystick Left: Only Motor B moves forward
+        speedA = 0; // Motor A is stopped
+        speedB = (0x80 - x) * 2; // Speed increases as x decreases
+        forwardA = true; // Doesn't matter since speedA is 0
+        forwardB = true;
+    } else if (x > 0x80) {
+        // Joystick Right: Only Motor A moves forward
+        speedA = (x - 0x80) * 2; // Speed increases as x increases
+        speedB = 0; // Motor B is stopped
+        forwardA = true;
+        forwardB = true; // Doesn't matter since speedB is 0
     }
-    */
 
+    // Ensure the speeds are within the valid range
+    speedA = (speedA < 0) ? 0 : (speedA > MAX_DUTY_CYCLE) ? MAX_DUTY_CYCLE : speedA;
+    speedB = (speedB < 0) ? 0 : (speedB > MAX_DUTY_CYCLE) ? MAX_DUTY_CYCLE : speedB;
 
-   //new code by tubi
-
-   if(y > 135 && x > 150){
-    set_motorA(true, sqrt(pow((y - 135)*4, 2) + pow((x-150)*4, 2)));
-    set_motorB(true, (y - 135) * 4);
-   } else if(y > 135 && x < 100){
-    set_motorA(false, (y - 135) * 4);
-    set_motorB(false, sqrt(pow((y - 135)*4, 2) + pow((x-150)*4, 2)));
-   } else if(y < 120 && x > 150){
-    set_motorA(true, sqrt(pow((120 - y)*4,2) + pow((x-150)*4,2)));
-    set_motorB(true, (120 - y) * 4);
-   } else if(y < 120 && x < 100){
-    set_motorA(true, (120 - y) * 4);
-    set_motorB(true, sqrt(pow((120 - y)*4,2) + pow((x-150)*4,2)));
-   } else if(y > 135){
-    set_motorA(true, (y - 135) * 4);
-    set_motorB(true, (y - 135) * 4);
-   } else if(y < 120){
-    set_motorA(false, (120 - y) * 4);
-    set_motorB(false, (120 - y) * 4);
-   } else {
-    set_motorA(true, 0);
-    set_motorB(true, 0);
-   }
+    // Set the motor speeds and directions
+    set_motorA(forwardA, speedA);
+    set_motorB(forwardB, speedB);
 }
-
-
 
     void app_main(void)
     {
@@ -227,28 +270,29 @@ void control_motors(uint8_t x, uint8_t y) {
         init_NRF();
         NRF24_RxMode(TxAddress, 122);
 
-        // uint8_t joystickX;
-        // uint8_t joystickY;
+        uint8_t joystickX;
+        uint8_t joystickY;
 
 
 
         while(1)
         {
+            
             if(isDataAvailable(1) == 1)
             {
                 NRF24_Receive(RxData);
 
-                // joystickX = RxData[0];
-                // joystickY = RxData[1];
-                // control_motors(joystickX, joystickY);
-                ESP_LOGI(TAG, "High Byte X %d: 0x%02X", 1, RxData[0]);  // Print each byte in hex
-                ESP_LOGI(TAG, "Low Byte X %d: 0x%02X", 2, RxData[1]);
+                joystickY = RxData[1];
+                joystickX = RxData[0];
+               
+                ESP_LOGI(TAG, "Byte X %d: 0x%02X", 1, joystickX);  // Print each byte in hex
+                ESP_LOGI(TAG, "Byte Y %d: 0x%02X", 2, joystickY);
+                control_motors(joystickX, joystickY);
                 vTaskDelay(pdMS_TO_TICKS(20));
-                ESP_LOGI(TAG, "High Byte Y %d: 0x%02X", 2, RxData[2]);
-                ESP_LOGI(TAG, "Low Byte Y %d: 0x%02X", 2, RxData[3]);
-                vTaskDelay(pdMS_TO_TICKS(20));
+            
                 
             }
+                
 
             // control_motors(120, 255);
 

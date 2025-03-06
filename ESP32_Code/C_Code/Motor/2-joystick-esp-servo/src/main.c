@@ -13,13 +13,13 @@
     #include <math.h>
 
     
-    #define IN1 10
-    #define IN2 8
-    #define ENA 9  // PWM channel 0
+    #define IN1 7
+    #define IN2 5
+    #define ENA 6  // PWM channel 0
     // Motor B pins
-    #define IN3 7
-    #define IN4 5
-    #define ENB 6  // PWM channel 1
+    #define IN3 17
+    #define IN4 15
+    #define ENB 16  // PWM channel 1
 
     // PWM configuration
     #define PWM_FREQ 1000
@@ -37,11 +37,12 @@
     #define CE_PIN         4 
 
 
-#define SERVO_X_PIN 41       // GPIO pin for Servo X
-#define SERVO_Y_PIN 42       // GPIO pin for Servo Y
+#define SERVO_X_PIN 42       // GPIO pin for Servo X
+#define SERVO_Y_PIN 41       // GPIO pin for Servo Y
 #define SERVO_X_CHANNEL LEDC_CHANNEL_2  // PWM channel for Servo X
 #define SERVO_Y_CHANNEL LEDC_CHANNEL_3  // PWM channel for Servo Y
-#define SERVO_Z_PIN 36 
+#define SERVO_Z_PIN 40
+#define SERVO_GRAB 39 
 #define SERVO_Z_CHANNEL LEDC_CHANNEL_4 
 #define BOOSTER_PIN 1 
 #define BOOSTER_CHANNEL LEDC_CHANNEL_5
@@ -53,7 +54,7 @@
 #define BOOSTER_RES LEDC_TIMER_2_BIT
 #define SERVO_MIN_DUTY 163  // Duty cycle for 0 degrees (1 ms pulse)
 #define SERVO_MAX_DUTY 819  // Duty cycle for 180 degrees (2 ms pulse)
-#define SERVO_NEUTRAL_DUTY 491  // Duty cycle for 90 degrees (1.5 ms pulse)
+#define SERVO_NEUTRAL_DUTY 492  // Duty cycle for 90 degrees (1.5 ms pulse)
     
 
     spi_device_handle_t spi;

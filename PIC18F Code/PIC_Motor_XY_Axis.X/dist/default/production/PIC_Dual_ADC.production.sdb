@@ -121,9 +121,9 @@ SPI1_DEFAULT 1
 [v ___omul __omul `(uo  1 e 8 0 ]
 "70 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Dual_ADC\main.c
 [v _main main `(i  1 e 2 0 ]
-"194
+"195
 [v _initADC initADC `(v  1 e 1 0 ]
-"207
+"208
 [v _readADC readADC `(us  1 e 2 0 ]
 "47 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Dual_ADC\mcc_generated_files/adc/src/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -980,9 +980,9 @@ SPI1_DEFAULT 1
 [v _main main `(i  1 e 2 0 ]
 {
 "118
-[v main@x_axis x_axis `us  1 a 2 38 ]
+[v main@y_axis y_axis `us  1 a 2 38 ]
 "116
-[v main@y_axis y_axis `us  1 a 2 36 ]
+[v main@x_axis x_axis `us  1 a 2 36 ]
 "105
 [v main@y_neutral y_neutral `us  1 a 2 34 ]
 "103
@@ -993,7 +993,7 @@ SPI1_DEFAULT 1
 [v main@limit2 limit2 `us  1 a 2 28 ]
 "108
 [v main@limit1 limit1 `us  1 a 2 26 ]
-"192
+"193
 } 0
 "122 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Dual_ADC\nrf24.c
 [v _nrf_send_data nrf_send_data `(uc  1 e 1 0 ]
@@ -1022,18 +1022,18 @@ SPI1_DEFAULT 1
 [v init_NRF@t t `uc  1 a 1 15 ]
 "100
 } 0
-"194 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Dual_ADC\main.c
+"195 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Dual_ADC\main.c
 [v _initADC initADC `(v  1 e 1 0 ]
 {
-"203
+"204
 } 0
-"207
+"208
 [v _readADC readADC `(us  1 e 2 0 ]
 {
 [v readADC@channel channel `uc  1 p 1 wreg ]
 [v readADC@channel channel `uc  1 p 1 wreg ]
 [v readADC@channel channel `uc  1 p 1 13 ]
-"213
+"214
 } 0
 "132 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Dual_ADC\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_TMRInterruptEnable TMR0_TMRInterruptEnable `(v  1 e 1 0 ]
