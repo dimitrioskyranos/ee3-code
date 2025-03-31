@@ -29302,6 +29302,8 @@ typedef enum
     ADC_CHANNEL_DAC1 = 0x3d,
     ADC_CHANNEL_FVR_BUFFER1 = 0x3e,
     ADC_CHANNEL_FVR_BUFFER2 = 0x3f,
+    ADC_CHANNEL_AND2 = 0x1a,
+    ADC_CHANNEL_AND3 = 0x1b,
     ADC_CHANNEL_AND5 = 0x1d,
     ADC_CHANNEL_AND6 = 0x1e
 } adc_channel_t;
@@ -29413,7 +29415,7 @@ typedef enum
     ADC_2ND_CONVERSION = 0x7
 } adc_conversion_stage_t;
 # 40 "mcc_generated_files/adc/src/../adc.h" 2
-# 62 "mcc_generated_files/adc/src/../adc.h"
+# 74 "mcc_generated_files/adc/src/../adc.h"
 void ADC_Initialize(void);
 
 
@@ -29447,9 +29449,9 @@ void ADC_Disable(void);
 
 
 void ADC_ChannelSelect(adc_channel_t channel);
-# 104 "mcc_generated_files/adc/src/../adc.h"
+# 116 "mcc_generated_files/adc/src/../adc.h"
 void ADC_ConversionStart(void);
-# 114 "mcc_generated_files/adc/src/../adc.h"
+# 126 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_IsConversionDone(void);
 
 
@@ -29459,7 +29461,7 @@ _Bool ADC_IsConversionDone(void);
 
 
 void ADC_ConversionStop(void);
-# 131 "mcc_generated_files/adc/src/../adc.h"
+# 143 "mcc_generated_files/adc/src/../adc.h"
 adc_result_t ADC_ConversionResultGet(void);
 
 
@@ -29517,7 +29519,7 @@ adc_accumulate_t ADC_AccumulatedResultGet(void);
 
 
 adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
-# 196 "mcc_generated_files/adc/src/../adc.h"
+# 208 "mcc_generated_files/adc/src/../adc.h"
 void ADC_StopOnInterruptEnable(void);
 
 
@@ -29567,11 +29569,11 @@ adc_repeat_count_t ADC_CurrentConversionCountGet(void);
 
 
 void ADC_AccumulatorClear(void);
-# 253 "mcc_generated_files/adc/src/../adc.h"
+# 265 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_IsAccumulatorClearComplete(void);
-# 262 "mcc_generated_files/adc/src/../adc.h"
+# 274 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_HasAccumulatorOverflowed(void);
-# 271 "mcc_generated_files/adc/src/../adc.h"
+# 283 "mcc_generated_files/adc/src/../adc.h"
 adc_result_t ADC_FilterValueGet(void);
 
 
@@ -29637,7 +29639,7 @@ void ADC_ContinuousConversionDisable(void);
 
 
 _Bool ADC_IsErrorGreaterThanUpperThreshold(void);
-# 344 "mcc_generated_files/adc/src/../adc.h"
+# 356 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_IsErrorLesserThanLowerThreshold(void);
 
 
@@ -29687,7 +29689,7 @@ void ADC_ChargePumpEnable(void);
 
 
 void ADC_ChargePumpDisable(void);
-# 401 "mcc_generated_files/adc/src/../adc.h"
+# 413 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_IsChargePumpReady(void);
 
 
@@ -29697,7 +29699,7 @@ _Bool ADC_IsChargePumpReady(void);
 
 
 uint8_t ADC_ResolutionGet(void);
-# 418 "mcc_generated_files/adc/src/../adc.h"
+# 430 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_IsBusy(void);
 
 
@@ -29723,9 +29725,9 @@ void ADC_ConversionDoneInterruptFlagClear(void);
 
 
 void ADC_ThresholdInterruptFlagClear(void);
-# 451 "mcc_generated_files/adc/src/../adc.h"
+# 463 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_IsConversionDoneInterruptFlagSet(void);
-# 460 "mcc_generated_files/adc/src/../adc.h"
+# 472 "mcc_generated_files/adc/src/../adc.h"
 _Bool ADC_IsThresholdInterruptFlagSet(void);
 
 

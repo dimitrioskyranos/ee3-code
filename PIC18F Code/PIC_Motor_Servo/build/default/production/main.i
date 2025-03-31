@@ -29275,7 +29275,7 @@ void CLOCK_Initialize(void);
 # 42 "./mcc_generated_files/system/system.h" 2
 
 # 1 "./mcc_generated_files/system/../system/pins.h" 1
-# 318 "./mcc_generated_files/system/../system/pins.h"
+# 238 "./mcc_generated_files/system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -29473,6 +29473,8 @@ typedef enum
     ADC_CHANNEL_DAC1 = 0x3d,
     ADC_CHANNEL_FVR_BUFFER1 = 0x3e,
     ADC_CHANNEL_FVR_BUFFER2 = 0x3f,
+    ADC_CHANNEL_AND2 = 0x1a,
+    ADC_CHANNEL_AND3 = 0x1b,
     ADC_CHANNEL_AND5 = 0x1d,
     ADC_CHANNEL_AND6 = 0x1e
 } adc_channel_t;
@@ -29584,7 +29586,7 @@ typedef enum
     ADC_2ND_CONVERSION = 0x7
 } adc_conversion_stage_t;
 # 40 "./mcc_generated_files/system/../adc/adc.h" 2
-# 62 "./mcc_generated_files/system/../adc/adc.h"
+# 74 "./mcc_generated_files/system/../adc/adc.h"
 void ADC_Initialize(void);
 
 
@@ -29618,9 +29620,9 @@ void ADC_Disable(void);
 
 
 void ADC_ChannelSelect(adc_channel_t channel);
-# 104 "./mcc_generated_files/system/../adc/adc.h"
+# 116 "./mcc_generated_files/system/../adc/adc.h"
 void ADC_ConversionStart(void);
-# 114 "./mcc_generated_files/system/../adc/adc.h"
+# 126 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_IsConversionDone(void);
 
 
@@ -29630,7 +29632,7 @@ _Bool ADC_IsConversionDone(void);
 
 
 void ADC_ConversionStop(void);
-# 131 "./mcc_generated_files/system/../adc/adc.h"
+# 143 "./mcc_generated_files/system/../adc/adc.h"
 adc_result_t ADC_ConversionResultGet(void);
 
 
@@ -29688,7 +29690,7 @@ adc_accumulate_t ADC_AccumulatedResultGet(void);
 
 
 adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
-# 196 "./mcc_generated_files/system/../adc/adc.h"
+# 208 "./mcc_generated_files/system/../adc/adc.h"
 void ADC_StopOnInterruptEnable(void);
 
 
@@ -29738,11 +29740,11 @@ adc_repeat_count_t ADC_CurrentConversionCountGet(void);
 
 
 void ADC_AccumulatorClear(void);
-# 253 "./mcc_generated_files/system/../adc/adc.h"
+# 265 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_IsAccumulatorClearComplete(void);
-# 262 "./mcc_generated_files/system/../adc/adc.h"
+# 274 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_HasAccumulatorOverflowed(void);
-# 271 "./mcc_generated_files/system/../adc/adc.h"
+# 283 "./mcc_generated_files/system/../adc/adc.h"
 adc_result_t ADC_FilterValueGet(void);
 
 
@@ -29808,7 +29810,7 @@ void ADC_ContinuousConversionDisable(void);
 
 
 _Bool ADC_IsErrorGreaterThanUpperThreshold(void);
-# 344 "./mcc_generated_files/system/../adc/adc.h"
+# 356 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_IsErrorLesserThanLowerThreshold(void);
 
 
@@ -29858,7 +29860,7 @@ void ADC_ChargePumpEnable(void);
 
 
 void ADC_ChargePumpDisable(void);
-# 401 "./mcc_generated_files/system/../adc/adc.h"
+# 413 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_IsChargePumpReady(void);
 
 
@@ -29868,7 +29870,7 @@ _Bool ADC_IsChargePumpReady(void);
 
 
 uint8_t ADC_ResolutionGet(void);
-# 418 "./mcc_generated_files/system/../adc/adc.h"
+# 430 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_IsBusy(void);
 
 
@@ -29894,9 +29896,9 @@ void ADC_ConversionDoneInterruptFlagClear(void);
 
 
 void ADC_ThresholdInterruptFlagClear(void);
-# 451 "./mcc_generated_files/system/../adc/adc.h"
+# 463 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_IsConversionDoneInterruptFlagSet(void);
-# 460 "./mcc_generated_files/system/../adc/adc.h"
+# 472 "./mcc_generated_files/system/../adc/adc.h"
 _Bool ADC_IsThresholdInterruptFlagSet(void);
 
 
@@ -30028,6 +30030,7 @@ int main(void)
 
 
 
+
     TMR0_Start();
     TMR0_TMRInterruptEnable();
     SPI1_Initialize();
@@ -30038,29 +30041,41 @@ int main(void)
 
     TRISBbits.TRISB2 = 0;
     LATB2 = 0;
-
-    TRISFbits.TRISF0 = 0;
-    LATFbits.LATF0 = 1;
-
-    TRISFbits.TRISF3 = 0;
-    TRISFbits.TRISF2 = 0;
+# 102 "main.c"
+    TRISDbits.TRISD1 = 1 ;
 
 
-TRISBbits.TRISB0 = 1;
-WPUBbits.WPUB0 = 1;
+
+    TRISDbits.TRISD2 = 1;
+    WPUDbits.WPUD2 = 1;
+
+
+    TRISDbits.TRISD3 = 1;
+    WPUDbits.WPUD3 = 1;
+
+
+    TRISDbits.TRISD4 = 1;
+
+
+    TRISDbits.TRISD5 = 1;
+    WPUDbits.WPUD5 = 1;
+
+
+    TRISDbits.TRISD6 = 1;
+    WPUDbits.WPUD6 = 1;
 
     init_NRF();
     NRF_TxMode(TxAddress, 122);
     initADC();
 
-    uint16_t x_neutral = readADC(0x1e);
+    uint16_t x_neutral = readADC(0x1b);
 
-    uint16_t y_neutral = readADC(0x1d);
+    uint16_t y_neutral = readADC(0x1a);
 
 
-    uint16_t x_neutral_servo = readADC(0x2F);
+    uint16_t x_neutral_servo = readADC(0x1e);
 
-    uint16_t y_neutral_servo = readADC(0x2E);
+    uint16_t y_neutral_servo = readADC(0x1d);
 
 
 
@@ -30068,22 +30083,35 @@ WPUBbits.WPUB0 = 1;
     uint16_t limit1 = 500;
     uint16_t limit2 = 1500;
     uint16_t limit3 = 2000;
-
-
+# 157 "main.c"
     while(1)
     {
         LATFbits.LATF3 =0;
-          uint16_t x_axis = readADC(0x1e);
+          uint16_t x_axis = readADC(0x1b);
         _delay((unsigned long)((20)*(64000000U/4000.0)));
-        uint16_t y_axis = readADC(0x1d);
+        uint16_t y_axis = readADC(0x1a);
         _delay((unsigned long)((20)*(64000000U/4000.0)));
 
-         uint16_t x_servo = readADC(0x2F);
+         uint16_t x_servo = readADC(0x1e);
         _delay((unsigned long)((20)*(64000000U/4000.0)));
-        uint16_t y_servo = readADC(0x2E);
+        uint16_t y_servo = readADC(0x1d);
         _delay((unsigned long)((20)*(64000000U/4000.0)));
-        uint16_t y_switch_servo = readADC(0x2D);
+
+
+        uint16_t y_switch_servo = readADC(0x1c);
         _delay((unsigned long)((20)*(64000000U/4000.0)));
+
+        uint16_t grab_switch = readADC(0x19);
+        _delay((unsigned long)((20)*(64000000U/4000.0)));
+
+        if (grab_switch!= 0x00){
+             DataTx[5] = 0xFF;
+        }
+        else{
+             DataTx[5] = 0x00;
+        }
+
+
         if (y_switch_servo!= 0x00){
              DataTx[4] = 0xFF;
         }

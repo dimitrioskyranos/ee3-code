@@ -60,10 +60,8 @@ uint8_t DataTx[32] = "Hello from pic";
 
 int main(void)
 {
-   
     SYSTEM_Initialize();
     
-
     // Enable the Global High Interrupts 
     //INTERRUPT_GlobalInterruptHighEnable(); 
     TMR0_Start();
@@ -98,10 +96,5 @@ int main(void)
             
             
         }
-     
-     
-         //LATFbits.LATF2 = ~ LATFbits.LATF2;
-     
-        
     }    
 }

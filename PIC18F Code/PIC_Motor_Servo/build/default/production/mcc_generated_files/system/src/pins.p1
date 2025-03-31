@@ -2810,14 +2810,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 64:     TRISC = 0xDF;
 [e = _TRISC -> -> 223 `i `uc ]
 "65
-[; ;mcc_generated_files/system/src/pins.c: 65:     TRISD = 0xF0;
-[e = _TRISD -> -> 240 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 65:     TRISD = 0xFF;
+[e = _TRISD -> -> 255 `i `uc ]
 "66
 [; ;mcc_generated_files/system/src/pins.c: 66:     TRISE = 0xF;
 [e = _TRISE -> -> 15 `i `uc ]
 "67
-[; ;mcc_generated_files/system/src/pins.c: 67:     TRISF = 0xF2;
-[e = _TRISF -> -> 242 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 67:     TRISF = 0xFF;
+[e = _TRISF -> -> 255 `i `uc ]
 "72
 [; ;mcc_generated_files/system/src/pins.c: 72:     ANSELA = 0xFF;
 [e = _ANSELA -> -> 255 `i `uc ]
@@ -2828,14 +2828,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 74:     ANSELC = 0xC7;
 [e = _ANSELC -> -> 199 `i `uc ]
 "75
-[; ;mcc_generated_files/system/src/pins.c: 75:     ANSELD = 0xE0;
-[e = _ANSELD -> -> 224 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 75:     ANSELD = 0xED;
+[e = _ANSELD -> -> 237 `i `uc ]
 "76
 [; ;mcc_generated_files/system/src/pins.c: 76:     ANSELE = 0x7;
 [e = _ANSELE -> -> 7 `i `uc ]
 "77
-[; ;mcc_generated_files/system/src/pins.c: 77:     ANSELF = 0xF2;
-[e = _ANSELF -> -> 242 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 77:     ANSELF = 0xFF;
+[e = _ANSELF -> -> 255 `i `uc ]
 "82
 [; ;mcc_generated_files/system/src/pins.c: 82:     WPUA = 0x0;
 [e = _WPUA -> -> 0 `i `uc ]

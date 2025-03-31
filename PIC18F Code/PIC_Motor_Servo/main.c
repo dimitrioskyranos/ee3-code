@@ -71,6 +71,7 @@ int main(void)
 {
    
     SYSTEM_Initialize();
+    //ADCON0 = %10000000;
     
 
     // Enable the Global High Interrupts 
@@ -80,34 +81,58 @@ int main(void)
     SPI1_Initialize();
     SPI1_Open(HOST_CONFIG);
     
-    TRISBbits.TRISB1 = 0;//CS pin
+    TRISBbits.TRISB1 = 0;//CE pin
     LATB1 = 1;
     
-    TRISBbits.TRISB2 = 0;//CE pin
+    TRISBbits.TRISB2 = 0;//CSN pin
     LATB2 = 0;
     
-    TRISFbits.TRISF0 = 0;//3.3V PWR
-    LATFbits.LATF0 = 1; 
-    
-    TRISFbits.TRISF3 = 0;//LED Toggle
-    TRISFbits.TRISF2 = 0;//LED Toggle
+//    TRISFbits.TRISF0 = 0;//3.3V PWR
+//    LATFbits.LATF0 = 1; 
+//    
+//    TRISFbits.TRISF3 = 0;//LED Toggle
+//    TRISFbits.TRISF2 = 0;//LED Toggle
     
 //    WPUBbits.WPUB = 1;  // Enable global weak pull-ups
-TRISBbits.TRISB0 = 1;  // Set RB0 as an input
-WPUBbits.WPUB0 = 1;    // Enable pull-up on RB0
+//TRISBbits.TRISB0 = 1;  // Set RB0 as an input
+//WPUBbits.WPUB0 = 1;    // Enable pull-up on RB0
+//TRISFbits.TRISF4 = 1;
+//WPUFbits.WPUF4 = 0;
     
+    TRISDbits.TRISD1 = 1 ;
+    
+    
+    
+    TRISDbits.TRISD2 = 1;
+    WPUDbits.WPUD2 = 1;
+    
+    
+    TRISDbits.TRISD3 = 1;
+    WPUDbits.WPUD3 = 1;
+    
+    
+    TRISDbits.TRISD4 = 1;
+    
+    
+    TRISDbits.TRISD5 = 1;
+    WPUDbits.WPUD5 = 1;
+    
+    
+    TRISDbits.TRISD6 = 1;
+    WPUDbits.WPUD6 = 1;
+//    
     init_NRF();
     NRF_TxMode(TxAddress, 122);
     initADC();
     
-    uint16_t x_neutral = readADC(0x1e); // Calibrate X-axis neutral value
+    uint16_t x_neutral = readADC(0x1b); // Calibrate X-axis neutral value
 //    __delay_ms(20);
-    uint16_t y_neutral = readADC(0x1d); // Calibrate Y-axis neutral value
+    uint16_t y_neutral = readADC(0x1a); // Calibrate Y-axis neutral value
 //    __delay_ms(20);
     
-    uint16_t x_neutral_servo = readADC(0x2F); // Calibrate X-axis neutral value
+    uint16_t x_neutral_servo = readADC(0x1e); // Calibrate X-axis neutral value
 //    __delay_ms(20);
-    uint16_t y_neutral_servo = readADC(0x2E); // Calibrate Y-axis neutral value
+    uint16_t y_neutral_servo = readADC(0x1d); // Calibrate Y-axis neutral value
 //    __delay_ms(20);
     
     
@@ -116,21 +141,47 @@ WPUBbits.WPUB0 = 1;    // Enable pull-up on RB0
     uint16_t limit2 = 1500;  // Moderate tilt (Medium speed)
     uint16_t limit3 = 2000; // Extreme tilt (High speed)
 
-
+/*
+ Motor Joystick: SW = D1 , VRy = D2 , VRx = D3
+ * 
+ * Servo Joystick: SW = D4, VRy = D5, VRx = D6
+ * 
+ * 
+ * NRF: CE = B1, CSN = B2, SCK = C3, MISO = C4, MOSI = C5
+ 
+ 
+ */
+    
+    
+    
     while(1)
     {
         LATFbits.LATF3 =0;
-          uint16_t x_axis = readADC(0x1e); // Joystick X-axis connected to D6
+          uint16_t x_axis = readADC(0x1b); // Joystick X-axis connected to D3
         __delay_ms(20);
-        uint16_t y_axis = readADC(0x1d); // Joystick Y-axis connected to D5
+        uint16_t y_axis = readADC(0x1a); // Joystick Y-axis connected to D2
         __delay_ms(20);
         
-         uint16_t x_servo = readADC(0x2F); // Servo Joystick X-Axis connected to F7
+         uint16_t x_servo = readADC(0x1e); // Servo Joystick X-Axis connected to D6
         __delay_ms(20);
-        uint16_t y_servo = readADC(0x2E); // Servo Joystick Y-Axis connected to F6
+        uint16_t y_servo = readADC(0x1d); // Servo Joystick Y-Axis connected to D5
         __delay_ms(20);
-        uint16_t y_switch_servo = readADC(0x2D); // Servo Joystick Switch connected to F5
+        
+        
+        uint16_t y_switch_servo = readADC(0x1c); // Servo Joystick Switch connected to D4
         __delay_ms(20);
+//        
+        uint16_t grab_switch = readADC(0x19); // Motor Joystick Switch connected to D1
+        __delay_ms(20);
+//        
+        if (grab_switch!= 0x00){
+             DataTx[5] = 0xFF;
+        }
+        else{
+             DataTx[5] = 0x00;
+        }
+        
+        
         if (y_switch_servo!= 0x00){
              DataTx[4] = 0xFF;
         }

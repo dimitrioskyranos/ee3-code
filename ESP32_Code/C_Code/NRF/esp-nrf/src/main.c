@@ -15,7 +15,7 @@
     #define MISO_PIN       12
     #define SCLK_PIN       14
     #define CS_PIN         11
-    #define CE_PIN         18 
+    #define CE_PIN         4 
 
     spi_device_handle_t spi;
 

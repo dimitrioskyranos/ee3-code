@@ -29523,9 +29523,7 @@ uint8_t DataTx[32] = "Hello from pic";
 
 int main(void)
 {
-
     SYSTEM_Initialize();
-
 
 
 
@@ -29561,10 +29559,5 @@ int main(void)
 
 
         }
-
-
-
-
-
     }
 }

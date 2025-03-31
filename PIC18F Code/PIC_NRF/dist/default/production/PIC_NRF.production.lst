@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.50 build 20240725155939 
-                                                                                               Tue Feb 11 22:37:42 2025
+                                                                                               Mon Mar 31 16:31:12 2025
 
 Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1 
      1                           	processor	18F57Q43
@@ -7534,50 +7534,50 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   7510   0027A0                     _main:
   7511                           	callstack 121
   7512   0027A0                     
-  7513                           ;main.c: 64:     SYSTEM_Initialize();
+  7513                           ;main.c: 63:     SYSTEM_Initialize();
   7514   0027A0  EC5C  F016         	call	_SYSTEM_Initialize	;wreg free
   7515   0027A4                     
-  7516                           ;main.c: 69:     TMR0_Start();
+  7516                           ;main.c: 67:     TMR0_Start();
   7517   0027A4  EC9A  F016         	call	_TMR0_Start	;wreg free
   7518   0027A8                     
-  7519                           ;main.c: 70:     TMR0_TMRInterruptEnable();
+  7519                           ;main.c: 68:     TMR0_TMRInterruptEnable();
   7520   0027A8  EC9D  F016         	call	_TMR0_TMRInterruptEnable	;wreg free
   7521   0027AC                     
-  7522                           ;main.c: 71:     SPI1_Initialize();
+  7522                           ;main.c: 69:     SPI1_Initialize();
   7523   0027AC  EC2B  F016         	call	_SPI1_Initialize	;wreg free
   7524   0027B0                     
-  7525                           ;main.c: 72:     SPI1_Open(HOST_CONFIG);
+  7525                           ;main.c: 70:     SPI1_Open(HOST_CONFIG);
   7526   0027B0  0E00               	movlw	0
   7527   0027B2  EC1B  F013         	call	_SPI1_Open
   7528   0027B6                     
-  7529                           ;main.c: 74:     TRISDbits.TRISD3 = 0;
+  7529                           ;main.c: 72:     TRISDbits.TRISD3 = 0;
   7530   0027B6  96C9               	bcf	201,3,c	;volatile
   7531   0027B8                     
-  7532                           ;main.c: 75:     LATD3 = 1;
+  7532                           ;main.c: 73:     LATD3 = 1;
   7533   0027B8  86C1               	bsf	1217,3,c	;volatile
   7534   0027BA                     
-  7535                           ;main.c: 77:     TRISDbits.TRISD2 = 0;
+  7535                           ;main.c: 75:     TRISDbits.TRISD2 = 0;
   7536   0027BA  94C9               	bcf	201,2,c	;volatile
   7537   0027BC                     
-  7538                           ;main.c: 78:     LATD2 = 0;
+  7538                           ;main.c: 76:     LATD2 = 0;
   7539   0027BC  94C1               	bcf	1217,2,c	;volatile
   7540   0027BE                     
-  7541                           ;main.c: 80:     TRISFbits.TRISF0 = 0;
+  7541                           ;main.c: 78:     TRISFbits.TRISF0 = 0;
   7542   0027BE  90CB               	bcf	203,0,c	;volatile
   7543   0027C0                     
-  7544                           ;main.c: 81:     LATFbits.LATF0 = 1;
+  7544                           ;main.c: 79:     LATFbits.LATF0 = 1;
   7545   0027C0  80C3               	bsf	195,0,c	;volatile
   7546   0027C2                     
-  7547                           ;main.c: 83:     TRISFbits.TRISF3 = 0;
+  7547                           ;main.c: 81:     TRISFbits.TRISF3 = 0;
   7548   0027C2  96CB               	bcf	203,3,c	;volatile
   7549   0027C4                     
-  7550                           ;main.c: 84:     TRISFbits.TRISF2 = 0;
+  7550                           ;main.c: 82:     TRISFbits.TRISF2 = 0;
   7551   0027C4  94CB               	bcf	203,2,c	;volatile
   7552   0027C6                     
-  7553                           ;main.c: 86:     init_NRF();
+  7553                           ;main.c: 84:     init_NRF();
   7554   0027C6  EC87  F014         	call	_init_NRF	;wreg free
   7555   0027CA                     
-  7556                           ;main.c: 87:     NRF_TxMode(TxAddress, 122);
+  7556                           ;main.c: 85:     NRF_TxMode(TxAddress, 122);
   7557   0027CA  0E30               	movlw	low _TxAddress
   7558   0027CC  6E44               	movwf	NRF_TxMode@Address^(0+1280),c
   7559   0027CE  0E05               	movlw	high _TxAddress
@@ -7587,10 +7587,10 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   7563   0027D6  EC0C  F015         	call	_NRF_TxMode	;wreg free
   7564   0027DA                     l2115:
   7565                           
-  7566                           ;main.c: 91:     {;main.c: 92:         LATFbits.LATF3 =0;
+  7566                           ;main.c: 89:     {;main.c: 90:         LATFbits.LATF3 =0;
   7567   0027DA  96C3               	bcf	195,3,c	;volatile
   7568   0027DC                     
-  7569                           ;main.c: 93:      if(nrf_send_data(DataTx) == 1)
+  7569                           ;main.c: 91:      if(nrf_send_data(DataTx) == 1)
   7570   0027DC  0E10               	movlw	low _DataTx
   7571   0027DE  6E42               	movwf	nrf_send_data@data^(0+1280),c
   7572   0027E0  0E05               	movlw	high _DataTx
@@ -7604,10 +7604,10 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   7580   0027F4  EFED  F013         	goto	l2115
   7581   0027F8                     u490:
   7582   0027F8                     
-  7583                           ;main.c: 94:         {;main.c: 95:             LATFbits.LATF3 =1;
+  7583                           ;main.c: 92:         {;main.c: 93:             LATFbits.LATF3 =1;
   7584   0027F8  86C3               	bsf	195,3,c	;volatile
   7585   0027FA                     
-  7586                           ;main.c: 96:             _delay((unsigned long)((1000)*(64000000U/4000.0)));
+  7586                           ;main.c: 94:             _delay((unsigned long)((1000)*(64000000U/4000.0)));
   7587   0027FA  0E52               	movlw	82
   7588   0027FC  0105               	movlb	5	; () banked
   7589   0027FE  6F66               	movwf	(??_main+1)& (0+255),b
@@ -12685,7 +12685,7 @@ DATA                 0      0      93      0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.50 build 20240725155939 
-Symbol Table                                                                                   Tue Feb 11 22:37:42 2025
+Symbol Table                                                                                   Mon Mar 31 16:31:12 2025
 
                        _SPI1_ByteExchange 2BEC                                        l61 2C6C  
                                       l67 26FE                                        l69 26FE  

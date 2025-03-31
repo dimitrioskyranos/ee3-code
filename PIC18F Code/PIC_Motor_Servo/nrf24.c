@@ -2,22 +2,22 @@
 
 void CS_unselect(void)
 {
-    LATBbits.LATB1 = 1;
+    LATBbits.LATB2 = 1;
 }
 
 void CS_select(void)
 {
-    LATBbits.LATB1 = 0;
+    LATBbits.LATB2 = 0;
 }
 
 void CE_disable(void)
 {
-    LATBbits.LATB2 = 0;
+    LATBbits.LATB1 = 0;
 }
 
 void CE_enable(void)
 {
-    LATBbits.LATB2 = 1;
+    LATBbits.LATB1 = 1;
 }
 
 void nrf24_writeReg(uint8_t reg, uint8_t data)

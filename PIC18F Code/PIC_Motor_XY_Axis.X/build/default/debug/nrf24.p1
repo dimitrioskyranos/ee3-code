@@ -1,15 +1,15 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"48929 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48929:     struct {
-[s S2284 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2284 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"48928
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48928: typedef union {
-[u S2283 `S2284 1 ]
-[n S2283 . . ]
-"48940
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48940: extern volatile LATBbits_t LATBbits __attribute__((address(0x4BF)));
-[v _LATBbits `VS2283 ~T0 @X0 0 e@1215 ]
+"49053 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49053:     struct {
+[s S2288 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2288 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"49052
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49052: typedef union {
+[u S2287 `S2288 1 ]
+[n S2287 . . ]
+"49064
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49064: extern volatile LATDbits_t LATDbits __attribute__((address(0x4C1)));
+[v _LATDbits `VS2287 ~T0 @X0 0 e@1217 ]
 "193 ./mcc_generated_files/system/../spi/spi1.h
 [; ;./mcc_generated_files/system/../spi/spi1.h: 193: uint8_t SPI1_ByteExchange(uint8_t byteData);
 [v _SPI1_ByteExchange `(uc ~T0 @X0 0 ef1`uc ]
@@ -2593,8 +2593,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CS_unselect ]
 [f ]
 "5
-[; ;nrf24.c: 5:     LATBbits.LATB1 = 1;
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+[; ;nrf24.c: 5:     LATDbits.LATD2 = 1;
+[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
 "6
 [; ;nrf24.c: 6: }
 [e :UE 2414 ]
@@ -2608,8 +2608,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CS_select ]
 [f ]
 "10
-[; ;nrf24.c: 10:     LATBbits.LATB1 = 0;
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;nrf24.c: 10:     LATDbits.LATD2 = 0;
+[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
 "11
 [; ;nrf24.c: 11: }
 [e :UE 2415 ]
@@ -2623,8 +2623,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CE_disable ]
 [f ]
 "15
-[; ;nrf24.c: 15:     LATBbits.LATB2 = 0;
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[; ;nrf24.c: 15:     LATDbits.LATD3 = 0;
+[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
 "16
 [; ;nrf24.c: 16: }
 [e :UE 2416 ]
@@ -2638,8 +2638,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CE_enable ]
 [f ]
 "20
-[; ;nrf24.c: 20:     LATBbits.LATB2 = 1;
-[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+[; ;nrf24.c: 20:     LATDbits.LATD3 = 1;
+[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
 "21
 [; ;nrf24.c: 21: }
 [e :UE 2417 ]

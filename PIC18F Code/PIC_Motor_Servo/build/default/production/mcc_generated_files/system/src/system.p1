@@ -2,11 +2,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56 mcc_generated_files/system/src/../../system/clock.h
 [; ;mcc_generated_files/system/src/../../system/clock.h: 56: void CLOCK_Initialize(void);
 [v _CLOCK_Initialize `(v ~T0 @X0 0 ef ]
-"318 mcc_generated_files/system/src/../../system/pins.h
-[; ;mcc_generated_files/system/src/../../system/pins.h: 318: void PIN_MANAGER_Initialize (void);
+"238 mcc_generated_files/system/src/../../system/pins.h
+[; ;mcc_generated_files/system/src/../../system/pins.h: 238: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"62 mcc_generated_files/system/src/../../adc/adc.h
-[; ;mcc_generated_files/system/src/../../adc/adc.h: 62: void ADC_Initialize(void);
+"74 mcc_generated_files/system/src/../../adc/adc.h
+[; ;mcc_generated_files/system/src/../../adc/adc.h: 74: void ADC_Initialize(void);
 [v _ADC_Initialize `(v ~T0 @X0 0 ef ]
 "169 mcc_generated_files/system/src/../../timer/tmr0.h
 [; ;mcc_generated_files/system/src/../../timer/tmr0.h: 169: void TMR0_Initialize(void);

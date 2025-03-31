@@ -30014,22 +30014,22 @@ void SYSTEM_Initialize(void);
 
 void CS_unselect(void)
 {
-    LATBbits.LATB1 = 1;
+    LATDbits.LATD2 = 1;
 }
 
 void CS_select(void)
 {
-    LATBbits.LATB1 = 0;
+    LATDbits.LATD2 = 0;
 }
 
 void CE_disable(void)
 {
-    LATBbits.LATB2 = 0;
+    LATDbits.LATD3 = 0;
 }
 
 void CE_enable(void)
 {
-    LATBbits.LATB2 = 1;
+    LATDbits.LATD3 = 1;
 }
 
 void nrf24_writeReg(uint8_t reg, uint8_t data)

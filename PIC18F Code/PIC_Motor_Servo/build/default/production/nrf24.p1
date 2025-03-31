@@ -2593,8 +2593,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CS_unselect ]
 [f ]
 "5
-[; ;nrf24.c: 5:     LATBbits.LATB1 = 1;
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+[; ;nrf24.c: 5:     LATBbits.LATB2 = 1;
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
 "6
 [; ;nrf24.c: 6: }
 [e :UE 2414 ]
@@ -2608,8 +2608,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CS_select ]
 [f ]
 "10
-[; ;nrf24.c: 10:     LATBbits.LATB1 = 0;
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;nrf24.c: 10:     LATBbits.LATB2 = 0;
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
 "11
 [; ;nrf24.c: 11: }
 [e :UE 2415 ]
@@ -2623,8 +2623,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CE_disable ]
 [f ]
 "15
-[; ;nrf24.c: 15:     LATBbits.LATB2 = 0;
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[; ;nrf24.c: 15:     LATBbits.LATB1 = 0;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 "16
 [; ;nrf24.c: 16: }
 [e :UE 2416 ]
@@ -2638,8 +2638,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CE_enable ]
 [f ]
 "20
-[; ;nrf24.c: 20:     LATBbits.LATB2 = 1;
-[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+[; ;nrf24.c: 20:     LATBbits.LATB1 = 1;
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 "21
 [; ;nrf24.c: 21: }
 [e :UE 2417 ]
@@ -3045,8 +3045,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "176
 [; ;nrf24.c: 176:         nrf24_writeReg(0x09, 0x00);
 [e ( _nrf24_writeReg (2 , -> -> 9 `i `uc -> -> 0 `i `uc ]
-[v F17444 `uc ~T0 @X0 -> 5 `i s ]
-[i F17444
+[v F17446 `uc ~T0 @X0 -> 5 `i s ]
+[i F17446
 :U ..
 "177
 [; ;nrf24.c: 177:         uint8_t rx_addr_p0_def[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
@@ -3058,12 +3058,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rx_addr_p0_def `uc ~T0 @X0 -> 5 `i a ]
-[e = _rx_addr_p0_def F17444 ]
+[e = _rx_addr_p0_def F17446 ]
 "178
 [; ;nrf24.c: 178:         nrf24_writeRegMulti(0x0A, rx_addr_p0_def, 5);
 [e ( _nrf24_writeRegMulti (3 , , -> -> 10 `i `uc &U _rx_addr_p0_def -> -> 5 `i `ui ]
-[v F17446 `uc ~T0 @X0 -> 5 `i s ]
-[i F17446
+[v F17448 `uc ~T0 @X0 -> 5 `i s ]
+[i F17448
 :U ..
 "179
 [; ;nrf24.c: 179:         uint8_t rx_addr_p1_def[5] = {0xC2, 0xC2, 0xC2, 0xC2, 0xC2};
@@ -3075,7 +3075,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rx_addr_p1_def `uc ~T0 @X0 -> 5 `i a ]
-[e = _rx_addr_p1_def F17446 ]
+[e = _rx_addr_p1_def F17448 ]
 "180
 [; ;nrf24.c: 180:         nrf24_writeRegMulti(0x0B, rx_addr_p1_def, 5);
 [e ( _nrf24_writeRegMulti (3 , , -> -> 11 `i `uc &U _rx_addr_p1_def -> -> 5 `i `ui ]
@@ -3091,8 +3091,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "184
 [; ;nrf24.c: 184:         nrf24_writeReg(0x0F, 0xC6);
 [e ( _nrf24_writeReg (2 , -> -> 15 `i `uc -> -> 198 `i `uc ]
-[v F17448 `uc ~T0 @X0 -> 5 `i s ]
-[i F17448
+[v F17450 `uc ~T0 @X0 -> 5 `i s ]
+[i F17450
 :U ..
 "185
 [; ;nrf24.c: 185:         uint8_t tx_addr_def[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
@@ -3104,7 +3104,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _tx_addr_def `uc ~T0 @X0 -> 5 `i a ]
-[e = _tx_addr_def F17448 ]
+[e = _tx_addr_def F17450 ]
 "186
 [; ;nrf24.c: 186:         nrf24_writeRegMulti(0x10, tx_addr_def, 5);
 [e ( _nrf24_writeRegMulti (3 , , -> -> 16 `i `uc &U _tx_addr_def -> -> 5 `i `ui ]

@@ -15,8 +15,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "150
 [; ;./mcc_generated_files/system/../spi/spi1.h: 150: _Bool SPI1_Open(uint8_t spiConfigIndex);
 [v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
-"72 main.c
-[; ;main.c: 72:     SPI1_Open(HOST_CONFIG);
+"70 main.c
+[; ;main.c: 70:     SPI1_Open(HOST_CONFIG);
 [c E17162 0 1 .. ]
 [n E17162 . HOST_CONFIG SPI1_DEFAULT  ]
 "49395 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
@@ -2685,83 +2685,83 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _main ]
 [f ]
-"64
-[; ;main.c: 64:     SYSTEM_Initialize();
+"63
+[; ;main.c: 63:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"69
-[; ;main.c: 69:     TMR0_Start();
+"67
+[; ;main.c: 67:     TMR0_Start();
 [e ( _TMR0_Start ..  ]
-"70
-[; ;main.c: 70:     TMR0_TMRInterruptEnable();
+"68
+[; ;main.c: 68:     TMR0_TMRInterruptEnable();
 [e ( _TMR0_TMRInterruptEnable ..  ]
-"71
-[; ;main.c: 71:     SPI1_Initialize();
+"69
+[; ;main.c: 69:     SPI1_Initialize();
 [e ( _SPI1_Initialize ..  ]
-"72
-[; ;main.c: 72:     SPI1_Open(HOST_CONFIG);
+"70
+[; ;main.c: 70:     SPI1_Open(HOST_CONFIG);
 [e ( _SPI1_Open (1 -> . `E17162 0 `uc ]
-"74
-[; ;main.c: 74:     TRISDbits.TRISD3 = 0;
+"72
+[; ;main.c: 72:     TRISDbits.TRISD3 = 0;
 [e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:     LATD3 = 1;
+"73
+[; ;main.c: 73:     LATD3 = 1;
 [e = _LATD3 -> -> 1 `i `b ]
-"77
-[; ;main.c: 77:     TRISDbits.TRISD2 = 0;
+"75
+[; ;main.c: 75:     TRISDbits.TRISD2 = 0;
 [e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-"78
-[; ;main.c: 78:     LATD2 = 0;
+"76
+[; ;main.c: 76:     LATD2 = 0;
 [e = _LATD2 -> -> 0 `i `b ]
-"80
-[; ;main.c: 80:     TRISFbits.TRISF0 = 0;
+"78
+[; ;main.c: 78:     TRISFbits.TRISF0 = 0;
 [e = . . _TRISFbits 0 0 -> -> 0 `i `uc ]
-"81
-[; ;main.c: 81:     LATFbits.LATF0 = 1;
+"79
+[; ;main.c: 79:     LATFbits.LATF0 = 1;
 [e = . . _LATFbits 0 0 -> -> 1 `i `uc ]
-"83
-[; ;main.c: 83:     TRISFbits.TRISF3 = 0;
+"81
+[; ;main.c: 81:     TRISFbits.TRISF3 = 0;
 [e = . . _TRISFbits 0 3 -> -> 0 `i `uc ]
-"84
-[; ;main.c: 84:     TRISFbits.TRISF2 = 0;
+"82
+[; ;main.c: 82:     TRISFbits.TRISF2 = 0;
 [e = . . _TRISFbits 0 2 -> -> 0 `i `uc ]
-"86
-[; ;main.c: 86:     init_NRF();
+"84
+[; ;main.c: 84:     init_NRF();
 [e ( _init_NRF ..  ]
-"87
-[; ;main.c: 87:     NRF_TxMode(TxAddress, 122);
+"85
+[; ;main.c: 85:     NRF_TxMode(TxAddress, 122);
 [e ( _NRF_TxMode (2 , &U _TxAddress -> -> 122 `i `uc ]
-"90
-[; ;main.c: 90:     while(1)
+"88
+[; ;main.c: 88:     while(1)
 [e :U 2416 ]
-"91
-[; ;main.c: 91:     {
+"89
+[; ;main.c: 89:     {
 {
-"92
-[; ;main.c: 92:         LATFbits.LATF3 =0;
+"90
+[; ;main.c: 90:         LATFbits.LATF3 =0;
 [e = . . _LATFbits 0 3 -> -> 0 `i `uc ]
-"93
-[; ;main.c: 93:      if(nrf_send_data(DataTx) == 1)
+"91
+[; ;main.c: 91:      if(nrf_send_data(DataTx) == 1)
 [e $ ! == -> ( _nrf_send_data (1 &U _DataTx `i -> 1 `i 2418  ]
-"94
-[; ;main.c: 94:         {
+"92
+[; ;main.c: 92:         {
 {
-"95
-[; ;main.c: 95:             LATFbits.LATF3 =1;
+"93
+[; ;main.c: 93:             LATFbits.LATF3 =1;
 [e = . . _LATFbits 0 3 -> -> 1 `i `uc ]
-"96
-[; ;main.c: 96:             _delay((unsigned long)((1000)*(64000000U/4000.0)));
+"94
+[; ;main.c: 94:             _delay((unsigned long)((1000)*(64000000U/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `ul `d .4000.0 `ul ]
-"100
-[; ;main.c: 100:         }
+"98
+[; ;main.c: 98:         }
 }
 [e :U 2418 ]
-"106
-[; ;main.c: 106:     }
+"99
+[; ;main.c: 99:     }
 }
 [e :U 2415 ]
 [e $U 2416  ]
 [e :U 2417 ]
-"107
-[; ;main.c: 107: }
+"100
+[; ;main.c: 100: }
 [e :UE 2414 ]
 }

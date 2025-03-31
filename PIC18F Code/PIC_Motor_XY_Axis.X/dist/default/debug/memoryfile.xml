@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug\PIC_Dual_ADC.debug.hex">
+  <executable name="dist/default/debug\PIC_Motor_XY_Axis.X.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>
-      <used>2668</used>
-      <free>128404</free>
+      <used>2420</used>
+      <free>128652</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>8192</length>
-      <used>112</used>
-      <free>8080</free>
+      <used>102</used>
+      <free>8090</free>
     </memory>
   </executable>
 </project>

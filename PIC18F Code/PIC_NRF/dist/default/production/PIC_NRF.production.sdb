@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"72 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_NRF\main.c
+"70 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_NRF\main.c
 [e E17162 . `uc
 HOST_CONFIG 0
 SPI1_DEFAULT 1
@@ -581,7 +581,7 @@ SPI1_DEFAULT 1
 "61 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_NRF\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"107
+"100
 } 0
 "122 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_NRF\nrf24.c
 [v _nrf_send_data nrf_send_data `(uc  1 e 1 0 ]

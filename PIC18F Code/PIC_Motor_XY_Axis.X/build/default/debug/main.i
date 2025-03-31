@@ -30017,7 +30017,7 @@ uint16_t readADC(uint8_t channel);
 uint16_t readRelativeADC(uint8_t channel);
 # 66 "main.c"
 uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
-uint8_t DataTx[32];
+uint8_t DataTx[32] = "Hello";
 uint16_t baselineValue = 0;
 
 int main(void)
@@ -30033,11 +30033,11 @@ int main(void)
     SPI1_Initialize();
     SPI1_Open(HOST_CONFIG);
 
-    TRISBbits.TRISB1 = 0;
-    LATB1 = 1;
+    TRISDbits.TRISD2 = 0;
+    LATD2 = 1;
 
-    TRISBbits.TRISB2 = 0;
-    LATB2 = 0;
+    TRISDbits.TRISD3 = 0;
+    LATD3 = 0;
 
     TRISFbits.TRISF0 = 0;
     LATFbits.LATF0 = 1;
@@ -30058,45 +30058,14 @@ WPUBbits.WPUB0 = 1;
     uint16_t y_neutral = readADC(0x1d);
     _delay((unsigned long)((20)*(64000000U/4000.0)));
 
-    uint16_t limit = 500;
+    uint16_t limit1 = 500;
+uint16_t limit2 = 1500;
+uint16_t limit3 = 2000;
 
 
     while(1)
     {
-        LATFbits.LATF3 =0;
-          uint16_t y_axis = readADC(0x1e);
-        _delay((unsigned long)((20)*(64000000U/4000.0)));
-        uint16_t x_axis = readADC(0x1d);
-        _delay((unsigned long)((20)*(64000000U/4000.0)));
-
-
-
-        if (x_axis > x_neutral + limit) {
-            DataTx[1] = 0xFF;
-        }
-        else if (x_axis < x_neutral - limit) {
-            DataTx[1] = 0x00;
-        }
-        else {
-            DataTx[1] = 0x80;
-        }
-
-
-
-
-        if (y_axis > y_neutral + limit) {
-            DataTx[0] = 0xFF;
-        }
-        else if (y_axis < y_neutral - limit) {
-            DataTx[0] = 0x00;
-        }
-        else {
-            DataTx[0] = 0x80;
-        }
-
-        _delay((unsigned long)((50)*(64000000U/4000.0)));
-
-
+# 177 "main.c"
      if(nrf_send_data(DataTx) == 1)
         {
             LATFbits.LATF3 =1;
