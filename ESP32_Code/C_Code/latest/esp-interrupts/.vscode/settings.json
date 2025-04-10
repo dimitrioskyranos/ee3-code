@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "esp_err.h": "c",
+        "random": "c",
+        "freertos.h": "c"
+    }
+}
