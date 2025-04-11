@@ -6,7 +6,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 38325: extern volatile unsigned char ADRESL __attribute__((address(0x3EA)));
 [v _ADRESL `Vuc ~T0 @X0 0 e@1002 ]
 "47 main.c
-[; ;main.c: 47: void readADC(uint8_t channel);
+[; ;main.c: 47:    void readADC(uint8_t channel);
 [v _readADC `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
 "58 ./mcc_generated_files/system/system.h
@@ -47,8 +47,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "150
 [; ;./mcc_generated_files/system/../spi/spi1.h: 150: _Bool SPI1_Open(uint8_t spiConfigIndex);
 [v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
-"322 main.c
-[; ;main.c: 322:     SPI1_Open(HOST_CONFIG);
+"319 main.c
+[; ;main.c: 319:        SPI1_Open(HOST_CONFIG);
 [c E17163 0 1 .. ]
 [n E17163 . HOST_CONFIG SPI1_DEFAULT  ]
 "49271 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
@@ -119,7 +119,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/system/../../nrf24.h: 57: void NRF_TxMode(uint8_t *Address, uint8_t channel);
 [v _NRF_TxMode `(v ~T0 @X0 0 ef2`*uc`uc ]
 "46 main.c
-[; ;main.c: 46: void initADC(void);
+[; ;main.c: 46:    void initADC(void);
 [v _initADC `(v ~T0 @X0 0 ef ]
 [v F17365 `(v ~T0 @X0 0 tf ]
 "482 ./mcc_generated_files/system/../adc/adc.h
@@ -167,17 +167,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38573
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 38573: extern volatile unsigned char ADPCH __attribute__((address(0x3EC)));
 [v _ADPCH `Vuc ~T0 @X0 0 e@1004 ]
-"48045
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48045:     struct {
-[s S2252 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2252 . INT0IF ZCDIF ADIF ACTIF C1IF SMT1IF SMT1PRAIF SMT1PWAIF ]
-"48044
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48044: typedef union {
-[u S2251 `S2252 1 ]
-[n S2251 . . ]
-"48056
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48056: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x4AF)));
-[v _PIR1bits `VS2251 ~T0 @X0 0 e@1199 ]
 "328 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2750,8 +2739,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
 "42 ./mcc_generated_files/system/../adc/adc.h
-[; ;./mcc_generated_files/system/../adc/adc.h: 42: volatile _Bool conversion_done = 0;
-[v _conversion_done `Va ~T0 @X0 1 e ]
+[; ;./mcc_generated_files/system/../adc/adc.h: 42:  _Bool conversion_done = 0;
+[v _conversion_done `a ~T0 @X0 1 e ]
 [i _conversion_done
 -> -> 0 `i `a
 ]
@@ -2762,118 +2751,118 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `a
 ]
 "48 main.c
-[; ;main.c: 48: uint16_t result;
+[; ;main.c: 48:    uint16_t result;
 [v _result `us ~T0 @X0 1 e ]
 "49
-[; ;main.c: 49: int sample_byte = 0;
+[; ;main.c: 49:    int sample_byte = 0;
 [v _sample_byte `i ~T0 @X0 1 e ]
 [i _sample_byte
 -> 0 `i
 ]
 "50
-[; ;main.c: 50: _Bool sample_neutrals_done = 0;
+[; ;main.c: 50:    _Bool sample_neutrals_done = 0;
 [v _sample_neutrals_done `a ~T0 @X0 1 e ]
 [i _sample_neutrals_done
 -> -> 0 `i `a
 ]
 "51
-[; ;main.c: 51: _Bool sample_neutrals_busy = 0;
+[; ;main.c: 51:    _Bool sample_neutrals_busy = 0;
 [v _sample_neutrals_busy `a ~T0 @X0 1 e ]
 [i _sample_neutrals_busy
 -> -> 0 `i `a
 ]
 "52
-[; ;main.c: 52: _Bool sample_cycle_done = 0;
+[; ;main.c: 52:    _Bool sample_cycle_done = 0;
 [v _sample_cycle_done `a ~T0 @X0 1 e ]
 [i _sample_cycle_done
 -> -> 0 `i `a
 ]
 "53
-[; ;main.c: 53: _Bool sample_cycle_busy = 0;
+[; ;main.c: 53:    _Bool sample_cycle_busy = 0;
 [v _sample_cycle_busy `a ~T0 @X0 1 e ]
 [i _sample_cycle_busy
 -> -> 0 `i `a
 ]
 "58
-[; ;main.c: 58: int delta_y_motor;
+[; ;main.c: 58:    int delta_y_motor;
 [v _delta_y_motor `i ~T0 @X0 1 e ]
 "59
-[; ;main.c: 59: int delta_x_motor;
+[; ;main.c: 59:    int delta_x_motor;
 [v _delta_x_motor `i ~T0 @X0 1 e ]
 "60
-[; ;main.c: 60: int delta_x_servo;
+[; ;main.c: 60:    int delta_x_servo;
 [v _delta_x_servo `i ~T0 @X0 1 e ]
 "61
-[; ;main.c: 61: int delta_y_servo;
+[; ;main.c: 61:    int delta_y_servo;
 [v _delta_y_servo `i ~T0 @X0 1 e ]
 "64
-[; ;main.c: 64:  uint16_t x_neutral;
+[; ;main.c: 64:     uint16_t x_neutral;
 [v _x_neutral `us ~T0 @X0 1 e ]
 "66
-[; ;main.c: 66:     uint16_t y_neutral;
+[; ;main.c: 66:        uint16_t y_neutral;
 [v _y_neutral `us ~T0 @X0 1 e ]
 "69
-[; ;main.c: 69:     uint16_t x_neutral_servo;
+[; ;main.c: 69:        uint16_t x_neutral_servo;
 [v _x_neutral_servo `us ~T0 @X0 1 e ]
 "71
-[; ;main.c: 71:     uint16_t y_neutral_servo;
+[; ;main.c: 71:        uint16_t y_neutral_servo;
 [v _y_neutral_servo `us ~T0 @X0 1 e ]
 "72
-[; ;main.c: 72:     uint16_t x_axis;
+[; ;main.c: 72:        uint16_t x_axis;
 [v _x_axis `us ~T0 @X0 1 e ]
 "74
-[; ;main.c: 74:         uint16_t y_axis;
+[; ;main.c: 74:            uint16_t y_axis;
 [v _y_axis `us ~T0 @X0 1 e ]
 "77
-[; ;main.c: 77:          uint16_t x_servo;
+[; ;main.c: 77:             uint16_t x_servo;
 [v _x_servo `us ~T0 @X0 1 e ]
 "79
-[; ;main.c: 79:         uint16_t y_servo;
+[; ;main.c: 79:            uint16_t y_servo;
 [v _y_servo `us ~T0 @X0 1 e ]
 "81
-[; ;main.c: 81:         uint16_t y_switch_servo;
+[; ;main.c: 81:            uint16_t y_switch_servo;
 [v _y_switch_servo `us ~T0 @X0 1 e ]
 "84
-[; ;main.c: 84:         uint16_t grab_switch;
+[; ;main.c: 84:            uint16_t grab_switch;
 [v _grab_switch `us ~T0 @X0 1 e ]
 "85
-[; ;main.c: 85:     int limit1 = 500;
+[; ;main.c: 85:        int limit1 = 500;
 [v _limit1 `i ~T0 @X0 1 e ]
 [i _limit1
 -> 500 `i
 ]
 "86
-[; ;main.c: 86:     int limit2 = 1500;
+[; ;main.c: 86:        int limit2 = 1500;
 [v _limit2 `i ~T0 @X0 1 e ]
 [i _limit2
 -> 1500 `i
 ]
 "87
-[; ;main.c: 87:     int limit3 = 2000;
+[; ;main.c: 87:        int limit3 = 2000;
 [v _limit3 `i ~T0 @X0 1 e ]
 [i _limit3
 -> 2000 `i
 ]
 "90
-[; ;main.c: 90:     int limit1x = 300;
+[; ;main.c: 90:        int limit1x = 300;
 [v _limit1x `i ~T0 @X0 1 e ]
 [i _limit1x
 -> 300 `i
 ]
 "91
-[; ;main.c: 91:     int limit2x = 700;
+[; ;main.c: 91:        int limit2x = 700;
 [v _limit2x `i ~T0 @X0 1 e ]
 [i _limit2x
 -> 700 `i
 ]
 "92
-[; ;main.c: 92:     int limit3x = 1000;
+[; ;main.c: 92:        int limit3x = 1000;
 [v _limit3x `i ~T0 @X0 1 e ]
 [i _limit3x
 -> 1000 `i
 ]
 "110
-[; ;main.c: 110: uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
+[; ;main.c: 110:    uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
 [v _TxAddress `uc ~T0 @X0 -> 5 `i e ]
 [i _TxAddress
 :U ..
@@ -2885,171 +2874,171 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "111
-[; ;main.c: 111: uint8_t DataTx[32];
+[; ;main.c: 111:    uint8_t DataTx[32];
 [v _DataTx `uc ~T0 @X0 -> 32 `i e ]
 "112
-[; ;main.c: 112: uint16_t baselineValue = 0;
+[; ;main.c: 112:    uint16_t baselineValue = 0;
 [v _baselineValue `us ~T0 @X0 1 e ]
 [i _baselineValue
 -> -> 0 `i `us
 ]
 "113
-[; ;main.c: 113: void my_adc_conversion_done_handler(void)
+[; ;main.c: 113:    void my_adc_conversion_done_handler(void)
 [v _my_adc_conversion_done_handler `(v ~T0 @X0 1 ef ]
 "114
-[; ;main.c: 114: {
+[; ;main.c: 114:    {
 {
 [e :U _my_adc_conversion_done_handler ]
 [f ]
-"116
-[; ;main.c: 116:     result = (uint16_t)(ADRESH << 8) | ADRESL;
-[e = _result -> | -> -> << -> _ADRESH `i -> 8 `i `us `ui -> _ADRESL `ui `us ]
 "117
-[; ;main.c: 117:     conversion_done = 1;
+[; ;main.c: 117:        result = (uint16_t)(ADRESH << 8) | ADRESL;
+[e = _result -> | -> -> << -> _ADRESH `i -> 8 `i `us `ui -> _ADRESL `ui `us ]
+"118
+[; ;main.c: 118:        conversion_done = 1;
 [e = _conversion_done -> -> 1 `i `a ]
-"119
-[; ;main.c: 119: }
+"120
+[; ;main.c: 120:    }
 [e :UE 2414 ]
 }
-"121
-[; ;main.c: 121: void sample_neutral_values(int sample_byte_nr){
+"122
+[; ;main.c: 122:    void sample_neutral_values(int sample_byte_nr){
 [v _sample_neutral_values `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _sample_neutral_values ]
 [v _sample_byte_nr `i ~T0 @X0 1 r1 ]
 [f ]
-"122
-[; ;main.c: 122:     if (sample_byte_nr == 0){
+"123
+[; ;main.c: 123:        if (sample_byte_nr == 0){
 [e $ ! == _sample_byte_nr -> 0 `i 2416  ]
 {
-"123
-[; ;main.c: 123:         readADC(0x1F);
-[e ( _readADC (1 -> -> 31 `i `uc ]
 "124
-[; ;main.c: 124:     }
+[; ;main.c: 124:            readADC(0x1F);
+[e ( _readADC (1 -> -> 31 `i `uc ]
+"125
+[; ;main.c: 125:        }
 }
 [e $U 2417  ]
-"125
-[; ;main.c: 125:     else if(sample_byte_nr == 1){
+"126
+[; ;main.c: 126:        else if(sample_byte_nr == 1){
 [e :U 2416 ]
 [e $ ! == _sample_byte_nr -> 1 `i 2418  ]
 {
-"126
-[; ;main.c: 126:         readADC(0x1A);
-[e ( _readADC (1 -> -> 26 `i `uc ]
 "127
-[; ;main.c: 127:     }
+[; ;main.c: 127:            readADC(0x1A);
+[e ( _readADC (1 -> -> 26 `i `uc ]
+"128
+[; ;main.c: 128:        }
 }
 [e $U 2419  ]
-"128
-[; ;main.c: 128:     else if (sample_byte_nr == 2){
+"129
+[; ;main.c: 129:        else if (sample_byte_nr == 2){
 [e :U 2418 ]
 [e $ ! == _sample_byte_nr -> 2 `i 2420  ]
 {
-"129
-[; ;main.c: 129:         readADC(0x1E);
-[e ( _readADC (1 -> -> 30 `i `uc ]
 "130
-[; ;main.c: 130:     }
+[; ;main.c: 130:            readADC(0x1E);
+[e ( _readADC (1 -> -> 30 `i `uc ]
+"131
+[; ;main.c: 131:        }
 }
 [e $U 2421  ]
-"131
-[; ;main.c: 131:     else if (sample_byte_nr == 3){
+"132
+[; ;main.c: 132:        else if (sample_byte_nr == 3){
 [e :U 2420 ]
 [e $ ! == _sample_byte_nr -> 3 `i 2422  ]
 {
-"132
-[; ;main.c: 132:         readADC(0x1D);
-[e ( _readADC (1 -> -> 29 `i `uc ]
 "133
-[; ;main.c: 133:     }
+[; ;main.c: 133:            readADC(0x1D);
+[e ( _readADC (1 -> -> 29 `i `uc ]
+"134
+[; ;main.c: 134:        }
 }
 [e :U 2422 ]
 [e :U 2421 ]
 [e :U 2419 ]
 [e :U 2417 ]
-"134
-[; ;main.c: 134: }
+"135
+[; ;main.c: 135:    }
 [e :UE 2415 ]
 }
-"136
-[; ;main.c: 136: void sample_values( int sample_byte_nr){
+"137
+[; ;main.c: 137:    void sample_values( int sample_byte_nr){
 [v _sample_values `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _sample_values ]
 [v _sample_byte_nr `i ~T0 @X0 1 r1 ]
 [f ]
-"137
-[; ;main.c: 137: if (sample_byte_nr == 0){
+"138
+[; ;main.c: 138:    if (sample_byte_nr == 0){
 [e $ ! == _sample_byte_nr -> 0 `i 2424  ]
 {
-"138
-[; ;main.c: 138:         readADC(0x1F);
-[e ( _readADC (1 -> -> 31 `i `uc ]
 "139
-[; ;main.c: 139:     }
+[; ;main.c: 139:            readADC(0x1F);
+[e ( _readADC (1 -> -> 31 `i `uc ]
+"140
+[; ;main.c: 140:        }
 }
 [e $U 2425  ]
-"140
-[; ;main.c: 140:     else if(sample_byte_nr == 1){
+"141
+[; ;main.c: 141:        else if(sample_byte_nr == 1){
 [e :U 2424 ]
 [e $ ! == _sample_byte_nr -> 1 `i 2426  ]
 {
-"141
-[; ;main.c: 141:         readADC(0x1A);
-[e ( _readADC (1 -> -> 26 `i `uc ]
 "142
-[; ;main.c: 142:     }
+[; ;main.c: 142:            readADC(0x1A);
+[e ( _readADC (1 -> -> 26 `i `uc ]
+"143
+[; ;main.c: 143:        }
 }
 [e $U 2427  ]
-"143
-[; ;main.c: 143:     else if (sample_byte_nr == 2){
+"144
+[; ;main.c: 144:        else if (sample_byte_nr == 2){
 [e :U 2426 ]
 [e $ ! == _sample_byte_nr -> 2 `i 2428  ]
 {
-"144
-[; ;main.c: 144:         readADC(0x1E);
-[e ( _readADC (1 -> -> 30 `i `uc ]
 "145
-[; ;main.c: 145:     }
+[; ;main.c: 145:            readADC(0x1E);
+[e ( _readADC (1 -> -> 30 `i `uc ]
+"146
+[; ;main.c: 146:        }
 }
 [e $U 2429  ]
-"146
-[; ;main.c: 146:     else if (sample_byte_nr == 3){
+"147
+[; ;main.c: 147:        else if (sample_byte_nr == 3){
 [e :U 2428 ]
 [e $ ! == _sample_byte_nr -> 3 `i 2430  ]
 {
-"147
-[; ;main.c: 147:         readADC(0x1D);
-[e ( _readADC (1 -> -> 29 `i `uc ]
 "148
-[; ;main.c: 148:     }
+[; ;main.c: 148:            readADC(0x1D);
+[e ( _readADC (1 -> -> 29 `i `uc ]
+"149
+[; ;main.c: 149:        }
 }
 [e $U 2431  ]
-"151
-[; ;main.c: 151:     else if (sample_byte_nr == 4)
+"152
+[; ;main.c: 152:        else if (sample_byte_nr == 4)
 [e :U 2430 ]
 [e $ ! == _sample_byte_nr -> 4 `i 2432  ]
-"152
-[; ;main.c: 152:     {
-{
 "153
-[; ;main.c: 153:       readADC(0x1c);
-[e ( _readADC (1 -> -> 28 `i `uc ]
+[; ;main.c: 153:        {
+{
 "154
-[; ;main.c: 154:     }
+[; ;main.c: 154:          readADC(0x1c);
+[e ( _readADC (1 -> -> 28 `i `uc ]
+"155
+[; ;main.c: 155:        }
 }
 [e $U 2433  ]
-"155
-[; ;main.c: 155:     else if (sample_byte_nr == 5){
+"156
+[; ;main.c: 156:        else if (sample_byte_nr == 5){
 [e :U 2432 ]
 [e $ ! == _sample_byte_nr -> 5 `i 2434  ]
 {
-"156
-[; ;main.c: 156:         readADC(0x19);
-[e ( _readADC (1 -> -> 25 `i `uc ]
 "157
-[; ;main.c: 157:     }
+[; ;main.c: 157:            readADC(0x19);
+[e ( _readADC (1 -> -> 25 `i `uc ]
+"158
+[; ;main.c: 158:        }
 }
 [e :U 2434 ]
 [e :U 2433 ]
@@ -3057,143 +3046,143 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2429 ]
 [e :U 2427 ]
 [e :U 2425 ]
-"158
-[; ;main.c: 158: }
+"159
+[; ;main.c: 159:    }
 [e :UE 2423 ]
 }
-"162
-[; ;main.c: 162: void convert(){
+"163
+[; ;main.c: 163:    void convert(){
 [v _convert `(v ~T0 @X0 1 ef ]
 {
 [e :U _convert ]
 [f ]
-"179
-[; ;main.c: 179:         if (grab_switch!= 0x00){
+"180
+[; ;main.c: 180:            if (grab_switch!= 0x00){
 [e $ ! != -> _grab_switch `ui -> -> 0 `i `ui 2436  ]
 {
-"180
-[; ;main.c: 180:              DataTx[5] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 5 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
 "181
-[; ;main.c: 181:         }
+[; ;main.c: 181:                 DataTx[5] = 0xFF;
+[e = *U + &U _DataTx * -> -> -> 5 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
+"182
+[; ;main.c: 182:            }
 }
 [e $U 2437  ]
-"182
-[; ;main.c: 182:         else{
+"183
+[; ;main.c: 183:            else{
 [e :U 2436 ]
 {
-"183
-[; ;main.c: 183:              DataTx[5] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 5 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
 "184
-[; ;main.c: 184:         }
+[; ;main.c: 184:                 DataTx[5] = 0x00;
+[e = *U + &U _DataTx * -> -> -> 5 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+"185
+[; ;main.c: 185:            }
 }
 [e :U 2437 ]
-"187
-[; ;main.c: 187:         if (y_switch_servo!= 0x00){
+"188
+[; ;main.c: 188:            if (y_switch_servo!= 0x00){
 [e $ ! != -> _y_switch_servo `ui -> -> 0 `i `ui 2438  ]
 {
-"188
-[; ;main.c: 188:              DataTx[4] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 4 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
 "189
-[; ;main.c: 189:         }
+[; ;main.c: 189:                 DataTx[4] = 0xFF;
+[e = *U + &U _DataTx * -> -> -> 4 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
+"190
+[; ;main.c: 190:            }
 }
 [e $U 2439  ]
-"190
-[; ;main.c: 190:         else{
+"191
+[; ;main.c: 191:            else{
 [e :U 2438 ]
 {
-"191
-[; ;main.c: 191:              DataTx[4] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 4 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
 "192
-[; ;main.c: 192:         }
+[; ;main.c: 192:                 DataTx[4] = 0x00;
+[e = *U + &U _DataTx * -> -> -> 4 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+"193
+[; ;main.c: 193:            }
 }
 [e :U 2439 ]
-"197
-[; ;main.c: 197: delta_y_motor = (int)y_axis - (int)y_neutral;
+"198
+[; ;main.c: 198:    delta_y_motor = (int)y_axis - (int)y_neutral;
 [e = _delta_y_motor - -> _y_axis `i -> _y_neutral `i ]
-"200
-[; ;main.c: 200: if (delta_y_motor > limit3) {
+"201
+[; ;main.c: 201:    if (delta_y_motor > limit3) {
 [e $ ! > _delta_y_motor _limit3 2440  ]
 {
-"201
-[; ;main.c: 201:     DataTx[1] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
 "202
-[; ;main.c: 202: }
+[; ;main.c: 202:        DataTx[1] = 0xFF;
+[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
+"203
+[; ;main.c: 203:    }
 }
 [e $U 2441  ]
-"203
-[; ;main.c: 203: else if (delta_y_motor > limit2) {
+"204
+[; ;main.c: 204:    else if (delta_y_motor > limit2) {
 [e :U 2440 ]
 [e $ ! > _delta_y_motor _limit2 2442  ]
 {
-"204
-[; ;main.c: 204:     DataTx[1] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
 "205
-[; ;main.c: 205: }
+[; ;main.c: 205:        DataTx[1] = 0xE0;
+[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
+"206
+[; ;main.c: 206:    }
 }
 [e $U 2443  ]
-"206
-[; ;main.c: 206: else if (delta_y_motor > limit1) {
+"207
+[; ;main.c: 207:    else if (delta_y_motor > limit1) {
 [e :U 2442 ]
 [e $ ! > _delta_y_motor _limit1 2444  ]
 {
-"207
-[; ;main.c: 207:     DataTx[1] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
 "208
-[; ;main.c: 208: }
+[; ;main.c: 208:        DataTx[1] = 0xC0;
+[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
+"209
+[; ;main.c: 209:    }
 }
 [e $U 2445  ]
-"209
-[; ;main.c: 209: else if (delta_y_motor < -limit3) {
+"210
+[; ;main.c: 210:    else if (delta_y_motor < -limit3) {
 [e :U 2444 ]
 [e $ ! < _delta_y_motor -U _limit3 2446  ]
 {
-"210
-[; ;main.c: 210:     DataTx[1] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
 "211
-[; ;main.c: 211: }
+[; ;main.c: 211:        DataTx[1] = 0x00;
+[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+"212
+[; ;main.c: 212:    }
 }
 [e $U 2447  ]
-"212
-[; ;main.c: 212: else if (delta_y_motor < -limit2) {
+"213
+[; ;main.c: 213:    else if (delta_y_motor < -limit2) {
 [e :U 2446 ]
 [e $ ! < _delta_y_motor -U _limit2 2448  ]
 {
-"213
-[; ;main.c: 213:     DataTx[1] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
 "214
-[; ;main.c: 214: }
+[; ;main.c: 214:        DataTx[1] = 0x20;
+[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
+"215
+[; ;main.c: 215:    }
 }
 [e $U 2449  ]
-"215
-[; ;main.c: 215: else if (delta_y_motor < -limit1) {
+"216
+[; ;main.c: 216:    else if (delta_y_motor < -limit1) {
 [e :U 2448 ]
 [e $ ! < _delta_y_motor -U _limit1 2450  ]
 {
-"216
-[; ;main.c: 216:     DataTx[1] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
 "217
-[; ;main.c: 217: }
+[; ;main.c: 217:        DataTx[1] = 0x40;
+[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
+"218
+[; ;main.c: 218:    }
 }
 [e $U 2451  ]
-"218
-[; ;main.c: 218: else {
+"219
+[; ;main.c: 219:    else {
 [e :U 2450 ]
 {
-"219
-[; ;main.c: 219:     DataTx[1] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
 "220
-[; ;main.c: 220: }
+[; ;main.c: 220:        DataTx[1] = 0x80;
+[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
+"221
+[; ;main.c: 221:    }
 }
 [e :U 2451 ]
 [e :U 2449 ]
@@ -3201,89 +3190,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2445 ]
 [e :U 2443 ]
 [e :U 2441 ]
-"222
-[; ;main.c: 222: delta_x_motor = (int)x_axis - (int)x_neutral;
+"223
+[; ;main.c: 223:    delta_x_motor = (int)x_axis - (int)x_neutral;
 [e = _delta_x_motor - -> _x_axis `i -> _x_neutral `i ]
-"224
-[; ;main.c: 224: if (delta_x_motor > limit3x) {
+"225
+[; ;main.c: 225:    if (delta_x_motor > limit3x) {
 [e $ ! > _delta_x_motor _limit3x 2452  ]
 {
-"225
-[; ;main.c: 225:     DataTx[0] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
 "226
-[; ;main.c: 226: }
+[; ;main.c: 226:        DataTx[0] = 0xFF;
+[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
+"227
+[; ;main.c: 227:    }
 }
 [e $U 2453  ]
-"227
-[; ;main.c: 227: else if (delta_x_motor > limit2x) {
+"228
+[; ;main.c: 228:    else if (delta_x_motor > limit2x) {
 [e :U 2452 ]
 [e $ ! > _delta_x_motor _limit2x 2454  ]
 {
-"228
-[; ;main.c: 228:     DataTx[0] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
 "229
-[; ;main.c: 229: }
+[; ;main.c: 229:        DataTx[0] = 0xE0;
+[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
+"230
+[; ;main.c: 230:    }
 }
 [e $U 2455  ]
-"230
-[; ;main.c: 230: else if (delta_x_motor > limit1x) {
+"231
+[; ;main.c: 231:    else if (delta_x_motor > limit1x) {
 [e :U 2454 ]
 [e $ ! > _delta_x_motor _limit1x 2456  ]
 {
-"231
-[; ;main.c: 231:     DataTx[0] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
 "232
-[; ;main.c: 232: }
+[; ;main.c: 232:        DataTx[0] = 0xC0;
+[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
+"233
+[; ;main.c: 233:    }
 }
 [e $U 2457  ]
-"233
-[; ;main.c: 233: else if (delta_x_motor < -limit3x) {
+"234
+[; ;main.c: 234:    else if (delta_x_motor < -limit3x) {
 [e :U 2456 ]
 [e $ ! < _delta_x_motor -U _limit3x 2458  ]
 {
-"234
-[; ;main.c: 234:     DataTx[0] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
 "235
-[; ;main.c: 235: }
+[; ;main.c: 235:        DataTx[0] = 0x00;
+[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+"236
+[; ;main.c: 236:    }
 }
 [e $U 2459  ]
-"236
-[; ;main.c: 236: else if (delta_x_motor < -limit2x) {
+"237
+[; ;main.c: 237:    else if (delta_x_motor < -limit2x) {
 [e :U 2458 ]
 [e $ ! < _delta_x_motor -U _limit2x 2460  ]
 {
-"237
-[; ;main.c: 237:     DataTx[0] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
 "238
-[; ;main.c: 238: }
+[; ;main.c: 238:        DataTx[0] = 0x20;
+[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
+"239
+[; ;main.c: 239:    }
 }
 [e $U 2461  ]
-"239
-[; ;main.c: 239: else if (delta_x_motor < -limit1x) {
+"240
+[; ;main.c: 240:    else if (delta_x_motor < -limit1x) {
 [e :U 2460 ]
 [e $ ! < _delta_x_motor -U _limit1x 2462  ]
 {
-"240
-[; ;main.c: 240:     DataTx[0] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
 "241
-[; ;main.c: 241: }
+[; ;main.c: 241:        DataTx[0] = 0x40;
+[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
+"242
+[; ;main.c: 242:    }
 }
 [e $U 2463  ]
-"242
-[; ;main.c: 242: else {
+"243
+[; ;main.c: 243:    else {
 [e :U 2462 ]
 {
-"243
-[; ;main.c: 243:     DataTx[0] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
 "244
-[; ;main.c: 244: }
+[; ;main.c: 244:        DataTx[0] = 0x80;
+[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
+"245
+[; ;main.c: 245:    }
 }
 [e :U 2463 ]
 [e :U 2461 ]
@@ -3291,89 +3280,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2457 ]
 [e :U 2455 ]
 [e :U 2453 ]
-"248
-[; ;main.c: 248: delta_y_servo = (int)y_servo - (int)y_neutral_servo;
+"249
+[; ;main.c: 249:    delta_y_servo = (int)y_servo - (int)y_neutral_servo;
 [e = _delta_y_servo - -> _y_servo `i -> _y_neutral_servo `i ]
-"251
-[; ;main.c: 251: if (delta_y_servo> limit3) {
+"252
+[; ;main.c: 252:    if (delta_y_servo> limit3) {
 [e $ ! > _delta_y_servo _limit3 2464  ]
 {
-"252
-[; ;main.c: 252:     DataTx[3] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
 "253
-[; ;main.c: 253: }
+[; ;main.c: 253:        DataTx[3] = 0xFF;
+[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
+"254
+[; ;main.c: 254:    }
 }
 [e $U 2465  ]
-"254
-[; ;main.c: 254: else if (delta_y_servo > limit2) {
+"255
+[; ;main.c: 255:    else if (delta_y_servo > limit2) {
 [e :U 2464 ]
 [e $ ! > _delta_y_servo _limit2 2466  ]
 {
-"255
-[; ;main.c: 255:     DataTx[3] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
 "256
-[; ;main.c: 256: }
+[; ;main.c: 256:        DataTx[3] = 0xE0;
+[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
+"257
+[; ;main.c: 257:    }
 }
 [e $U 2467  ]
-"257
-[; ;main.c: 257: else if (delta_y_servo > limit1) {
+"258
+[; ;main.c: 258:    else if (delta_y_servo > limit1) {
 [e :U 2466 ]
 [e $ ! > _delta_y_servo _limit1 2468  ]
 {
-"258
-[; ;main.c: 258:     DataTx[3] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
 "259
-[; ;main.c: 259: }
+[; ;main.c: 259:        DataTx[3] = 0xC0;
+[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
+"260
+[; ;main.c: 260:    }
 }
 [e $U 2469  ]
-"260
-[; ;main.c: 260: else if (delta_y_servo < -limit3) {
+"261
+[; ;main.c: 261:    else if (delta_y_servo < -limit3) {
 [e :U 2468 ]
 [e $ ! < _delta_y_servo -U _limit3 2470  ]
 {
-"261
-[; ;main.c: 261:     DataTx[3] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
 "262
-[; ;main.c: 262: }
+[; ;main.c: 262:        DataTx[3] = 0x00;
+[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+"263
+[; ;main.c: 263:    }
 }
 [e $U 2471  ]
-"263
-[; ;main.c: 263: else if (delta_y_servo < -limit2) {
+"264
+[; ;main.c: 264:    else if (delta_y_servo < -limit2) {
 [e :U 2470 ]
 [e $ ! < _delta_y_servo -U _limit2 2472  ]
 {
-"264
-[; ;main.c: 264:     DataTx[3] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
 "265
-[; ;main.c: 265: }
+[; ;main.c: 265:        DataTx[3] = 0x20;
+[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
+"266
+[; ;main.c: 266:    }
 }
 [e $U 2473  ]
-"266
-[; ;main.c: 266: else if (delta_y_servo < -limit1) {
+"267
+[; ;main.c: 267:    else if (delta_y_servo < -limit1) {
 [e :U 2472 ]
 [e $ ! < _delta_y_servo -U _limit1 2474  ]
 {
-"267
-[; ;main.c: 267:     DataTx[3] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
 "268
-[; ;main.c: 268: }
+[; ;main.c: 268:        DataTx[3] = 0x40;
+[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
+"269
+[; ;main.c: 269:    }
 }
 [e $U 2475  ]
-"269
-[; ;main.c: 269: else {
+"270
+[; ;main.c: 270:    else {
 [e :U 2474 ]
 {
-"270
-[; ;main.c: 270:     DataTx[3] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
 "271
-[; ;main.c: 271: }
+[; ;main.c: 271:        DataTx[3] = 0x80;
+[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
+"272
+[; ;main.c: 272:    }
 }
 [e :U 2475 ]
 [e :U 2473 ]
@@ -3381,89 +3370,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2469 ]
 [e :U 2467 ]
 [e :U 2465 ]
-"274
-[; ;main.c: 274: delta_x_servo = (int)x_servo - (int)x_neutral_servo;
+"275
+[; ;main.c: 275:    delta_x_servo = (int)x_servo - (int)x_neutral_servo;
 [e = _delta_x_servo - -> _x_servo `i -> _x_neutral_servo `i ]
-"277
-[; ;main.c: 277: if (delta_x_servo > limit3x) {
+"278
+[; ;main.c: 278:    if (delta_x_servo > limit3x) {
 [e $ ! > _delta_x_servo _limit3x 2476  ]
 {
-"278
-[; ;main.c: 278:     DataTx[2] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
 "279
-[; ;main.c: 279: }
+[; ;main.c: 279:        DataTx[2] = 0xFF;
+[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
+"280
+[; ;main.c: 280:    }
 }
 [e $U 2477  ]
-"280
-[; ;main.c: 280: else if (delta_x_servo > limit2x) {
+"281
+[; ;main.c: 281:    else if (delta_x_servo > limit2x) {
 [e :U 2476 ]
 [e $ ! > _delta_x_servo _limit2x 2478  ]
 {
-"281
-[; ;main.c: 281:     DataTx[2] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
 "282
-[; ;main.c: 282: }
+[; ;main.c: 282:        DataTx[2] = 0xE0;
+[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
+"283
+[; ;main.c: 283:    }
 }
 [e $U 2479  ]
-"283
-[; ;main.c: 283: else if (delta_x_servo > limit1x) {
+"284
+[; ;main.c: 284:    else if (delta_x_servo > limit1x) {
 [e :U 2478 ]
 [e $ ! > _delta_x_servo _limit1x 2480  ]
 {
-"284
-[; ;main.c: 284:     DataTx[2] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
 "285
-[; ;main.c: 285: }
+[; ;main.c: 285:        DataTx[2] = 0xC0;
+[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
+"286
+[; ;main.c: 286:    }
 }
 [e $U 2481  ]
-"286
-[; ;main.c: 286: else if (delta_x_servo < -limit3x) {
+"287
+[; ;main.c: 287:    else if (delta_x_servo < -limit3x) {
 [e :U 2480 ]
 [e $ ! < _delta_x_servo -U _limit3x 2482  ]
 {
-"287
-[; ;main.c: 287:     DataTx[2] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
 "288
-[; ;main.c: 288: }
+[; ;main.c: 288:        DataTx[2] = 0x00;
+[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+"289
+[; ;main.c: 289:    }
 }
 [e $U 2483  ]
-"289
-[; ;main.c: 289: else if (delta_x_servo < -limit2x) {
+"290
+[; ;main.c: 290:    else if (delta_x_servo < -limit2x) {
 [e :U 2482 ]
 [e $ ! < _delta_x_servo -U _limit2x 2484  ]
 {
-"290
-[; ;main.c: 290:     DataTx[2] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
 "291
-[; ;main.c: 291: }
+[; ;main.c: 291:        DataTx[2] = 0x20;
+[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
+"292
+[; ;main.c: 292:    }
 }
 [e $U 2485  ]
-"292
-[; ;main.c: 292: else if (delta_x_servo < -limit1x) {
+"293
+[; ;main.c: 293:    else if (delta_x_servo < -limit1x) {
 [e :U 2484 ]
 [e $ ! < _delta_x_servo -U _limit1x 2486  ]
 {
-"293
-[; ;main.c: 293:     DataTx[2] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
 "294
-[; ;main.c: 294: }
+[; ;main.c: 294:        DataTx[2] = 0x40;
+[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
+"295
+[; ;main.c: 295:    }
 }
 [e $U 2487  ]
-"295
-[; ;main.c: 295: else {
+"296
+[; ;main.c: 296:    else {
 [e :U 2486 ]
 {
-"296
-[; ;main.c: 296:     DataTx[2] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
 "297
-[; ;main.c: 297: }
+[; ;main.c: 297:        DataTx[2] = 0x80;
+[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
+"298
+[; ;main.c: 298:    }
 }
 [e :U 2487 ]
 [e :U 2485 ]
@@ -3471,362 +3460,362 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2481 ]
 [e :U 2479 ]
 [e :U 2477 ]
-"301
-[; ;main.c: 301: }
+"302
+[; ;main.c: 302:    }
 [e :UE 2435 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"303
-[; ;main.c: 303: int main(void)
-[v _main `(i ~T0 @X0 1 ef ]
 "304
-[; ;main.c: 304: {
+[; ;main.c: 304:    int main(void)
+[v _main `(i ~T0 @X0 1 ef ]
+"305
+[; ;main.c: 305:    {
 {
 [e :U _main ]
 [f ]
-"309
-[; ;main.c: 309:     SYSTEM_Initialize();
+"310
+[; ;main.c: 310:        SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"314
-[; ;main.c: 314:      (INTCON0bits.GIE = 1);
+"311
+[; ;main.c: 311:         (INTCON0bits.GIE = 1);
 [e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"315
-[; ;main.c: 315:     TRISCbits.TRISC0 = 0;
+"312
+[; ;main.c: 312:        TRISCbits.TRISC0 = 0;
 [e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-"316
-[; ;main.c: 316:     LATC0 = 1;
+"313
+[; ;main.c: 313:        LATC0 = 1;
 [e = _LATC0 -> -> 1 `i `b ]
-"321
-[; ;main.c: 321:     SPI1_Initialize();
+"318
+[; ;main.c: 318:        SPI1_Initialize();
 [e ( _SPI1_Initialize ..  ]
-"322
-[; ;main.c: 322:     SPI1_Open(HOST_CONFIG);
+"319
+[; ;main.c: 319:        SPI1_Open(HOST_CONFIG);
 [e ( _SPI1_Open (1 -> . `E17163 0 `uc ]
-"324
-[; ;main.c: 324:     TRISBbits.TRISB1 = 0;
+"321
+[; ;main.c: 321:        TRISBbits.TRISB1 = 0;
 [e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"325
-[; ;main.c: 325:     LATB1 = 1;
+"322
+[; ;main.c: 322:        LATB1 = 1;
 [e = _LATB1 -> -> 1 `i `b ]
-"327
-[; ;main.c: 327:     TRISBbits.TRISB2 = 0;
+"324
+[; ;main.c: 324:        TRISBbits.TRISB2 = 0;
 [e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-"328
-[; ;main.c: 328:     LATB2 = 0;
+"325
+[; ;main.c: 325:        LATB2 = 0;
 [e = _LATB2 -> -> 0 `i `b ]
-"330
-[; ;main.c: 330:     TRISFbits.TRISF0 = 0;
+"327
+[; ;main.c: 327:        TRISFbits.TRISF0 = 0;
 [e = . . _TRISFbits 0 0 -> -> 0 `i `uc ]
-"331
-[; ;main.c: 331:     LATFbits.LATF0 = 1;
+"328
+[; ;main.c: 328:        LATFbits.LATF0 = 1;
 [e = . . _LATFbits 0 0 -> -> 1 `i `uc ]
-"333
-[; ;main.c: 333:     TRISFbits.TRISF3 = 0;
+"330
+[; ;main.c: 330:        TRISFbits.TRISF3 = 0;
 [e = . . _TRISFbits 0 3 -> -> 0 `i `uc ]
-"334
-[; ;main.c: 334:     TRISFbits.TRISF2 = 0;
+"331
+[; ;main.c: 331:        TRISFbits.TRISF2 = 0;
 [e = . . _TRISFbits 0 2 -> -> 0 `i `uc ]
-"337
-[; ;main.c: 337: TRISBbits.TRISB0 = 1;
+"334
+[; ;main.c: 334:    TRISBbits.TRISB0 = 1;
 [e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-"338
-[; ;main.c: 338: WPUBbits.WPUB0 = 1;
+"335
+[; ;main.c: 335:    WPUBbits.WPUB0 = 1;
 [e = . . _WPUBbits 0 0 -> -> 1 `i `uc ]
-"339
-[; ;main.c: 339: TRISFbits.TRISF4 = 1;
+"336
+[; ;main.c: 336:    TRISFbits.TRISF4 = 1;
 [e = . . _TRISFbits 0 4 -> -> 1 `i `uc ]
-"340
-[; ;main.c: 340: WPUFbits.WPUF4 = 0;
+"337
+[; ;main.c: 337:    WPUFbits.WPUF4 = 0;
 [e = . . _WPUFbits 0 4 -> -> 0 `i `uc ]
-"347
-[; ;main.c: 347:     init_NRF();
+"344
+[; ;main.c: 344:        init_NRF();
 [e ( _init_NRF ..  ]
-"348
-[; ;main.c: 348:     NRF_TxMode(TxAddress, 122);
+"345
+[; ;main.c: 345:        NRF_TxMode(TxAddress, 122);
 [e ( _NRF_TxMode (2 , &U _TxAddress -> -> 122 `i `uc ]
-"349
-[; ;main.c: 349:     initADC();
+"346
+[; ;main.c: 346:        initADC();
 [e ( _initADC ..  ]
-"350
-[; ;main.c: 350:     ADC_ConversionDoneCallbackRegister(my_adc_conversion_done_handler);
+"347
+[; ;main.c: 347:        ADC_ConversionDoneCallbackRegister(my_adc_conversion_done_handler);
 [e ( _ADC_ConversionDoneCallbackRegister (1 &U _my_adc_conversion_done_handler ]
-"383
-[; ;main.c: 383:     while(1)
+"380
+[; ;main.c: 380:        while(1)
 [e :U 2490 ]
-"384
-[; ;main.c: 384:     {
+"381
+[; ;main.c: 381:        {
 {
-"385
-[; ;main.c: 385:         if(!sample_neutrals_busy&& !sample_neutrals_done)
+"382
+[; ;main.c: 382:            if(!sample_neutrals_busy&& !sample_neutrals_done)
 [e $ ! && ! != -> _sample_neutrals_busy `i -> 0 `i ! != -> _sample_neutrals_done `i -> 0 `i 2492  ]
-"386
-[; ;main.c: 386:         {
+"383
+[; ;main.c: 383:            {
 {
-"387
-[; ;main.c: 387:             sample_neutral_values(sample_byte);
+"384
+[; ;main.c: 384:                sample_neutral_values(sample_byte);
 [e ( _sample_neutral_values (1 _sample_byte ]
-"388
-[; ;main.c: 388:             sample_neutrals_busy = 1;
+"385
+[; ;main.c: 385:                sample_neutrals_busy = 1;
 [e = _sample_neutrals_busy -> -> 1 `i `a ]
-"389
-[; ;main.c: 389:         }
+"386
+[; ;main.c: 386:            }
 }
 [e :U 2492 ]
-"391
-[; ;main.c: 391:         if(sample_neutrals_done &&!sample_cycle_done && !sample_cycle_busy){
+"388
+[; ;main.c: 388:            if(sample_neutrals_done &&!sample_cycle_done && !sample_cycle_busy){
 [e $ ! && && != -> _sample_neutrals_done `i -> 0 `i ! != -> _sample_cycle_done `i -> 0 `i ! != -> _sample_cycle_busy `i -> 0 `i 2493  ]
 {
-"392
-[; ;main.c: 392:             sample_values(sample_byte);
+"389
+[; ;main.c: 389:                sample_values(sample_byte);
 [e ( _sample_values (1 _sample_byte ]
-"393
-[; ;main.c: 393:             sample_cycle_busy = 1;
+"390
+[; ;main.c: 390:                sample_cycle_busy = 1;
 [e = _sample_cycle_busy -> -> 1 `i `a ]
-"394
-[; ;main.c: 394:         }
+"391
+[; ;main.c: 391:            }
 }
 [e :U 2493 ]
-"396
-[; ;main.c: 396:         if (conversion_done){
+"393
+[; ;main.c: 393:            if (conversion_done){
 [e $ ! != -> _conversion_done `i -> 0 `i 2494  ]
 {
-"399
-[; ;main.c: 399:             if (sample_neutrals_busy){
+"396
+[; ;main.c: 396:                if (sample_neutrals_busy){
 [e $ ! != -> _sample_neutrals_busy `i -> 0 `i 2495  ]
 {
-"400
-[; ;main.c: 400:                 if(sample_byte == 0){
+"397
+[; ;main.c: 397:                    if(sample_byte == 0){
 [e $ ! == _sample_byte -> 0 `i 2496  ]
 {
-"401
-[; ;main.c: 401:                     sample_byte++;
+"398
+[; ;main.c: 398:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"402
-[; ;main.c: 402:                     x_neutral = result;
+"399
+[; ;main.c: 399:                        x_neutral = result;
 [e = _x_neutral _result ]
-"403
-[; ;main.c: 403:                     sample_neutrals_busy = 0;
+"400
+[; ;main.c: 400:                        sample_neutrals_busy = 0;
 [e = _sample_neutrals_busy -> -> 0 `i `a ]
-"404
-[; ;main.c: 404:                     conversion_done = 0;
+"401
+[; ;main.c: 401:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"405
-[; ;main.c: 405:                 }
+"402
+[; ;main.c: 402:                    }
 }
 [e $U 2497  ]
-"407
-[; ;main.c: 407:                 else if(sample_byte == 1){
+"404
+[; ;main.c: 404:                    else if(sample_byte == 1){
 [e :U 2496 ]
 [e $ ! == _sample_byte -> 1 `i 2498  ]
 {
-"408
-[; ;main.c: 408:                     sample_byte++;
+"405
+[; ;main.c: 405:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"409
-[; ;main.c: 409:                     y_neutral = result;
+"406
+[; ;main.c: 406:                        y_neutral = result;
 [e = _y_neutral _result ]
-"410
-[; ;main.c: 410:                     sample_neutrals_busy = 0;
+"407
+[; ;main.c: 407:                        sample_neutrals_busy = 0;
 [e = _sample_neutrals_busy -> -> 0 `i `a ]
-"411
-[; ;main.c: 411:                     conversion_done = 0;
+"408
+[; ;main.c: 408:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"412
-[; ;main.c: 412:                 }
+"409
+[; ;main.c: 409:                    }
 }
 [e $U 2499  ]
-"414
-[; ;main.c: 414:                 else if(sample_byte == 2)
+"411
+[; ;main.c: 411:                    else if(sample_byte == 2)
 [e :U 2498 ]
 [e $ ! == _sample_byte -> 2 `i 2500  ]
-"415
-[; ;main.c: 415:                 {
+"412
+[; ;main.c: 412:                    {
 {
-"416
-[; ;main.c: 416:                     sample_byte++;
+"413
+[; ;main.c: 413:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"417
-[; ;main.c: 417:                     x_neutral_servo = result;
+"414
+[; ;main.c: 414:                        x_neutral_servo = result;
 [e = _x_neutral_servo _result ]
-"418
-[; ;main.c: 418:                     sample_neutrals_busy = 0;
+"415
+[; ;main.c: 415:                        sample_neutrals_busy = 0;
 [e = _sample_neutrals_busy -> -> 0 `i `a ]
-"419
-[; ;main.c: 419:                     conversion_done = 0;
+"416
+[; ;main.c: 416:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"420
-[; ;main.c: 420:                 }
+"417
+[; ;main.c: 417:                    }
 }
 [e $U 2501  ]
-"421
-[; ;main.c: 421:                 else if(sample_byte == 3){
+"418
+[; ;main.c: 418:                    else if(sample_byte == 3){
 [e :U 2500 ]
 [e $ ! == _sample_byte -> 3 `i 2502  ]
 {
-"422
-[; ;main.c: 422:                     sample_byte++;
+"419
+[; ;main.c: 419:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"423
-[; ;main.c: 423:                     y_neutral_servo = result;
+"420
+[; ;main.c: 420:                        y_neutral_servo = result;
 [e = _y_neutral_servo _result ]
-"424
-[; ;main.c: 424:                     sample_neutrals_busy = 0;
+"421
+[; ;main.c: 421:                        sample_neutrals_busy = 0;
 [e = _sample_neutrals_busy -> -> 0 `i `a ]
-"425
-[; ;main.c: 425:                     sample_neutrals_done = 1;
+"422
+[; ;main.c: 422:                        sample_neutrals_done = 1;
 [e = _sample_neutrals_done -> -> 1 `i `a ]
-"426
-[; ;main.c: 426:                     conversion_done = 0;
+"423
+[; ;main.c: 423:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"427
-[; ;main.c: 427:                     sample_byte = 0;
+"424
+[; ;main.c: 424:                        sample_byte = 0;
 [e = _sample_byte -> 0 `i ]
-"428
-[; ;main.c: 428:             }
+"425
+[; ;main.c: 425:                }
 }
 [e :U 2502 ]
 [e :U 2501 ]
 [e :U 2499 ]
 [e :U 2497 ]
-"429
-[; ;main.c: 429:             }
+"426
+[; ;main.c: 426:                }
 }
 [e :U 2495 ]
-"431
-[; ;main.c: 431:                 if (sample_cycle_busy){
+"428
+[; ;main.c: 428:                    if (sample_cycle_busy){
 [e $ ! != -> _sample_cycle_busy `i -> 0 `i 2503  ]
 {
-"433
-[; ;main.c: 433:                   if(sample_byte == 0){
+"430
+[; ;main.c: 430:                      if(sample_byte == 0){
 [e $ ! == _sample_byte -> 0 `i 2504  ]
 {
-"434
-[; ;main.c: 434:                       sample_byte++;
+"431
+[; ;main.c: 431:                          sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"435
-[; ;main.c: 435:                     x_axis = result;
+"432
+[; ;main.c: 432:                        x_axis = result;
 [e = _x_axis _result ]
-"436
-[; ;main.c: 436:                     sample_cycle_busy = 0;
+"433
+[; ;main.c: 433:                        sample_cycle_busy = 0;
 [e = _sample_cycle_busy -> -> 0 `i `a ]
-"437
-[; ;main.c: 437:                     conversion_done = 0;
+"434
+[; ;main.c: 434:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"438
-[; ;main.c: 438:                 }
+"435
+[; ;main.c: 435:                    }
 }
 [e $U 2505  ]
-"440
-[; ;main.c: 440:                 else if(sample_byte == 1){
+"437
+[; ;main.c: 437:                    else if(sample_byte == 1){
 [e :U 2504 ]
 [e $ ! == _sample_byte -> 1 `i 2506  ]
 {
-"441
-[; ;main.c: 441:                     sample_byte++;
+"438
+[; ;main.c: 438:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"442
-[; ;main.c: 442:                     y_axis = result;
+"439
+[; ;main.c: 439:                        y_axis = result;
 [e = _y_axis _result ]
-"443
-[; ;main.c: 443:                     sample_cycle_busy = 0;
+"440
+[; ;main.c: 440:                        sample_cycle_busy = 0;
 [e = _sample_cycle_busy -> -> 0 `i `a ]
-"444
-[; ;main.c: 444:                     conversion_done = 0;
+"441
+[; ;main.c: 441:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"445
-[; ;main.c: 445:                 }
+"442
+[; ;main.c: 442:                    }
 }
 [e $U 2507  ]
-"447
-[; ;main.c: 447:                 else if(sample_byte == 2)
+"444
+[; ;main.c: 444:                    else if(sample_byte == 2)
 [e :U 2506 ]
 [e $ ! == _sample_byte -> 2 `i 2508  ]
-"448
-[; ;main.c: 448:                 {
+"445
+[; ;main.c: 445:                    {
 {
-"449
-[; ;main.c: 449:                     sample_byte++;
+"446
+[; ;main.c: 446:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"450
-[; ;main.c: 450:                     x_servo = result;
+"447
+[; ;main.c: 447:                        x_servo = result;
 [e = _x_servo _result ]
-"451
-[; ;main.c: 451:                     sample_cycle_busy = 0;
+"448
+[; ;main.c: 448:                        sample_cycle_busy = 0;
 [e = _sample_cycle_busy -> -> 0 `i `a ]
-"452
-[; ;main.c: 452:                     conversion_done = 0;
+"449
+[; ;main.c: 449:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"453
-[; ;main.c: 453:                 }
+"450
+[; ;main.c: 450:                    }
 }
 [e $U 2509  ]
-"454
-[; ;main.c: 454:                 else if(sample_byte == 3){
+"451
+[; ;main.c: 451:                    else if(sample_byte == 3){
 [e :U 2508 ]
 [e $ ! == _sample_byte -> 3 `i 2510  ]
 {
-"455
-[; ;main.c: 455:                     sample_byte++;
+"452
+[; ;main.c: 452:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"456
-[; ;main.c: 456:                     y_servo = result;
+"453
+[; ;main.c: 453:                        y_servo = result;
 [e = _y_servo _result ]
-"457
-[; ;main.c: 457:                     sample_cycle_busy = 0;
+"454
+[; ;main.c: 454:                        sample_cycle_busy = 0;
 [e = _sample_cycle_busy -> -> 0 `i `a ]
-"458
-[; ;main.c: 458:                     conversion_done = 0;
+"455
+[; ;main.c: 455:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"460
-[; ;main.c: 460:             }
+"457
+[; ;main.c: 457:                }
 }
 [e $U 2511  ]
-"462
-[; ;main.c: 462:                 else if (sample_byte == 4 ){
+"459
+[; ;main.c: 459:                    else if (sample_byte == 4 ){
 [e :U 2510 ]
 [e $ ! == _sample_byte -> 4 `i 2512  ]
 {
-"463
-[; ;main.c: 463:                     sample_byte++;
+"460
+[; ;main.c: 460:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"464
-[; ;main.c: 464:                 y_switch_servo = result;
+"461
+[; ;main.c: 461:                    y_switch_servo = result;
 [e = _y_switch_servo _result ]
-"465
-[; ;main.c: 465:                     sample_cycle_busy = 0;
+"462
+[; ;main.c: 462:                        sample_cycle_busy = 0;
 [e = _sample_cycle_busy -> -> 0 `i `a ]
-"466
-[; ;main.c: 466:                     conversion_done = 0;
+"463
+[; ;main.c: 463:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"467
-[; ;main.c: 467:                 }
+"464
+[; ;main.c: 464:                    }
 }
 [e $U 2513  ]
-"469
-[; ;main.c: 469:                 else if (sample_byte == 5 ){
+"466
+[; ;main.c: 466:                    else if (sample_byte == 5 ){
 [e :U 2512 ]
 [e $ ! == _sample_byte -> 5 `i 2514  ]
 {
-"470
-[; ;main.c: 470:                     sample_byte++;
+"467
+[; ;main.c: 467:                        sample_byte++;
 [e ++ _sample_byte -> 1 `i ]
-"471
-[; ;main.c: 471:                 y_switch_servo = result;
+"468
+[; ;main.c: 468:                    y_switch_servo = result;
 [e = _y_switch_servo _result ]
-"472
-[; ;main.c: 472:                     sample_cycle_busy = 0;
+"469
+[; ;main.c: 469:                        sample_cycle_busy = 0;
 [e = _sample_cycle_busy -> -> 0 `i `a ]
-"473
-[; ;main.c: 473:                     sample_cycle_done = 1;
+"470
+[; ;main.c: 470:                        sample_cycle_done = 1;
 [e = _sample_cycle_done -> -> 1 `i `a ]
-"474
-[; ;main.c: 474:                     conversion_done = 0;
+"471
+[; ;main.c: 471:                        conversion_done = 0;
 [e = _conversion_done -> -> 0 `i `a ]
-"475
-[; ;main.c: 475:                     sample_byte = 0;
+"472
+[; ;main.c: 472:                        sample_byte = 0;
 [e = _sample_byte -> 0 `i ]
-"476
-[; ;main.c: 476:                 }
+"473
+[; ;main.c: 473:                    }
 }
 [e :U 2514 ]
 [e :U 2513 ]
@@ -3834,93 +3823,83 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2509 ]
 [e :U 2507 ]
 [e :U 2505 ]
-"482
-[; ;main.c: 482:                 }
+"479
+[; ;main.c: 479:                    }
 }
 [e :U 2503 ]
-"487
-[; ;main.c: 487:         }
+"484
+[; ;main.c: 484:            }
 }
 [e :U 2494 ]
-"492
-[; ;main.c: 492:         if (sample_cycle_done){
+"489
+[; ;main.c: 489:            if (sample_cycle_done){
 [e $ ! != -> _sample_cycle_done `i -> 0 `i 2515  ]
 {
-"493
-[; ;main.c: 493:             convert();
+"490
+[; ;main.c: 490:                convert();
 [e ( _convert ..  ]
-"494
-[; ;main.c: 494:             if(nrf_send_data(DataTx) == 1)
-[e $ ! == -> ( _nrf_send_data (1 &U _DataTx `i -> 1 `i 2516  ]
-"495
-[; ;main.c: 495:         {
-{
-"496
-[; ;main.c: 496:             sample_cycle_done = 0;
+"491
+[; ;main.c: 491:                sample_cycle_done = 0;
 [e = _sample_cycle_done -> -> 0 `i `a ]
-"498
-[; ;main.c: 498:         }
-}
-[e :U 2516 ]
-"500
-[; ;main.c: 500:         }
+"492
+[; ;main.c: 492:                nrf_send_data(DataTx);
+[e ( _nrf_send_data (1 &U _DataTx ]
+"494
+[; ;main.c: 494:            }
 }
 [e :U 2515 ]
-"504
-[; ;main.c: 504:     }
+"498
+[; ;main.c: 498:        }
 }
 [e :U 2489 ]
 [e $U 2490  ]
 [e :U 2491 ]
-"505
-[; ;main.c: 505: }
+"499
+[; ;main.c: 499:    }
 [e :UE 2488 ]
 }
-"507
-[; ;main.c: 507: void initADC(void) {
+"501
+[; ;main.c: 501:    void initADC(void) {
 [v _initADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _initADC ]
 [f ]
-"508
-[; ;main.c: 508:     ADCON0 = 0x00;
+"502
+[; ;main.c: 502:        ADCON0 = 0x00;
 [e = _ADCON0 -> -> 0 `i `uc ]
-"509
-[; ;main.c: 509:     ADREF = 0x00;
+"503
+[; ;main.c: 503:        ADREF = 0x00;
 [e = _ADREF -> -> 0 `i `uc ]
-"510
-[; ;main.c: 510:     ADCLK = 0x3F;
+"504
+[; ;main.c: 504:        ADCLK = 0x3F;
 [e = _ADCLK -> -> 63 `i `uc ]
-"511
-[; ;main.c: 511:     ADCON0bits.ADFM = 1;
+"505
+[; ;main.c: 505:        ADCON0bits.ADFM = 1;
 [e = . . _ADCON0bits 1 2 -> -> 1 `i `uc ]
-"512
-[; ;main.c: 512:     ADCON0bits.ADON = 1;
+"506
+[; ;main.c: 506:        ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
-"516
-[; ;main.c: 516: }
-[e :UE 2517 ]
+"510
+[; ;main.c: 510:    }
+[e :UE 2516 ]
 }
-"520
-[; ;main.c: 520: void readADC(uint8_t channel) {
+"514
+[; ;main.c: 514:    void readADC(uint8_t channel) {
 [v _readADC `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _readADC ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"521
-[; ;main.c: 521:     ADPCH = channel;
+"517
+[; ;main.c: 517:        ADPCH = channel;
 [e = _ADPCH _channel ]
-"522
-[; ;main.c: 522:     PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
-"523
-[; ;main.c: 523:     ADCON0bits.ADCONT = 0;
+"518
+[; ;main.c: 518:        ADCON0bits.ADCONT = 0;
 [e = . . _ADCON0bits 1 5 -> -> 0 `i `uc ]
-"524
-[; ;main.c: 524:     ADCON0bits.ADGO = 1;
+"519
+[; ;main.c: 519:        ADCON0bits.ADGO = 1;
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"525
-[; ;main.c: 525: }
-[e :UE 2518 ]
+"522
+[; ;main.c: 522:    }
+[e :UE 2517 ]
 }

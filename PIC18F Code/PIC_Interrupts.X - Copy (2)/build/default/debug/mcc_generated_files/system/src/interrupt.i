@@ -29927,7 +29927,47 @@ void ADC_ThresholdCallbackRegister(void (*callback)(void));
 
 
 
-void ADC_Tasks(void);
+void ADC_ConversionDoneInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ISR(void);
+
+
+
+
+
+
+
+void ADC_ThresholdISR(void);
 # 48 "mcc_generated_files/system/src/../../system/system.h" 2
 
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr0.h" 1

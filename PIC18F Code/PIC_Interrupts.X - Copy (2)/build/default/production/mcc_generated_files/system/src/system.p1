@@ -2592,8 +2592,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
 "42 mcc_generated_files/system/src/../../adc/adc.h
-[; ;mcc_generated_files/system/src/../../adc/adc.h: 42: volatile _Bool conversion_done = 0;
-[v _conversion_done `Va ~T0 @X0 1 e ]
+[; ;mcc_generated_files/system/src/../../adc/adc.h: 42:  _Bool conversion_done = 0;
+[v _conversion_done `a ~T0 @X0 1 e ]
 [i _conversion_done
 -> -> 0 `i `a
 ]

@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17276 `(v ~T0 @X0 0 tf ]
-[v F17278 `(v ~T0 @X0 0 tf ]
+[v F17281 `(v ~T0 @X0 0 tf ]
+[v F17283 `(v ~T0 @X0 0 tf ]
 "39143 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39143:     struct {
 [s S1861 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -94,8 +94,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39807
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39807: extern volatile unsigned char ADACT __attribute__((address(0x3F9)));
 [v _ADACT `Vuc ~T0 @X0 0 e@1017 ]
-[v F17281 `(v ~T0 @X0 0 tf ]
-[v F17283 `(v ~T0 @X0 0 tf ]
+[v F17286 `(v ~T0 @X0 0 tf ]
+[v F17288 `(v ~T0 @X0 0 tf ]
 "48045
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48045:     struct {
 [s S2252 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -303,12 +303,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36061
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 36061: extern volatile ADCPbits_t ADCPbits __attribute__((address(0x3D8)));
 [v _ADCPbits `VS1736 ~T0 @X0 0 e@984 ]
-[v F17348 `(v ~T0 @X0 0 tf ]
-[v F17350 `(v ~T0 @X0 0 tf ]
 [v F17353 `(v ~T0 @X0 0 tf ]
 [v F17355 `(v ~T0 @X0 0 tf ]
 [v F17358 `(v ~T0 @X0 0 tf ]
-[v F17359 `(v ~T0 @X0 0 tf ]
+[v F17360 `(v ~T0 @X0 0 tf ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt irq ( AD ) base ( 8 ) ]
+[v F17367 `(v ~T0 @X0 0 tf ]
+[t T2 __interrupt irq ( ADT ) base ( 8 ) ]
+[v F17369 `(v ~T0 @X0 0 tf ]
 "328 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2881,17 +2884,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
 "42 mcc_generated_files/adc/src/../adc.h
-[; ;mcc_generated_files/adc/src/../adc.h: 42: volatile _Bool conversion_done = 0;
-[v _conversion_done `Va ~T0 @X0 1 e ]
+[; ;mcc_generated_files/adc/src/../adc.h: 42:  _Bool conversion_done = 0;
+[v _conversion_done `a ~T0 @X0 1 e ]
 [i _conversion_done
 -> -> 0 `i `a
 ]
 "43 mcc_generated_files/adc/src/adc.c
 [; ;mcc_generated_files/adc/src/adc.c: 43: static void (*ADC_ConversionDoneCallback)(void);
-[v _ADC_ConversionDoneCallback `*F17276 ~T0 @X0 1 s ]
+[v _ADC_ConversionDoneCallback `*F17281 ~T0 @X0 1 s ]
 "44
 [; ;mcc_generated_files/adc/src/adc.c: 44: static void (*ADC_ThresholdCallback)(void);
-[v _ADC_ThresholdCallback `*F17278 ~T0 @X0 1 s ]
+[v _ADC_ThresholdCallback `*F17283 ~T0 @X0 1 s ]
 "45
 [; ;mcc_generated_files/adc/src/adc.c: 45: static _Bool adc_busy_status;
 [v _adc_busy_status `a ~T0 @X0 1 s ]
@@ -2974,10 +2977,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ADACT -> << -> 0 `i -> 0 `i `uc ]
 "82
 [; ;mcc_generated_files/adc/src/adc.c: 82:     ADC_ConversionDoneCallback = ((void*)0);
-[e = _ADC_ConversionDoneCallback -> -> -> 0 `i `*v `*F17281 ]
+[e = _ADC_ConversionDoneCallback -> -> -> 0 `i `*v `*F17286 ]
 "83
 [; ;mcc_generated_files/adc/src/adc.c: 83:     ADC_ThresholdCallback = ((void*)0);
-[e = _ADC_ThresholdCallback -> -> -> 0 `i `*v `*F17283 ]
+[e = _ADC_ThresholdCallback -> -> -> 0 `i `*v `*F17288 ]
 "84
 [; ;mcc_generated_files/adc/src/adc.c: 84:     adc_busy_status = 0;
 [e = _adc_busy_status -> -> 0 `i `a ]
@@ -2985,8 +2988,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/adc/src/adc.c: 86:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
 "87
-[; ;mcc_generated_files/adc/src/adc.c: 87:     PIE1bits.ADIE = 0;
-[e = . . _PIE1bits 0 2 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/adc/src/adc.c: 87:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 2 -> -> 1 `i `uc ]
 "88
 [; ;mcc_generated_files/adc/src/adc.c: 88:     PIR2bits.ADTIF = 0;
 [e = . . _PIR2bits 0 0 -> -> 0 `i `uc ]
@@ -3927,14 +3930,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "378
 [; ;mcc_generated_files/adc/src/adc.c: 378: void ADC_ConversionDoneCallbackRegister(void (*callback)(void))
-[v _ADC_ConversionDoneCallbackRegister `(v ~T0 @X0 1 ef1`*F17348 ]
+[v _ADC_ConversionDoneCallbackRegister `(v ~T0 @X0 1 ef1`*F17353 ]
 "379
 [; ;mcc_generated_files/adc/src/adc.c: 379: {
 {
 [e :U _ADC_ConversionDoneCallbackRegister ]
 "378
 [; ;mcc_generated_files/adc/src/adc.c: 378: void ADC_ConversionDoneCallbackRegister(void (*callback)(void))
-[v _callback `*F17350 ~T0 @X0 1 r1 ]
+[v _callback `*F17355 ~T0 @X0 1 r1 ]
 "379
 [; ;mcc_generated_files/adc/src/adc.c: 379: {
 [f ]
@@ -3947,14 +3950,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "383
 [; ;mcc_generated_files/adc/src/adc.c: 383: void ADC_ThresholdCallbackRegister(void (*callback)(void))
-[v _ADC_ThresholdCallbackRegister `(v ~T0 @X0 1 ef1`*F17353 ]
+[v _ADC_ThresholdCallbackRegister `(v ~T0 @X0 1 ef1`*F17358 ]
 "384
 [; ;mcc_generated_files/adc/src/adc.c: 384: {
 {
 [e :U _ADC_ThresholdCallbackRegister ]
 "383
 [; ;mcc_generated_files/adc/src/adc.c: 383: void ADC_ThresholdCallbackRegister(void (*callback)(void))
-[v _callback `*F17355 ~T0 @X0 1 r1 ]
+[v _callback `*F17360 ~T0 @X0 1 r1 ]
 "384
 [; ;mcc_generated_files/adc/src/adc.c: 384: {
 [f ]
@@ -3966,106 +3969,140 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2466 ]
 }
 "388
-[; ;mcc_generated_files/adc/src/adc.c: 388: void ADC_Tasks(void)
-[v _ADC_Tasks `(v ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/adc/src/adc.c: 388: void ADC_ConversionDoneInterruptEnable(void)
+[v _ADC_ConversionDoneInterruptEnable `(v ~T0 @X0 1 ef ]
 "389
 [; ;mcc_generated_files/adc/src/adc.c: 389: {
 {
-[e :U _ADC_Tasks ]
+[e :U _ADC_ConversionDoneInterruptEnable ]
 [f ]
 "390
-[; ;mcc_generated_files/adc/src/adc.c: 390:     if (1U == PIR1bits.ADIF)
-[e $ ! == -> 1 `ui -> . . _PIR1bits 0 2 `ui 2468  ]
+[; ;mcc_generated_files/adc/src/adc.c: 390:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 2 -> -> 1 `i `uc ]
 "391
-[; ;mcc_generated_files/adc/src/adc.c: 391:     {
-{
-"392
-[; ;mcc_generated_files/adc/src/adc.c: 392:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
-"393
-[; ;mcc_generated_files/adc/src/adc.c: 393:         if (((void*)0) != ADC_ConversionDoneCallback)
-[e $ ! != -> -> -> 0 `i `*v `*F17358 _ADC_ConversionDoneCallback 2469  ]
-"394
-[; ;mcc_generated_files/adc/src/adc.c: 394:         {
-{
-"395
-[; ;mcc_generated_files/adc/src/adc.c: 395:             ADC_ConversionDoneCallback();
-[e ( *U _ADC_ConversionDoneCallback ..  ]
-"396
-[; ;mcc_generated_files/adc/src/adc.c: 396:         }
-}
-[e $U 2470  ]
-"397
-[; ;mcc_generated_files/adc/src/adc.c: 397:         else
-[e :U 2469 ]
-"398
-[; ;mcc_generated_files/adc/src/adc.c: 398:         {
-{
-"400
-[; ;mcc_generated_files/adc/src/adc.c: 400:         }
-}
-[e :U 2470 ]
-"401
-[; ;mcc_generated_files/adc/src/adc.c: 401:     }
-}
-[e $U 2471  ]
-"402
-[; ;mcc_generated_files/adc/src/adc.c: 402:     else
-[e :U 2468 ]
-"403
-[; ;mcc_generated_files/adc/src/adc.c: 403:     {
-{
-"405
-[; ;mcc_generated_files/adc/src/adc.c: 405:     }
-}
-[e :U 2471 ]
-"406
-[; ;mcc_generated_files/adc/src/adc.c: 406:     if (1U == PIR2bits.ADTIF)
-[e $ ! == -> 1 `ui -> . . _PIR2bits 0 0 `ui 2472  ]
-"407
-[; ;mcc_generated_files/adc/src/adc.c: 407:     {
-{
-"408
-[; ;mcc_generated_files/adc/src/adc.c: 408:         PIR2bits.ADTIF = 0;
-[e = . . _PIR2bits 0 0 -> -> 0 `i `uc ]
-"409
-[; ;mcc_generated_files/adc/src/adc.c: 409:         if (((void*)0) != ADC_ThresholdCallback)
-[e $ ! != -> -> -> 0 `i `*v `*F17359 _ADC_ThresholdCallback 2473  ]
-"410
-[; ;mcc_generated_files/adc/src/adc.c: 410:         {
-{
-"411
-[; ;mcc_generated_files/adc/src/adc.c: 411:             ADC_ThresholdCallback();
-[e ( *U _ADC_ThresholdCallback ..  ]
-"412
-[; ;mcc_generated_files/adc/src/adc.c: 412:         }
-}
-[e $U 2474  ]
-"413
-[; ;mcc_generated_files/adc/src/adc.c: 413:         else
-[e :U 2473 ]
-"414
-[; ;mcc_generated_files/adc/src/adc.c: 414:         {
-{
-"416
-[; ;mcc_generated_files/adc/src/adc.c: 416:         }
-}
-[e :U 2474 ]
-"417
-[; ;mcc_generated_files/adc/src/adc.c: 417:     }
-}
-[e $U 2475  ]
-"418
-[; ;mcc_generated_files/adc/src/adc.c: 418:     else
-[e :U 2472 ]
-"419
-[; ;mcc_generated_files/adc/src/adc.c: 419:     {
-{
-"421
-[; ;mcc_generated_files/adc/src/adc.c: 421:     }
-}
-[e :U 2475 ]
-"422
-[; ;mcc_generated_files/adc/src/adc.c: 422: }
+[; ;mcc_generated_files/adc/src/adc.c: 391: }
 [e :UE 2467 ]
+}
+"393
+[; ;mcc_generated_files/adc/src/adc.c: 393: void ADC_ConversionDoneInterruptDisable(void)
+[v _ADC_ConversionDoneInterruptDisable `(v ~T0 @X0 1 ef ]
+"394
+[; ;mcc_generated_files/adc/src/adc.c: 394:     {
+{
+[e :U _ADC_ConversionDoneInterruptDisable ]
+[f ]
+"395
+[; ;mcc_generated_files/adc/src/adc.c: 395:     PIE1bits.ADIE = 0;
+[e = . . _PIE1bits 0 2 -> -> 0 `i `uc ]
+"396
+[; ;mcc_generated_files/adc/src/adc.c: 396: }
+[e :UE 2468 ]
+}
+"398
+[; ;mcc_generated_files/adc/src/adc.c: 398: void ADC_ThresholdInterruptEnable(void)
+[v _ADC_ThresholdInterruptEnable `(v ~T0 @X0 1 ef ]
+"399
+[; ;mcc_generated_files/adc/src/adc.c: 399: {
+{
+[e :U _ADC_ThresholdInterruptEnable ]
+[f ]
+"400
+[; ;mcc_generated_files/adc/src/adc.c: 400:     PIE2bits.ADTIE = 1;
+[e = . . _PIE2bits 0 0 -> -> 1 `i `uc ]
+"401
+[; ;mcc_generated_files/adc/src/adc.c: 401: }
+[e :UE 2469 ]
+}
+"403
+[; ;mcc_generated_files/adc/src/adc.c: 403: void ADC_ThresholdInterruptDisable(void)
+[v _ADC_ThresholdInterruptDisable `(v ~T0 @X0 1 ef ]
+"404
+[; ;mcc_generated_files/adc/src/adc.c: 404: {
+{
+[e :U _ADC_ThresholdInterruptDisable ]
+[f ]
+"405
+[; ;mcc_generated_files/adc/src/adc.c: 405:     PIE2bits.ADTIE = 0;
+[e = . . _PIE2bits 0 0 -> -> 0 `i `uc ]
+"406
+[; ;mcc_generated_files/adc/src/adc.c: 406: }
+[e :UE 2470 ]
+}
+[v $root$_ADC_ISR `(v ~T0 @X0 0 e ]
+"408
+[; ;mcc_generated_files/adc/src/adc.c: 408: void __attribute__((picinterrupt(("irq(AD),base(8)")))) ADC_ISR(void)
+[v _ADC_ISR `(v ~T1 @X0 1 ef ]
+"409
+[; ;mcc_generated_files/adc/src/adc.c: 409: {
+{
+[e :U _ADC_ISR ]
+[f ]
+"410
+[; ;mcc_generated_files/adc/src/adc.c: 410:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
+"412
+[; ;mcc_generated_files/adc/src/adc.c: 412:         if (((void*)0) != ADC_ConversionDoneCallback)
+[e $ ! != -> -> -> 0 `i `*v `*F17367 _ADC_ConversionDoneCallback 2472  ]
+"413
+[; ;mcc_generated_files/adc/src/adc.c: 413:         {
+{
+"414
+[; ;mcc_generated_files/adc/src/adc.c: 414:             ADC_ConversionDoneCallback();
+[e ( *U _ADC_ConversionDoneCallback ..  ]
+"415
+[; ;mcc_generated_files/adc/src/adc.c: 415:         }
+}
+[e $U 2473  ]
+"416
+[; ;mcc_generated_files/adc/src/adc.c: 416:         else
+[e :U 2472 ]
+"417
+[; ;mcc_generated_files/adc/src/adc.c: 417:         {
+{
+"419
+[; ;mcc_generated_files/adc/src/adc.c: 419:         }
+}
+[e :U 2473 ]
+"420
+[; ;mcc_generated_files/adc/src/adc.c: 420:     }
+[e :UE 2471 ]
+}
+[v $root$_ADC_ThresholdISR `(v ~T0 @X0 0 e ]
+"422
+[; ;mcc_generated_files/adc/src/adc.c: 422: void __attribute__((picinterrupt(("irq(ADT),base(8)")))) ADC_ThresholdISR(void)
+[v _ADC_ThresholdISR `(v ~T2 @X0 1 ef ]
+"423
+[; ;mcc_generated_files/adc/src/adc.c: 423:     {
+{
+[e :U _ADC_ThresholdISR ]
+[f ]
+"424
+[; ;mcc_generated_files/adc/src/adc.c: 424:         PIR2bits.ADTIF = 0;
+[e = . . _PIR2bits 0 0 -> -> 0 `i `uc ]
+"426
+[; ;mcc_generated_files/adc/src/adc.c: 426:         if (((void*)0) != ADC_ThresholdCallback)
+[e $ ! != -> -> -> 0 `i `*v `*F17369 _ADC_ThresholdCallback 2475  ]
+"427
+[; ;mcc_generated_files/adc/src/adc.c: 427:         {
+{
+"428
+[; ;mcc_generated_files/adc/src/adc.c: 428:             ADC_ThresholdCallback();
+[e ( *U _ADC_ThresholdCallback ..  ]
+"429
+[; ;mcc_generated_files/adc/src/adc.c: 429:         }
+}
+[e $U 2476  ]
+"430
+[; ;mcc_generated_files/adc/src/adc.c: 430:         else
+[e :U 2475 ]
+"431
+[; ;mcc_generated_files/adc/src/adc.c: 431:         {
+{
+"433
+[; ;mcc_generated_files/adc/src/adc.c: 433:         }
+}
+[e :U 2476 ]
+"434
+[; ;mcc_generated_files/adc/src/adc.c: 434:     }
+[e :UE 2474 ]
 }

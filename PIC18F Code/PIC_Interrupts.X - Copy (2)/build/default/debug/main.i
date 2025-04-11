@@ -29926,7 +29926,47 @@ void ADC_ThresholdCallbackRegister(void (*callback)(void));
 
 
 
-void ADC_Tasks(void);
+void ADC_ConversionDoneInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ISR(void);
+
+
+
+
+
+
+
+void ADC_ThresholdISR(void);
 # 48 "./mcc_generated_files/system/system.h" 2
 
 # 1 "./mcc_generated_files/system/../timer/tmr0.h" 1
@@ -30073,6 +30113,7 @@ uint16_t baselineValue = 0;
 void my_adc_conversion_done_handler(void)
 {
 
+
     result = (uint16_t)(ADRESH << 8) | ADRESL;
     conversion_done = 1;
 
@@ -30120,7 +30161,7 @@ if (sample_byte_nr == 0){
 
 
 void convert(){
-# 179 "main.c"
+# 180 "main.c"
         if (grab_switch!= 0x00){
              DataTx[5] = 0xFF;
         }
@@ -30252,10 +30293,6 @@ int main(void)
 
 
     SYSTEM_Initialize();
-
-
-
-
      (INTCON0bits.GIE = 1);
     TRISCbits.TRISC0 = 0;
     LATC0 = 1;
@@ -30293,7 +30330,7 @@ WPUFbits.WPUF4 = 0;
     NRF_TxMode(TxAddress, 122);
     initADC();
     ADC_ConversionDoneCallbackRegister(my_adc_conversion_done_handler);
-# 383 "main.c"
+# 380 "main.c"
     while(1)
     {
         if(!sample_neutrals_busy&& !sample_neutrals_done)
@@ -30433,7 +30470,8 @@ void initADC(void) {
 
 void readADC(uint8_t channel) {
     ADPCH = channel;
-    PIR1bits.ADIF = 0;
     ADCON0bits.ADCONT = 0;
     ADCON0bits.ADGO = 1;
+
+
 }

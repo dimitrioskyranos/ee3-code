@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o
+ C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o
  -Odist/default/debug\PIC_Interrupts.X_-_Copy__2_.debug.hex
  -logfile=dist/default/debug\PIC_Interrupts.X_-_Copy__2_.debug.hxl
  -addressing=1
@@ -9,25 +9,25 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
-  8h - 105h		(C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
-  2600h - 33A5h		(C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
-  33A8h - 34B5h		(C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
-  34B8h - 34BFh		(C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
-  300000h - 300007h		(C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
-  300009h - 300009h		(C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
+  8h - 105h		(C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
+  2600h - 31B5h		(C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
+  31B8h - 3251h		(C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
+  3254h - 3537h		(C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
+  300000h - 300007h		(C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
+  300009h - 300009h		(C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   106h - 25FFh
-  33A6h - 33A7h
-  34B6h - 34B7h
-  34C0h - 2FFFFFh
+  31B6h - 31B7h
+  3252h - 3253h
+  3538h - 2FFFFFh
   300008h - 300008h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\dimk2\AppData\Local\Temp\xcAs53g.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\dimk2\AppData\Local\Temp\xcAs14ns.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -236,7 +236,7 @@
 00003180 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003190 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000031A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000031B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000031B0 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
 000031C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000031D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000031E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -246,7 +246,7 @@
 00003220 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003230 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003240 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003250 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003250 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003260 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003270 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003280 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -267,7 +267,7 @@
 00003370 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003380 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003390 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000033A0 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+000033A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000033B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000033C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000033D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -284,7 +284,15 @@
 00003480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003490 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000034A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000034B0 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+000034B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000034C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000034D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000034E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000034F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003510 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003520 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003530 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- H1 -- -- -- -- -- --
 00300010 | --

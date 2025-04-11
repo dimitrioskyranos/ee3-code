@@ -29755,7 +29755,47 @@ void ADC_ThresholdCallbackRegister(void (*callback)(void));
 
 
 
-void ADC_Tasks(void);
+void ADC_ConversionDoneInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ISR(void);
+
+
+
+
+
+
+
+void ADC_ThresholdISR(void);
 # 39 "mcc_generated_files/adc/src/adc.c" 2
 
 
@@ -29805,7 +29845,7 @@ void ADC_Initialize(void)
     adc_busy_status = 0;
 
     PIR1bits.ADIF = 0;
-    PIE1bits.ADIE = 0;
+    PIE1bits.ADIE = 1;
     PIR2bits.ADTIF = 0;
     PIE2bits.ADTIE = 0;
     ADCON0 = (0 << 0x0)
@@ -30106,11 +30146,30 @@ void ADC_ThresholdCallbackRegister(void (*callback)(void))
     ADC_ThresholdCallback = callback;
 }
 
-void ADC_Tasks(void)
+void ADC_ConversionDoneInterruptEnable(void)
 {
-    if (1U == PIR1bits.ADIF)
+    PIE1bits.ADIE = 1;
+}
+
+void ADC_ConversionDoneInterruptDisable(void)
     {
+    PIE1bits.ADIE = 0;
+}
+
+void ADC_ThresholdInterruptEnable(void)
+{
+    PIE2bits.ADTIE = 1;
+}
+
+void ADC_ThresholdInterruptDisable(void)
+{
+    PIE2bits.ADTIE = 0;
+}
+
+void __attribute__((picinterrupt(("irq(AD),base(8)")))) ADC_ISR(void)
+{
         PIR1bits.ADIF = 0;
+
         if (((void*)0) != ADC_ConversionDoneCallback)
         {
             ADC_ConversionDoneCallback();
@@ -30120,13 +30179,11 @@ void ADC_Tasks(void)
 
         }
     }
-    else
-    {
 
-    }
-    if (1U == PIR2bits.ADTIF)
+void __attribute__((picinterrupt(("irq(ADT),base(8)")))) ADC_ThresholdISR(void)
     {
         PIR2bits.ADTIF = 0;
+
         if (((void*)0) != ADC_ThresholdCallback)
         {
             ADC_ThresholdCallback();
@@ -30136,8 +30193,3 @@ void ADC_Tasks(void)
 
         }
     }
-    else
-    {
-
-    }
-}

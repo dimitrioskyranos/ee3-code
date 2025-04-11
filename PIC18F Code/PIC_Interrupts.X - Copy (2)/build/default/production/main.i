@@ -29588,7 +29588,7 @@ typedef enum
 # 40 "./mcc_generated_files/system/../adc/adc.h" 2
 
 
-volatile _Bool conversion_done = 0;
+ _Bool conversion_done = 0;
 # 76 "./mcc_generated_files/system/../adc/adc.h"
 void ADC_Initialize(void);
 
@@ -29926,7 +29926,47 @@ void ADC_ThresholdCallbackRegister(void (*callback)(void));
 
 
 
-void ADC_Tasks(void);
+void ADC_ConversionDoneInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_ISR(void);
+
+
+
+
+
+
+
+void ADC_ThresholdISR(void);
 # 48 "./mcc_generated_files/system/system.h" 2
 
 # 1 "./mcc_generated_files/system/../timer/tmr0.h" 1
@@ -30019,421 +30059,418 @@ void CS_unselect(void);
 void SYSTEM_Initialize(void);
 # 35 "main.c" 2
 # 46 "main.c"
-void initADC(void);
-void readADC(uint8_t channel);
-uint16_t result;
-int sample_byte = 0;
-_Bool sample_neutrals_done = 0;
-_Bool sample_neutrals_busy = 0;
-_Bool sample_cycle_done = 0;
-_Bool sample_cycle_busy = 0;
+   void initADC(void);
+   void readADC(uint8_t channel);
+   uint16_t result;
+   int sample_byte = 0;
+   _Bool sample_neutrals_done = 0;
+   _Bool sample_neutrals_busy = 0;
+   _Bool sample_cycle_done = 0;
+   _Bool sample_cycle_busy = 0;
 
 
 
 
-int delta_y_motor;
-int delta_x_motor;
-int delta_x_servo;
-int delta_y_servo;
+   int delta_y_motor;
+   int delta_x_motor;
+   int delta_x_servo;
+   int delta_y_servo;
 
 
- uint16_t x_neutral;
+    uint16_t x_neutral;
 
-    uint16_t y_neutral;
-
-
-    uint16_t x_neutral_servo;
-
-    uint16_t y_neutral_servo;
-    uint16_t x_axis;
-
-        uint16_t y_axis;
+       uint16_t y_neutral;
 
 
-         uint16_t x_servo;
+       uint16_t x_neutral_servo;
 
-        uint16_t y_servo;
+       uint16_t y_neutral_servo;
+       uint16_t x_axis;
 
-        uint16_t y_switch_servo;
-
-
-        uint16_t grab_switch;
-    int limit1 = 500;
-    int limit2 = 1500;
-    int limit3 = 2000;
+           uint16_t y_axis;
 
 
-    int limit1x = 300;
-    int limit2x = 700;
-    int limit3x = 1000;
+            uint16_t x_servo;
+
+           uint16_t y_servo;
+
+           uint16_t y_switch_servo;
+
+
+           uint16_t grab_switch;
+       int limit1 = 500;
+       int limit2 = 1500;
+       int limit3 = 2000;
+
+
+       int limit1x = 300;
+       int limit2x = 700;
+       int limit3x = 1000;
 # 110 "main.c"
-uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
-uint8_t DataTx[32];
-uint16_t baselineValue = 0;
-void my_adc_conversion_done_handler(void)
-{
-
-    result = (uint16_t)(ADRESH << 8) | ADRESL;
-    conversion_done = 1;
-
-}
-
-void sample_neutral_values(int sample_byte_nr){
-    if (sample_byte_nr == 0){
-        readADC(0x1F);
-    }
-    else if(sample_byte_nr == 1){
-        readADC(0x1A);
-    }
-    else if (sample_byte_nr == 2){
-        readADC(0x1E);
-    }
-    else if (sample_byte_nr == 3){
-        readADC(0x1D);
-    }
-}
-
-void sample_values( int sample_byte_nr){
-if (sample_byte_nr == 0){
-        readADC(0x1F);
-    }
-    else if(sample_byte_nr == 1){
-        readADC(0x1A);
-    }
-    else if (sample_byte_nr == 2){
-        readADC(0x1E);
-    }
-    else if (sample_byte_nr == 3){
-        readADC(0x1D);
-    }
-
-
-    else if (sample_byte_nr == 4)
-    {
-      readADC(0x1c);
-    }
-    else if (sample_byte_nr == 5){
-        readADC(0x19);
-    }
-}
-
-
-
-void convert(){
-# 179 "main.c"
-        if (grab_switch!= 0x00){
-             DataTx[5] = 0xFF;
-        }
-        else{
-             DataTx[5] = 0x00;
-        }
-
-
-        if (y_switch_servo!= 0x00){
-             DataTx[4] = 0xFF;
-        }
-        else{
-             DataTx[4] = 0x00;
-        }
-
-
-
-
-delta_y_motor = (int)y_axis - (int)y_neutral;
-
-
-if (delta_y_motor > limit3) {
-    DataTx[1] = 0xFF;
-}
-else if (delta_y_motor > limit2) {
-    DataTx[1] = 0xE0;
-}
-else if (delta_y_motor > limit1) {
-    DataTx[1] = 0xC0;
-}
-else if (delta_y_motor < -limit3) {
-    DataTx[1] = 0x00;
-}
-else if (delta_y_motor < -limit2) {
-    DataTx[1] = 0x20;
-}
-else if (delta_y_motor < -limit1) {
-    DataTx[1] = 0x40;
-}
-else {
-    DataTx[1] = 0x80;
-}
-
-delta_x_motor = (int)x_axis - (int)x_neutral;
-
-if (delta_x_motor > limit3x) {
-    DataTx[0] = 0xFF;
-}
-else if (delta_x_motor > limit2x) {
-    DataTx[0] = 0xE0;
-}
-else if (delta_x_motor > limit1x) {
-    DataTx[0] = 0xC0;
-}
-else if (delta_x_motor < -limit3x) {
-    DataTx[0] = 0x00;
-}
-else if (delta_x_motor < -limit2x) {
-    DataTx[0] = 0x20;
-}
-else if (delta_x_motor < -limit1x) {
-    DataTx[0] = 0x40;
-}
-else {
-    DataTx[0] = 0x80;
-}
+   uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
+   uint8_t DataTx[32];
+   uint16_t baselineValue = 0;
+   void my_adc_conversion_done_handler(void)
+   {
+
+
+       result = (uint16_t)(ADRESH << 8) | ADRESL;
+       conversion_done = 1;
+
+   }
+
+   void sample_neutral_values(int sample_byte_nr){
+       if (sample_byte_nr == 0){
+           readADC(0x1F);
+       }
+       else if(sample_byte_nr == 1){
+           readADC(0x1A);
+       }
+       else if (sample_byte_nr == 2){
+           readADC(0x1E);
+       }
+       else if (sample_byte_nr == 3){
+           readADC(0x1D);
+       }
+   }
+
+   void sample_values( int sample_byte_nr){
+   if (sample_byte_nr == 0){
+           readADC(0x1F);
+       }
+       else if(sample_byte_nr == 1){
+           readADC(0x1A);
+       }
+       else if (sample_byte_nr == 2){
+           readADC(0x1E);
+       }
+       else if (sample_byte_nr == 3){
+           readADC(0x1D);
+       }
+
+
+       else if (sample_byte_nr == 4)
+       {
+         readADC(0x1c);
+       }
+       else if (sample_byte_nr == 5){
+           readADC(0x19);
+       }
+   }
+
+
+
+   void convert(){
+# 180 "main.c"
+           if (grab_switch!= 0x00){
+                DataTx[5] = 0xFF;
+           }
+           else{
+                DataTx[5] = 0x00;
+           }
+
+
+           if (y_switch_servo!= 0x00){
+                DataTx[4] = 0xFF;
+           }
+           else{
+                DataTx[4] = 0x00;
+           }
+
+
+
+
+   delta_y_motor = (int)y_axis - (int)y_neutral;
+
+
+   if (delta_y_motor > limit3) {
+       DataTx[1] = 0xFF;
+   }
+   else if (delta_y_motor > limit2) {
+       DataTx[1] = 0xE0;
+   }
+   else if (delta_y_motor > limit1) {
+       DataTx[1] = 0xC0;
+   }
+   else if (delta_y_motor < -limit3) {
+       DataTx[1] = 0x00;
+   }
+   else if (delta_y_motor < -limit2) {
+       DataTx[1] = 0x20;
+   }
+   else if (delta_y_motor < -limit1) {
+       DataTx[1] = 0x40;
+   }
+   else {
+       DataTx[1] = 0x80;
+   }
+
+   delta_x_motor = (int)x_axis - (int)x_neutral;
+
+   if (delta_x_motor > limit3x) {
+       DataTx[0] = 0xFF;
+   }
+   else if (delta_x_motor > limit2x) {
+       DataTx[0] = 0xE0;
+   }
+   else if (delta_x_motor > limit1x) {
+       DataTx[0] = 0xC0;
+   }
+   else if (delta_x_motor < -limit3x) {
+       DataTx[0] = 0x00;
+   }
+   else if (delta_x_motor < -limit2x) {
+       DataTx[0] = 0x20;
+   }
+   else if (delta_x_motor < -limit1x) {
+       DataTx[0] = 0x40;
+   }
+   else {
+       DataTx[0] = 0x80;
+   }
 
 
 
-delta_y_servo = (int)y_servo - (int)y_neutral_servo;
+   delta_y_servo = (int)y_servo - (int)y_neutral_servo;
 
 
-if (delta_y_servo> limit3) {
-    DataTx[3] = 0xFF;
-}
-else if (delta_y_servo > limit2) {
-    DataTx[3] = 0xE0;
-}
-else if (delta_y_servo > limit1) {
-    DataTx[3] = 0xC0;
-}
-else if (delta_y_servo < -limit3) {
-    DataTx[3] = 0x00;
-}
-else if (delta_y_servo < -limit2) {
-    DataTx[3] = 0x20;
-}
-else if (delta_y_servo < -limit1) {
-    DataTx[3] = 0x40;
-}
-else {
-    DataTx[3] = 0x80;
-}
+   if (delta_y_servo> limit3) {
+       DataTx[3] = 0xFF;
+   }
+   else if (delta_y_servo > limit2) {
+       DataTx[3] = 0xE0;
+   }
+   else if (delta_y_servo > limit1) {
+       DataTx[3] = 0xC0;
+   }
+   else if (delta_y_servo < -limit3) {
+       DataTx[3] = 0x00;
+   }
+   else if (delta_y_servo < -limit2) {
+       DataTx[3] = 0x20;
+   }
+   else if (delta_y_servo < -limit1) {
+       DataTx[3] = 0x40;
+   }
+   else {
+       DataTx[3] = 0x80;
+   }
 
 
-delta_x_servo = (int)x_servo - (int)x_neutral_servo;
+   delta_x_servo = (int)x_servo - (int)x_neutral_servo;
 
 
-if (delta_x_servo > limit3x) {
-    DataTx[2] = 0xFF;
-}
-else if (delta_x_servo > limit2x) {
-    DataTx[2] = 0xE0;
-}
-else if (delta_x_servo > limit1x) {
-    DataTx[2] = 0xC0;
-}
-else if (delta_x_servo < -limit3x) {
-    DataTx[2] = 0x00;
-}
-else if (delta_x_servo < -limit2x) {
-    DataTx[2] = 0x20;
-}
-else if (delta_x_servo < -limit1x) {
-    DataTx[2] = 0x40;
-}
-else {
-    DataTx[2] = 0x80;
-}
-
-
+   if (delta_x_servo > limit3x) {
+       DataTx[2] = 0xFF;
+   }
+   else if (delta_x_servo > limit2x) {
+       DataTx[2] = 0xE0;
+   }
+   else if (delta_x_servo > limit1x) {
+       DataTx[2] = 0xC0;
+   }
+   else if (delta_x_servo < -limit3x) {
+       DataTx[2] = 0x00;
+   }
+   else if (delta_x_servo < -limit2x) {
+       DataTx[2] = 0x20;
+   }
+   else if (delta_x_servo < -limit1x) {
+       DataTx[2] = 0x40;
+   }
+   else {
+       DataTx[2] = 0x80;
+   }
+
+
+
+   }
+
+   int main(void)
+   {
+
+
+
+
+       SYSTEM_Initialize();
+        (INTCON0bits.GIE = 1);
+       TRISCbits.TRISC0 = 0;
+       LATC0 = 1;
+
+
+
+
+       SPI1_Initialize();
+       SPI1_Open(HOST_CONFIG);
+
+       TRISBbits.TRISB1 = 0;
+       LATB1 = 1;
+
+       TRISBbits.TRISB2 = 0;
+       LATB2 = 0;
+
+       TRISFbits.TRISF0 = 0;
+       LATFbits.LATF0 = 1;
+
+       TRISFbits.TRISF3 = 0;
+       TRISFbits.TRISF2 = 0;
+
+
+   TRISBbits.TRISB0 = 1;
+   WPUBbits.WPUB0 = 1;
+   TRISFbits.TRISF4 = 1;
+   WPUFbits.WPUF4 = 0;
+
+
+
+
+
+
+       init_NRF();
+       NRF_TxMode(TxAddress, 122);
+       initADC();
+       ADC_ConversionDoneCallbackRegister(my_adc_conversion_done_handler);
+# 380 "main.c"
+       while(1)
+       {
+           if(!sample_neutrals_busy&& !sample_neutrals_done)
+           {
+               sample_neutral_values(sample_byte);
+               sample_neutrals_busy = 1;
+           }
+
+           if(sample_neutrals_done &&!sample_cycle_done && !sample_cycle_busy){
+               sample_values(sample_byte);
+               sample_cycle_busy = 1;
+           }
 
-}
+           if (conversion_done){
 
-int main(void)
-{
 
-
-
-
-    SYSTEM_Initialize();
-
-
-
-
-     (INTCON0bits.GIE = 1);
-    TRISCbits.TRISC0 = 0;
-    LATC0 = 1;
-
-
-
-
-    SPI1_Initialize();
-    SPI1_Open(HOST_CONFIG);
-
-    TRISBbits.TRISB1 = 0;
-    LATB1 = 1;
-
-    TRISBbits.TRISB2 = 0;
-    LATB2 = 0;
-
-    TRISFbits.TRISF0 = 0;
-    LATFbits.LATF0 = 1;
-
-    TRISFbits.TRISF3 = 0;
-    TRISFbits.TRISF2 = 0;
-
-
-TRISBbits.TRISB0 = 1;
-WPUBbits.WPUB0 = 1;
-TRISFbits.TRISF4 = 1;
-WPUFbits.WPUF4 = 0;
-
-
-
-
-
-
-    init_NRF();
-    NRF_TxMode(TxAddress, 122);
-    initADC();
-    ADC_ConversionDoneCallbackRegister(my_adc_conversion_done_handler);
-# 383 "main.c"
-    while(1)
-    {
-        if(!sample_neutrals_busy&& !sample_neutrals_done)
-        {
-            sample_neutral_values(sample_byte);
-            sample_neutrals_busy = 1;
-        }
+               if (sample_neutrals_busy){
+                   if(sample_byte == 0){
+                       sample_byte++;
+                       x_neutral = result;
+                       sample_neutrals_busy = 0;
+                       conversion_done = 0;
+                   }
 
-        if(sample_neutrals_done &&!sample_cycle_done && !sample_cycle_busy){
-            sample_values(sample_byte);
-            sample_cycle_busy = 1;
-        }
+                   else if(sample_byte == 1){
+                       sample_byte++;
+                       y_neutral = result;
+                       sample_neutrals_busy = 0;
+                       conversion_done = 0;
+                   }
 
-        if (conversion_done){
+                   else if(sample_byte == 2)
+                   {
+                       sample_byte++;
+                       x_neutral_servo = result;
+                       sample_neutrals_busy = 0;
+                       conversion_done = 0;
+                   }
+                   else if(sample_byte == 3){
+                       sample_byte++;
+                       y_neutral_servo = result;
+                       sample_neutrals_busy = 0;
+                       sample_neutrals_done = 1;
+                       conversion_done = 0;
+                       sample_byte = 0;
+               }
+               }
 
+                   if (sample_cycle_busy){
 
-            if (sample_neutrals_busy){
-                if(sample_byte == 0){
-                    sample_byte++;
-                    x_neutral = result;
-                    sample_neutrals_busy = 0;
-                    conversion_done = 0;
-                }
+                     if(sample_byte == 0){
+                         sample_byte++;
+                       x_axis = result;
+                       sample_cycle_busy = 0;
+                       conversion_done = 0;
+                   }
 
-                else if(sample_byte == 1){
-                    sample_byte++;
-                    y_neutral = result;
-                    sample_neutrals_busy = 0;
-                    conversion_done = 0;
-                }
+                   else if(sample_byte == 1){
+                       sample_byte++;
+                       y_axis = result;
+                       sample_cycle_busy = 0;
+                       conversion_done = 0;
+                   }
 
-                else if(sample_byte == 2)
-                {
-                    sample_byte++;
-                    x_neutral_servo = result;
-                    sample_neutrals_busy = 0;
-                    conversion_done = 0;
-                }
-                else if(sample_byte == 3){
-                    sample_byte++;
-                    y_neutral_servo = result;
-                    sample_neutrals_busy = 0;
-                    sample_neutrals_done = 1;
-                    conversion_done = 0;
-                    sample_byte = 0;
-            }
-            }
+                   else if(sample_byte == 2)
+                   {
+                       sample_byte++;
+                       x_servo = result;
+                       sample_cycle_busy = 0;
+                       conversion_done = 0;
+                   }
+                   else if(sample_byte == 3){
+                       sample_byte++;
+                       y_servo = result;
+                       sample_cycle_busy = 0;
+                       conversion_done = 0;
 
-                if (sample_cycle_busy){
+               }
 
-                  if(sample_byte == 0){
-                      sample_byte++;
-                    x_axis = result;
-                    sample_cycle_busy = 0;
-                    conversion_done = 0;
-                }
+                   else if (sample_byte == 4 ){
+                       sample_byte++;
+                   y_switch_servo = result;
+                       sample_cycle_busy = 0;
+                       conversion_done = 0;
+                   }
 
-                else if(sample_byte == 1){
-                    sample_byte++;
-                    y_axis = result;
-                    sample_cycle_busy = 0;
-                    conversion_done = 0;
-                }
+                   else if (sample_byte == 5 ){
+                       sample_byte++;
+                   y_switch_servo = result;
+                       sample_cycle_busy = 0;
+                       sample_cycle_done = 1;
+                       conversion_done = 0;
+                       sample_byte = 0;
+                   }
 
-                else if(sample_byte == 2)
-                {
-                    sample_byte++;
-                    x_servo = result;
-                    sample_cycle_busy = 0;
-                    conversion_done = 0;
-                }
-                else if(sample_byte == 3){
-                    sample_byte++;
-                    y_servo = result;
-                    sample_cycle_busy = 0;
-                    conversion_done = 0;
 
-            }
 
-                else if (sample_byte == 4 ){
-                    sample_byte++;
-                y_switch_servo = result;
-                    sample_cycle_busy = 0;
-                    conversion_done = 0;
-                }
 
-                else if (sample_byte == 5 ){
-                    sample_byte++;
-                y_switch_servo = result;
-                    sample_cycle_busy = 0;
-                    sample_cycle_done = 1;
-                    conversion_done = 0;
-                    sample_byte = 0;
-                }
 
+                   }
 
 
 
 
-                }
+           }
 
 
 
 
-        }
+           if (sample_cycle_done){
+               convert();
+               sample_cycle_done = 0;
+               nrf_send_data(DataTx);
 
+           }
 
 
 
-        if (sample_cycle_done){
-            convert();
-            if(nrf_send_data(DataTx) == 1)
-        {
-            sample_cycle_done = 0;
+       }
+   }
 
-        }
+   void initADC(void) {
+       ADCON0 = 0x00;
+       ADREF = 0x00;
+       ADCLK = 0x3F;
+       ADCON0bits.ADFM = 1;
+       ADCON0bits.ADON = 1;
 
-        }
 
 
+   }
 
-    }
-}
 
-void initADC(void) {
-    ADCON0 = 0x00;
-    ADREF = 0x00;
-    ADCLK = 0x3F;
-    ADCON0bits.ADFM = 1;
-    ADCON0bits.ADON = 1;
 
+   void readADC(uint8_t channel) {
 
 
-}
+       ADPCH = channel;
+       ADCON0bits.ADCONT = 0;
+       ADCON0bits.ADGO = 1;
 
 
-
-void readADC(uint8_t channel) {
-    ADPCH = channel;
-    PIR1bits.ADIF = 0;
-    ADCON0bits.ADCONT = 0;
-    ADCON0bits.ADGO = 1;
-}
+   }

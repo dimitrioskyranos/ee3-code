@@ -39,7 +39,7 @@
 #include <stdbool.h>
 #include "./adc_types.h"
 
-volatile bool conversion_done = false;
+ bool conversion_done = false;
 
 /**
  * @ingroup adc
@@ -491,10 +491,50 @@ void ADC_ThresholdCallbackRegister(void (*callback)(void));
 
 /**
  * @ingroup adc
- * @brief Implements the Tasks routine for the polling implementations.
+ * @brief Sets the ADC Interrupt Enable (ADIE) bit to '1'.
  * @param None.
  * @return None.
 */
-void ADC_Tasks(void);
+void ADC_ConversionDoneInterruptEnable(void);
+
+/**
+ * @ingroup adc
+ * @brief Sets the ADC Interrupt Enable (ADIE) bit to '0'.
+ * @param None.
+ * @return None.
+*/
+void ADC_ConversionDoneInterruptDisable(void);
+
+/**
+ * @ingroup adc
+ * @brief Sets the ADC Threshold Interrupt Enable bit to '1'.
+ * @param None.
+ * @return None.
+*/
+void ADC_ThresholdInterruptEnable(void);
+
+/**
+ * @ingroup adc
+ * @brief Sets the ADC Threshold Interrupt Enable bit to '0'.
+ * @param None.
+ * @return None.
+*/
+void ADC_ThresholdInterruptDisable(void);
+
+/**
+ * @ingroup adc
+ * @brief Implements the ADC Interrupt (ADI) service routine for the interrupt-driven implementations.
+ * @param None.
+ * @return None.
+*/
+void ADC_ISR(void);
+
+/**
+ * @ingroup adc
+ * @brief Implements the ADC Threshold Interrupt (ADTI) service routine for the interrupt-driven implementations.
+ * @param None.
+ * @return None.
+*/
+void ADC_ThresholdISR(void);
 
 #endif // ADC_H

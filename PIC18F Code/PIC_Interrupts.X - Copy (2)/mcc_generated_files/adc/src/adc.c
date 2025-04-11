@@ -13,7 +13,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -84,7 +84,7 @@ void ADC_Initialize(void)
     adc_busy_status = false;
 
     PIR1bits.ADIF = ADC_BIT_CLEAR;
-    PIE1bits.ADIE = ADC_BIT_CLEAR;
+    PIE1bits.ADIE = ADC_BIT_SET;
     PIR2bits.ADTIF = ADC_BIT_CLEAR;
     PIE2bits.ADTIE = ADC_BIT_CLEAR;
     ADCON0 = (0 << _ADCON0_ADGO_POSITION)	/* ADGO stop(0) */
@@ -385,11 +385,30 @@ void ADC_ThresholdCallbackRegister(void (*callback)(void))
     ADC_ThresholdCallback = callback;
 }
 
-void ADC_Tasks(void)
+void ADC_ConversionDoneInterruptEnable(void)
 {
-    if (1U == PIR1bits.ADIF)
+    PIE1bits.ADIE = ADC_BIT_SET;
+}
+
+void ADC_ConversionDoneInterruptDisable(void)
     {
+    PIE1bits.ADIE = ADC_BIT_CLEAR;
+}
+
+void ADC_ThresholdInterruptEnable(void)
+{
+    PIE2bits.ADTIE = ADC_BIT_SET;    
+}
+
+void ADC_ThresholdInterruptDisable(void)
+{
+    PIE2bits.ADTIE = ADC_BIT_CLEAR;    
+}
+
+void __interrupt(irq(AD),base(8)) ADC_ISR(void)
+{
         PIR1bits.ADIF = ADC_BIT_CLEAR;
+
         if (NULL != ADC_ConversionDoneCallback)
         {
             ADC_ConversionDoneCallback();
@@ -399,13 +418,11 @@ void ADC_Tasks(void)
             // Do nothing
         }
     }
-    else
-    {
-        // Do nothing
-    }
-    if (1U == PIR2bits.ADTIF)
+
+void __interrupt(irq(ADT),base(8)) ADC_ThresholdISR(void)
     {
         PIR2bits.ADTIF = ADC_BIT_CLEAR;
+
         if (NULL != ADC_ThresholdCallback)
         {
             ADC_ThresholdCallback();
@@ -415,8 +432,3 @@ void ADC_Tasks(void)
             // Do nothing
         }
     }
-    else
-    {
-        // Do nothing
-    }
-}
