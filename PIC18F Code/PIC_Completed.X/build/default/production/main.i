@@ -30136,7 +30136,7 @@ void SYSTEM_Initialize(void);
 
    void sample_values( int sample_byte_nr){
    if (sample_byte_nr == 0){
-           readADC(0x1F);
+           readADC(0x1B);
        }
        else if(sample_byte_nr == 1){
            readADC(0x1A);

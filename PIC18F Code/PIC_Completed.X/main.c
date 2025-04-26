@@ -136,7 +136,7 @@
 
    void sample_values( int sample_byte_nr){
    if (sample_byte_nr == 0){
-           readADC(0x1F); // x joystick value
+           readADC(0x1B); // x joystick value
        }
        else if(sample_byte_nr == 1){
            readADC(0x1A); // y joystick value
@@ -161,7 +161,7 @@
 
 
    void convert(){
-   //         x_axis = readADC(0x1F); // Joystick X-axis connected to D7
+   //         x_axis = readADC(0x1F); // Joystick X-axis connected to D3
    ////        __delay_ms(20);
    //         y_axis = readADC(0x1a); // Joystick Y-axis connected to D2
    ////        __delay_ms(20);

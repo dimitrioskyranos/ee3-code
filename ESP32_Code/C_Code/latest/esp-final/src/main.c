@@ -383,7 +383,7 @@ static void uart_init(void) {
         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
     };
     uart_param_config(UART_NUM, &uart_config);
-    uart_set_pin(UART_NUM, 48, 47, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+    uart_set_pin(UART_NUM, 8, 18, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     uart_driver_install(UART_NUM, BUF_SIZE * 2, 0, QUEUE_SIZE, &uart_queue, 0);
 
     // Run UART task on Core 1

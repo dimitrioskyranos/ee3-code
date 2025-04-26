@@ -1,17 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"38453 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 38453: extern volatile unsigned char ADRESH __attribute__((address(0x3EB)));
-[v _ADRESH `Vuc ~T0 @X0 0 e@1003 ]
-"38325
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 38325: extern volatile unsigned char ADRESL __attribute__((address(0x3EA)));
-[v _ADRESL `Vuc ~T0 @X0 0 e@1002 ]
-"47 main.c
-[; ;main.c: 47:    void readADC(uint8_t channel);
-[v _readADC `(v ~T0 @X0 0 ef1`uc ]
-[p mainexit ]
-"58 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 58: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+[v F17422 `(v ~T0 @X0 0 tf ]
+[v F17424 `(v ~T0 @X0 0 tf ]
+[v F17426 `(v ~T0 @X0 0 tf ]
 "49899 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49899:     struct {
 [s S2318 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -27,146 +17,111 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49913
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49913: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x4D6)));
 [v _INTCON0bits `VS2317 ~T0 @X0 0 e@1238 ]
-"49333
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49333:     struct {
-[s S2298 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2298 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"49332
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49332: typedef union {
-[u S2297 `S2298 1 ]
-[n S2297 . . ]
-"49344
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49344: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x4C8)));
-[v _TRISCbits `VS2297 ~T0 @X0 0 e@1224 ]
-"55897
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 55897: extern volatile __bit LATC0 __attribute__((address(0x2600)));
-[v _LATC0 `Vb ~T0 @X0 0 e@9728 ]
-"132 ./mcc_generated_files/system/../spi/spi1.h
-[; ;./mcc_generated_files/system/../spi/spi1.h: 132: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"150
-[; ;./mcc_generated_files/system/../spi/spi1.h: 150: _Bool SPI1_Open(uint8_t spiConfigIndex);
-[v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
-"319 main.c
-[; ;main.c: 319:        SPI1_Open(HOST_CONFIG);
-[c E17163 0 1 .. ]
-[n E17163 . HOST_CONFIG SPI1_DEFAULT  ]
-"49271 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49271:     struct {
-[s S2296 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2296 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"49270
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49270: typedef union {
-[u S2295 `S2296 1 ]
-[n S2295 . . ]
-"49282
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49282: extern volatile TRISBbits_t TRISBbits __attribute__((address(0x4C7)));
-[v _TRISBbits `VS2295 ~T0 @X0 0 e@1223 ]
-"55876
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 55876: extern volatile __bit LATB1 __attribute__((address(0x25F9)));
-[v _LATB1 `Vb ~T0 @X0 0 e@9721 ]
-"55879
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 55879: extern volatile __bit LATB2 __attribute__((address(0x25FA)));
-[v _LATB2 `Vb ~T0 @X0 0 e@9722 ]
-"49489
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49489:     struct {
-[s S2304 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2304 . TRISF0 TRISF1 TRISF2 TRISF3 TRISF4 TRISF5 TRISF6 TRISF7 ]
-"49488
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49488: typedef union {
-[u S2303 `S2304 1 ]
-[n S2303 . . ]
-"49500
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49500: extern volatile TRISFbits_t TRISFbits __attribute__((address(0x4CB)));
-[v _TRISFbits `VS2303 ~T0 @X0 0 e@1227 ]
-"49147
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49147:     struct {
-[s S2292 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2292 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
-"49146
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49146: typedef union {
-[u S2291 `S2292 1 ]
-[n S2291 . . ]
-"49158
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49158: extern volatile LATFbits_t LATFbits __attribute__((address(0x4C3)));
-[v _LATFbits `VS2291 ~T0 @X0 0 e@1219 ]
-"40579
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 40579:     struct {
-[s S1918 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1918 . WPUB0 WPUB1 WPUB2 WPUB3 WPUB4 WPUB5 WPUB6 WPUB7 ]
-"40578
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 40578: typedef union {
-[u S1917 `S1918 1 ]
-[n S1917 . . ]
-"40590
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 40590: extern volatile WPUBbits_t WPUBbits __attribute__((address(0x409)));
-[v _WPUBbits `VS1917 ~T0 @X0 0 e@1033 ]
-"42116
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 42116:     struct {
-[s S1976 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1976 . WPUF0 WPUF1 WPUF2 WPUF3 WPUF4 WPUF5 WPUF6 WPUF7 ]
-"42115
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 42115: typedef union {
-[u S1975 `S1976 1 ]
-[n S1975 . . ]
-"42127
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 42127: extern volatile WPUFbits_t WPUFbits __attribute__((address(0x429)));
-[v _WPUFbits `VS1975 ~T0 @X0 0 e@1065 ]
-"58 ./mcc_generated_files/system/../../nrf24.h
-[; ;./mcc_generated_files/system/../../nrf24.h: 58: void init_NRF(void);
-[v _init_NRF `(v ~T0 @X0 0 ef ]
-"57
-[; ;./mcc_generated_files/system/../../nrf24.h: 57: void NRF_TxMode(uint8_t *Address, uint8_t channel);
-[v _NRF_TxMode `(v ~T0 @X0 0 ef2`*uc`uc ]
-"46 main.c
-[; ;main.c: 46:    void initADC(void);
-[v _initADC `(v ~T0 @X0 0 ef ]
-[v F17365 `(v ~T0 @X0 0 tf ]
-"482 ./mcc_generated_files/system/../adc/adc.h
-[; ;./mcc_generated_files/system/../adc/adc.h: 482: void ADC_ConversionDoneCallbackRegister(void (*callback)(void));
-[v _ADC_ConversionDoneCallbackRegister `(v ~T0 @X0 0 ef1`*F17365 ]
-"56 ./mcc_generated_files/system/../../nrf24.h
-[; ;./mcc_generated_files/system/../../nrf24.h: 56: uint8_t nrf_send_data(uint8_t *data);
-[v _nrf_send_data `(uc ~T0 @X0 0 ef1`*uc ]
-"39137 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39137: extern volatile unsigned char ADCON0 __attribute__((address(0x3F3)));
-[v _ADCON0 `Vuc ~T0 @X0 0 e@1011 ]
-"39725
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39725: extern volatile unsigned char ADREF __attribute__((address(0x3F8)));
-[v _ADREF `Vuc ~T0 @X0 0 e@1016 ]
-"39911
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39911: extern volatile unsigned char ADCLK __attribute__((address(0x3FA)));
-[v _ADCLK `Vuc ~T0 @X0 0 e@1018 ]
-"39143
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39143:     struct {
-[s S1861 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1861 . GO . FM CS . CONT ON ]
-"39152
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39152:     struct {
-[s S1862 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1862 . ADGO . ADFM ADCS . ADCONT ADON ]
-"39161
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39161:     struct {
-[s S1863 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1863 . DONE . FM0 ]
-"39166
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39166:     struct {
-[s S1864 :1 `uc 1 ]
-[n S1864 . GO_NOT_DONE ]
-"39169
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39169:     struct {
-[s S1865 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1865 . GO_nDONE . ADFM0 ]
-"39142
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39142: typedef union {
-[u S1860 `S1861 1 `S1862 1 `S1863 1 `S1864 1 `S1865 1 ]
-[n S1860 . . . . . . ]
-"39175
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 39175: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x3F3)));
-[v _ADCON0bits `VS1860 ~T0 @X0 0 e@1011 ]
-"38573
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 38573: extern volatile unsigned char ADPCH __attribute__((address(0x3EC)));
-[v _ADPCH `Vuc ~T0 @X0 0 e@1004 ]
+"55087
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 55087: extern volatile __bit GIE __attribute__((address(0x26B7)));
+[v _GIE `Vb ~T0 @X0 0 e@9911 ]
+"45052
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 45052: extern volatile unsigned char IVTLOCK __attribute__((address(0x459)));
+[v _IVTLOCK `Vuc ~T0 @X0 0 e@1113 ]
+"45058
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 45058:     struct {
+[s S2098 :1 `uc 1 ]
+[n S2098 . IVTLOCKED ]
+"45057
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 45057: typedef union {
+[u S2097 `S2098 1 ]
+[n S2097 . . ]
+"45062
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 45062: extern volatile IVTLOCKbits_t IVTLOCKbits __attribute__((address(0x459)));
+[v _IVTLOCKbits `VS2097 ~T0 @X0 0 e@1113 ]
+"45382
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 45382: extern volatile unsigned char IVTBASEU __attribute__((address(0x45F)));
+[v _IVTBASEU `Vuc ~T0 @X0 0 e@1119 ]
+"45320
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 45320: extern volatile unsigned char IVTBASEH __attribute__((address(0x45E)));
+[v _IVTBASEH `Vuc ~T0 @X0 0 e@1118 ]
+"45258
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 45258: extern volatile unsigned char IVTBASEL __attribute__((address(0x45D)));
+[v _IVTBASEL `Vuc ~T0 @X0 0 e@1117 ]
+"32028
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 32028:     struct {
+[s S1530 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1530 . SPI1RXIP SPI1TXIP SPI1IP TMR2IP TMR1IP TMR1GIP CCP1IP TMR0IP ]
+"32027
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 32027: typedef union {
+[u S1529 `S1530 1 ]
+[n S1529 . . ]
+"32039
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 32039: extern volatile IPR3bits_t IPR3bits __attribute__((address(0x365)));
+[v _IPR3bits `VS1529 ~T0 @X0 0 e@869 ]
+"48045
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48045:     struct {
+[s S2252 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2252 . INT0IF ZCDIF ADIF ACTIF C1IF SMT1IF SMT1PRAIF SMT1PWAIF ]
+"48044
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48044: typedef union {
+[u S2251 `S2252 1 ]
+[n S2251 . . ]
+"48056
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48056: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x4AF)));
+[v _PIR1bits `VS2251 ~T0 @X0 0 e@1199 ]
+[v F5 `(v ~T0 @X0 0 tf ]
+"237 mcc_generated_files/system/src/../../system/../system/interrupt.h
+[v _INT0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F5 ]
+"256
+[v _INT0_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
+"48322 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48322:     struct {
+[s S2262 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2262 . INT1IF CLC2IF CWG1IF NCO1IF DMA2SCNTIF DMA2DCNTIF DMA2ORIF DMA2AIF ]
+"48321
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48321: typedef union {
+[u S2261 `S2262 1 ]
+[n S2261 . . ]
+"48333
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48333: extern volatile PIR6bits_t PIR6bits __attribute__((address(0x4B4)));
+[v _PIR6bits `VS2261 ~T0 @X0 0 e@1204 ]
+[v F13 `(v ~T0 @X0 0 tf ]
+"274 mcc_generated_files/system/src/../../system/../system/interrupt.h
+[v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F13 ]
+"293
+[v _INT1_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
+"48548 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48548:     struct {
+[s S2270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2270 . INT2IF CLC5IF CWG2IF NCO2IF DMA3SCNTIF DMA3DCNTIF DMA3ORIF DMA3AIF ]
+"48547
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48547: typedef union {
+[u S2269 `S2270 1 ]
+[n S2269 . . ]
+"48559
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48559: extern volatile PIR10bits_t PIR10bits __attribute__((address(0x4B8)));
+[v _PIR10bits `VS2269 ~T0 @X0 0 e@1208 ]
+[v F21 `(v ~T0 @X0 0 tf ]
+"311 mcc_generated_files/system/src/../../system/../system/interrupt.h
+[v _INT2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F21 ]
+"330
+[v _INT2_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt irq ( default ) base ( 8 ) ]
+[t T2 __interrupt irq ( INT0 ) base ( 8 ) ]
+"228
+[v _INT0_CallBack `(v ~T0 @X0 0 ef ]
+[v F17435 `(v ~T0 @X0 0 tf ]
+[v F17437 `(v ~T0 @X0 0 tf ]
+[v F17439 `(v ~T0 @X0 0 tf ]
+[t T3 __interrupt irq ( INT1 ) base ( 8 ) ]
+"265
+[v _INT1_CallBack `(v ~T0 @X0 0 ef ]
+[v F17444 `(v ~T0 @X0 0 tf ]
+[v F17446 `(v ~T0 @X0 0 tf ]
+[v F17448 `(v ~T0 @X0 0 tf ]
+[t T4 __interrupt irq ( INT2 ) base ( 8 ) ]
+"302
+[v _INT2_CallBack `(v ~T0 @X0 0 ef ]
+[v F17453 `(v ~T0 @X0 0 tf ]
+[v F17455 `(v ~T0 @X0 0 tf ]
+[v F17457 `(v ~T0 @X0 0 tf ]
 "328 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2738,1168 +2693,323 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51171
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"42 ./mcc_generated_files/system/../adc/adc.h
-[; ;./mcc_generated_files/system/../adc/adc.h: 42:  _Bool conversion_done = 0;
+"42 mcc_generated_files/system/src/../../system/../adc/adc.h
+[; ;mcc_generated_files/system/src/../../system/../adc/adc.h: 42:  _Bool conversion_done = 0;
 [v _conversion_done `a ~T0 @X0 1 e ]
 [i _conversion_done
 -> -> 0 `i `a
 ]
-"274 ./mcc_generated_files/system/../timer/tmr0.h
-[; ;./mcc_generated_files/system/../timer/tmr0.h: 274: volatile _Bool time_to_sample = 0;
+"274 mcc_generated_files/system/src/../../system/../timer/tmr0.h
+[; ;mcc_generated_files/system/src/../../system/../timer/tmr0.h: 274: volatile _Bool time_to_sample = 0;
 [v _time_to_sample `Va ~T0 @X0 1 e ]
 [i _time_to_sample
 -> -> 0 `i `a
 ]
-"48 main.c
-[; ;main.c: 48:    uint16_t result;
-[v _result `us ~T0 @X0 1 e ]
-"49
-[; ;main.c: 49:    int sample_byte = 0;
-[v _sample_byte `i ~T0 @X0 1 e ]
-[i _sample_byte
--> 0 `i
-]
-"50
-[; ;main.c: 50:    _Bool sample_neutrals_done = 0;
-[v _sample_neutrals_done `a ~T0 @X0 1 e ]
-[i _sample_neutrals_done
--> -> 0 `i `a
-]
-"51
-[; ;main.c: 51:    _Bool sample_neutrals_busy = 0;
-[v _sample_neutrals_busy `a ~T0 @X0 1 e ]
-[i _sample_neutrals_busy
--> -> 0 `i `a
-]
-"52
-[; ;main.c: 52:    _Bool sample_cycle_done = 0;
-[v _sample_cycle_done `a ~T0 @X0 1 e ]
-[i _sample_cycle_done
--> -> 0 `i `a
-]
-"53
-[; ;main.c: 53:    _Bool sample_cycle_busy = 0;
-[v _sample_cycle_busy `a ~T0 @X0 1 e ]
-[i _sample_cycle_busy
--> -> 0 `i `a
-]
-"58
-[; ;main.c: 58:    int delta_y_motor;
-[v _delta_y_motor `i ~T0 @X0 1 e ]
-"59
-[; ;main.c: 59:    int delta_x_motor;
-[v _delta_x_motor `i ~T0 @X0 1 e ]
-"60
-[; ;main.c: 60:    int delta_x_servo;
-[v _delta_x_servo `i ~T0 @X0 1 e ]
-"61
-[; ;main.c: 61:    int delta_y_servo;
-[v _delta_y_servo `i ~T0 @X0 1 e ]
-"64
-[; ;main.c: 64:     uint16_t x_neutral;
-[v _x_neutral `us ~T0 @X0 1 e ]
-"66
-[; ;main.c: 66:        uint16_t y_neutral;
-[v _y_neutral `us ~T0 @X0 1 e ]
-"69
-[; ;main.c: 69:        uint16_t x_neutral_servo;
-[v _x_neutral_servo `us ~T0 @X0 1 e ]
-"71
-[; ;main.c: 71:        uint16_t y_neutral_servo;
-[v _y_neutral_servo `us ~T0 @X0 1 e ]
-"72
-[; ;main.c: 72:        uint16_t x_axis;
-[v _x_axis `us ~T0 @X0 1 e ]
-"74
-[; ;main.c: 74:            uint16_t y_axis;
-[v _y_axis `us ~T0 @X0 1 e ]
-"77
-[; ;main.c: 77:             uint16_t x_servo;
-[v _x_servo `us ~T0 @X0 1 e ]
-"79
-[; ;main.c: 79:            uint16_t y_servo;
-[v _y_servo `us ~T0 @X0 1 e ]
-"81
-[; ;main.c: 81:            uint16_t y_switch_servo;
-[v _y_switch_servo `us ~T0 @X0 1 e ]
-"84
-[; ;main.c: 84:            uint16_t grab_switch;
-[v _grab_switch `us ~T0 @X0 1 e ]
-"85
-[; ;main.c: 85:        int limit1 = 500;
-[v _limit1 `i ~T0 @X0 1 e ]
-[i _limit1
--> 500 `i
-]
-"86
-[; ;main.c: 86:        int limit2 = 1500;
-[v _limit2 `i ~T0 @X0 1 e ]
-[i _limit2
--> 1500 `i
-]
-"87
-[; ;main.c: 87:        int limit3 = 2000;
-[v _limit3 `i ~T0 @X0 1 e ]
-[i _limit3
--> 2000 `i
-]
-"90
-[; ;main.c: 90:        int limit1x = 300;
-[v _limit1x `i ~T0 @X0 1 e ]
-[i _limit1x
--> 300 `i
-]
-"91
-[; ;main.c: 91:        int limit2x = 700;
-[v _limit2x `i ~T0 @X0 1 e ]
-[i _limit2x
--> 700 `i
-]
-"92
-[; ;main.c: 92:        int limit3x = 1000;
-[v _limit3x `i ~T0 @X0 1 e ]
-[i _limit3x
--> 1000 `i
-]
-"110
-[; ;main.c: 110:    uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
-[v _TxAddress `uc ~T0 @X0 -> 5 `i e ]
-[i _TxAddress
-:U ..
--> -> 231 `i `uc
--> -> 231 `i `uc
--> -> 231 `i `uc
--> -> 231 `i `uc
--> -> 231 `i `uc
-..
-]
-"111
-[; ;main.c: 111:    uint8_t DataTx[32];
-[v _DataTx `uc ~T0 @X0 -> 32 `i e ]
-"112
-[; ;main.c: 112:    uint16_t baselineValue = 0;
-[v _baselineValue `us ~T0 @X0 1 e ]
-[i _baselineValue
--> -> 0 `i `us
-]
-"113
-[; ;main.c: 113:    void my_adc_conversion_done_handler(void)
-[v _my_adc_conversion_done_handler `(v ~T0 @X0 1 ef ]
-"114
-[; ;main.c: 114:    {
+"38 mcc_generated_files/system/src/interrupt.c
+[; ;mcc_generated_files/system/src/interrupt.c: 38: void (*INT0_InterruptHandler)(void);
+[v _INT0_InterruptHandler `*F17422 ~T0 @X0 1 e ]
+"39
+[; ;mcc_generated_files/system/src/interrupt.c: 39: void (*INT1_InterruptHandler)(void);
+[v _INT1_InterruptHandler `*F17424 ~T0 @X0 1 e ]
+"40
+[; ;mcc_generated_files/system/src/interrupt.c: 40: void (*INT2_InterruptHandler)(void);
+[v _INT2_InterruptHandler `*F17426 ~T0 @X0 1 e ]
+"42
+[; ;mcc_generated_files/system/src/interrupt.c: 42: void INTERRUPT_Initialize (void)
+[v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
+"43
+[; ;mcc_generated_files/system/src/interrupt.c: 43: {
 {
-[e :U _my_adc_conversion_done_handler ]
+[e :U _INTERRUPT_Initialize ]
 [f ]
-"117
-[; ;main.c: 117:        result = (uint16_t)(ADRESH << 8) | ADRESL;
-[e = _result -> | -> -> << -> _ADRESH `i -> 8 `i `us `ui -> _ADRESL `ui `us ]
-"118
-[; ;main.c: 118:        conversion_done = 1;
-[e = _conversion_done -> -> 1 `i `a ]
-"120
-[; ;main.c: 120:    }
+"44
+[; ;mcc_generated_files/system/src/interrupt.c: 44:     INTCON0bits.IPEN = 1;
+[e = . . _INTCON0bits 0 4 -> -> 1 `i `uc ]
+"46
+[; ;mcc_generated_files/system/src/interrupt.c: 46:     _Bool state = (unsigned char)GIE;
+[v _state `a ~T0 @X0 1 a ]
+[e = _state -> -> _GIE `uc `a ]
+"47
+[; ;mcc_generated_files/system/src/interrupt.c: 47:     GIE = 0;
+[e = _GIE -> -> 0 `i `b ]
+"48
+[; ;mcc_generated_files/system/src/interrupt.c: 48:     IVTLOCK = 0x55;
+[e = _IVTLOCK -> -> 85 `i `uc ]
+"49
+[; ;mcc_generated_files/system/src/interrupt.c: 49:     IVTLOCK = 0xAA;
+[e = _IVTLOCK -> -> 170 `i `uc ]
+"50
+[; ;mcc_generated_files/system/src/interrupt.c: 50:     IVTLOCKbits.IVTLOCKED = 0x00;
+[e = . . _IVTLOCKbits 0 0 -> -> 0 `i `uc ]
+"52
+[; ;mcc_generated_files/system/src/interrupt.c: 52:     IVTBASEU = 0;
+[e = _IVTBASEU -> -> 0 `i `uc ]
+"53
+[; ;mcc_generated_files/system/src/interrupt.c: 53:     IVTBASEH = 0;
+[e = _IVTBASEH -> -> 0 `i `uc ]
+"54
+[; ;mcc_generated_files/system/src/interrupt.c: 54:     IVTBASEL = 8;
+[e = _IVTBASEL -> -> 8 `i `uc ]
+"56
+[; ;mcc_generated_files/system/src/interrupt.c: 56:     IVTLOCK = 0x55;
+[e = _IVTLOCK -> -> 85 `i `uc ]
+"57
+[; ;mcc_generated_files/system/src/interrupt.c: 57:     IVTLOCK = 0xAA;
+[e = _IVTLOCK -> -> 170 `i `uc ]
+"58
+[; ;mcc_generated_files/system/src/interrupt.c: 58:     IVTLOCKbits.IVTLOCKED = 0x01;
+[e = . . _IVTLOCKbits 0 0 -> -> 1 `i `uc ]
+"60
+[; ;mcc_generated_files/system/src/interrupt.c: 60:     GIE = state;
+[e = _GIE _state ]
+"62
+[; ;mcc_generated_files/system/src/interrupt.c: 62:     IPR3bits.TMR0IP = 1;
+[e = . . _IPR3bits 0 7 -> -> 1 `i `uc ]
+"66
+[; ;mcc_generated_files/system/src/interrupt.c: 66:     (PIR1bits.INT0IF = 0);
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"67
+[; ;mcc_generated_files/system/src/interrupt.c: 67:     (INTCON0bits.INT0EDG = 1);
+[e = . . _INTCON0bits 0 0 -> -> 1 `i `uc ]
+"69
+[; ;mcc_generated_files/system/src/interrupt.c: 69:     INT0_SetInterruptHandler(INT0_DefaultInterruptHandler);
+[e ( _INT0_SetInterruptHandler (1 &U _INT0_DefaultInterruptHandler ]
+"74
+[; ;mcc_generated_files/system/src/interrupt.c: 74:     (PIR6bits.INT1IF = 0);
+[e = . . _PIR6bits 0 0 -> -> 0 `i `uc ]
+"75
+[; ;mcc_generated_files/system/src/interrupt.c: 75:     (INTCON0bits.INT1EDG = 1);
+[e = . . _INTCON0bits 0 1 -> -> 1 `i `uc ]
+"77
+[; ;mcc_generated_files/system/src/interrupt.c: 77:     INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
+[e ( _INT1_SetInterruptHandler (1 &U _INT1_DefaultInterruptHandler ]
+"82
+[; ;mcc_generated_files/system/src/interrupt.c: 82:     (PIR10bits.INT2IF = 0);
+[e = . . _PIR10bits 0 0 -> -> 0 `i `uc ]
+"83
+[; ;mcc_generated_files/system/src/interrupt.c: 83:     (INTCON0bits.INT2EDG = 1);
+[e = . . _INTCON0bits 0 2 -> -> 1 `i `uc ]
+"85
+[; ;mcc_generated_files/system/src/interrupt.c: 85:     INT2_SetInterruptHandler(INT2_DefaultInterruptHandler);
+[e ( _INT2_SetInterruptHandler (1 &U _INT2_DefaultInterruptHandler ]
+"88
+[; ;mcc_generated_files/system/src/interrupt.c: 88: }
 [e :UE 2414 ]
 }
-"122
-[; ;main.c: 122:    void sample_neutral_values(int sample_byte_nr){
-[v _sample_neutral_values `(v ~T0 @X0 1 ef1`i ]
+[v $root$_Default_ISR `(v ~T0 @X0 0 e ]
+"90
+[; ;mcc_generated_files/system/src/interrupt.c: 90: void __attribute__((picinterrupt(("irq(default),base(8)")))) Default_ISR()
+[v _Default_ISR `(v ~T1 @X0 1 ef ]
+"91
+[; ;mcc_generated_files/system/src/interrupt.c: 91: {
 {
-[e :U _sample_neutral_values ]
-[v _sample_byte_nr `i ~T0 @X0 1 r1 ]
+[e :U _Default_ISR ]
 [f ]
-"123
-[; ;main.c: 123:        if (sample_byte_nr == 0){
-[e $ ! == _sample_byte_nr -> 0 `i 2416  ]
-{
-"124
-[; ;main.c: 124:            readADC(0x1F);
-[e ( _readADC (1 -> -> 31 `i `uc ]
-"125
-[; ;main.c: 125:        }
-}
-[e $U 2417  ]
-"126
-[; ;main.c: 126:        else if(sample_byte_nr == 1){
-[e :U 2416 ]
-[e $ ! == _sample_byte_nr -> 1 `i 2418  ]
-{
-"127
-[; ;main.c: 127:            readADC(0x1A);
-[e ( _readADC (1 -> -> 26 `i `uc ]
-"128
-[; ;main.c: 128:        }
-}
-[e $U 2419  ]
-"129
-[; ;main.c: 129:        else if (sample_byte_nr == 2){
-[e :U 2418 ]
-[e $ ! == _sample_byte_nr -> 2 `i 2420  ]
-{
-"130
-[; ;main.c: 130:            readADC(0x1E);
-[e ( _readADC (1 -> -> 30 `i `uc ]
-"131
-[; ;main.c: 131:        }
-}
-[e $U 2421  ]
-"132
-[; ;main.c: 132:        else if (sample_byte_nr == 3){
-[e :U 2420 ]
-[e $ ! == _sample_byte_nr -> 3 `i 2422  ]
-{
-"133
-[; ;main.c: 133:            readADC(0x1D);
-[e ( _readADC (1 -> -> 29 `i `uc ]
-"134
-[; ;main.c: 134:        }
-}
-[e :U 2422 ]
-[e :U 2421 ]
-[e :U 2419 ]
-[e :U 2417 ]
-"135
-[; ;main.c: 135:    }
+"92
+[; ;mcc_generated_files/system/src/interrupt.c: 92: }
 [e :UE 2415 ]
 }
+[v $root$_INT0_ISR `(v ~T0 @X0 0 e ]
+"103
+[; ;mcc_generated_files/system/src/interrupt.c: 103: void __attribute__((picinterrupt(("irq(INT0),base(8)")))) INT0_ISR()
+[v _INT0_ISR `(v ~T2 @X0 1 ef ]
+"104
+[; ;mcc_generated_files/system/src/interrupt.c: 104: {
+{
+[e :U _INT0_ISR ]
+[f ]
+"105
+[; ;mcc_generated_files/system/src/interrupt.c: 105:     (PIR1bits.INT0IF = 0);
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"108
+[; ;mcc_generated_files/system/src/interrupt.c: 108:     INT0_CallBack();
+[e ( _INT0_CallBack ..  ]
+"109
+[; ;mcc_generated_files/system/src/interrupt.c: 109: }
+[e :UE 2416 ]
+}
+"112
+[; ;mcc_generated_files/system/src/interrupt.c: 112: void INT0_CallBack(void)
+[v _INT0_CallBack `(v ~T0 @X0 1 ef ]
+"113
+[; ;mcc_generated_files/system/src/interrupt.c: 113: {
+{
+[e :U _INT0_CallBack ]
+[f ]
+"115
+[; ;mcc_generated_files/system/src/interrupt.c: 115:     if(INT0_InterruptHandler)
+[e $ ! != _INT0_InterruptHandler -> -> 0 `i `*F17435 2418  ]
+"116
+[; ;mcc_generated_files/system/src/interrupt.c: 116:     {
+{
+"117
+[; ;mcc_generated_files/system/src/interrupt.c: 117:         INT0_InterruptHandler();
+[e ( *U _INT0_InterruptHandler ..  ]
+"118
+[; ;mcc_generated_files/system/src/interrupt.c: 118:     }
+}
+[e :U 2418 ]
+"119
+[; ;mcc_generated_files/system/src/interrupt.c: 119: }
+[e :UE 2417 ]
+}
+"121
+[; ;mcc_generated_files/system/src/interrupt.c: 121: void INT0_SetInterruptHandler(void (* InterruptHandler)(void)){
+[v _INT0_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17437 ]
+{
+[e :U _INT0_SetInterruptHandler ]
+[v _InterruptHandler `*F17439 ~T0 @X0 1 r1 ]
+[f ]
+"122
+[; ;mcc_generated_files/system/src/interrupt.c: 122:     INT0_InterruptHandler = InterruptHandler;
+[e = _INT0_InterruptHandler _InterruptHandler ]
+"123
+[; ;mcc_generated_files/system/src/interrupt.c: 123: }
+[e :UE 2419 ]
+}
+"125
+[; ;mcc_generated_files/system/src/interrupt.c: 125: void INT0_DefaultInterruptHandler(void){
+[v _INT0_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _INT0_DefaultInterruptHandler ]
+[f ]
+"128
+[; ;mcc_generated_files/system/src/interrupt.c: 128: }
+[e :UE 2420 ]
+}
+[v $root$_INT1_ISR `(v ~T0 @X0 0 e ]
 "137
-[; ;main.c: 137:    void sample_values( int sample_byte_nr){
-[v _sample_values `(v ~T0 @X0 1 ef1`i ]
-{
-[e :U _sample_values ]
-[v _sample_byte_nr `i ~T0 @X0 1 r1 ]
-[f ]
+[; ;mcc_generated_files/system/src/interrupt.c: 137: void __attribute__((picinterrupt(("irq(INT1),base(8)")))) INT1_ISR()
+[v _INT1_ISR `(v ~T3 @X0 1 ef ]
 "138
-[; ;main.c: 138:    if (sample_byte_nr == 0){
-[e $ ! == _sample_byte_nr -> 0 `i 2424  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 138: {
 {
+[e :U _INT1_ISR ]
+[f ]
 "139
-[; ;main.c: 139:            readADC(0x1B);
-[e ( _readADC (1 -> -> 27 `i `uc ]
-"140
-[; ;main.c: 140:        }
-}
-[e $U 2425  ]
-"141
-[; ;main.c: 141:        else if(sample_byte_nr == 1){
-[e :U 2424 ]
-[e $ ! == _sample_byte_nr -> 1 `i 2426  ]
-{
+[; ;mcc_generated_files/system/src/interrupt.c: 139:     (PIR6bits.INT1IF = 0);
+[e = . . _PIR6bits 0 0 -> -> 0 `i `uc ]
 "142
-[; ;main.c: 142:            readADC(0x1A);
-[e ( _readADC (1 -> -> 26 `i `uc ]
+[; ;mcc_generated_files/system/src/interrupt.c: 142:     INT1_CallBack();
+[e ( _INT1_CallBack ..  ]
 "143
-[; ;main.c: 143:        }
+[; ;mcc_generated_files/system/src/interrupt.c: 143: }
+[e :UE 2421 ]
 }
-[e $U 2427  ]
-"144
-[; ;main.c: 144:        else if (sample_byte_nr == 2){
-[e :U 2426 ]
-[e $ ! == _sample_byte_nr -> 2 `i 2428  ]
-{
-"145
-[; ;main.c: 145:            readADC(0x1E);
-[e ( _readADC (1 -> -> 30 `i `uc ]
 "146
-[; ;main.c: 146:        }
-}
-[e $U 2429  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 146: void INT1_CallBack(void)
+[v _INT1_CallBack `(v ~T0 @X0 1 ef ]
 "147
-[; ;main.c: 147:        else if (sample_byte_nr == 3){
-[e :U 2428 ]
-[e $ ! == _sample_byte_nr -> 3 `i 2430  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 147: {
 {
-"148
-[; ;main.c: 148:            readADC(0x1D);
-[e ( _readADC (1 -> -> 29 `i `uc ]
+[e :U _INT1_CallBack ]
+[f ]
 "149
-[; ;main.c: 149:        }
-}
-[e $U 2431  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 149:     if(INT1_InterruptHandler)
+[e $ ! != _INT1_InterruptHandler -> -> 0 `i `*F17444 2423  ]
+"150
+[; ;mcc_generated_files/system/src/interrupt.c: 150:     {
+{
+"151
+[; ;mcc_generated_files/system/src/interrupt.c: 151:         INT1_InterruptHandler();
+[e ( *U _INT1_InterruptHandler ..  ]
 "152
-[; ;main.c: 152:        else if (sample_byte_nr == 4)
-[e :U 2430 ]
-[e $ ! == _sample_byte_nr -> 4 `i 2432  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 152:     }
+}
+[e :U 2423 ]
 "153
-[; ;main.c: 153:        {
-{
-"154
-[; ;main.c: 154:          readADC(0x1c);
-[e ( _readADC (1 -> -> 28 `i `uc ]
+[; ;mcc_generated_files/system/src/interrupt.c: 153: }
+[e :UE 2422 ]
+}
 "155
-[; ;main.c: 155:        }
-}
-[e $U 2433  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 155: void INT1_SetInterruptHandler(void (* InterruptHandler)(void)){
+[v _INT1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17446 ]
+{
+[e :U _INT1_SetInterruptHandler ]
+[v _InterruptHandler `*F17448 ~T0 @X0 1 r1 ]
+[f ]
 "156
-[; ;main.c: 156:        else if (sample_byte_nr == 5){
-[e :U 2432 ]
-[e $ ! == _sample_byte_nr -> 5 `i 2434  ]
-{
+[; ;mcc_generated_files/system/src/interrupt.c: 156:     INT1_InterruptHandler = InterruptHandler;
+[e = _INT1_InterruptHandler _InterruptHandler ]
 "157
-[; ;main.c: 157:            readADC(0x19);
-[e ( _readADC (1 -> -> 25 `i `uc ]
-"158
-[; ;main.c: 158:        }
+[; ;mcc_generated_files/system/src/interrupt.c: 157: }
+[e :UE 2424 ]
 }
-[e :U 2434 ]
-[e :U 2433 ]
-[e :U 2431 ]
-[e :U 2429 ]
-[e :U 2427 ]
-[e :U 2425 ]
 "159
-[; ;main.c: 159:    }
-[e :UE 2423 ]
-}
-"163
-[; ;main.c: 163:    void convert(){
-[v _convert `(v ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/system/src/interrupt.c: 159: void INT1_DefaultInterruptHandler(void){
+[v _INT1_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
-[e :U _convert ]
+[e :U _INT1_DefaultInterruptHandler ]
 [f ]
+"162
+[; ;mcc_generated_files/system/src/interrupt.c: 162: }
+[e :UE 2425 ]
+}
+[v $root$_INT2_ISR `(v ~T0 @X0 0 e ]
+"171
+[; ;mcc_generated_files/system/src/interrupt.c: 171: void __attribute__((picinterrupt(("irq(INT2),base(8)")))) INT2_ISR()
+[v _INT2_ISR `(v ~T4 @X0 1 ef ]
+"172
+[; ;mcc_generated_files/system/src/interrupt.c: 172: {
+{
+[e :U _INT2_ISR ]
+[f ]
+"173
+[; ;mcc_generated_files/system/src/interrupt.c: 173:     (PIR10bits.INT2IF = 0);
+[e = . . _PIR10bits 0 0 -> -> 0 `i `uc ]
+"176
+[; ;mcc_generated_files/system/src/interrupt.c: 176:     INT2_CallBack();
+[e ( _INT2_CallBack ..  ]
+"177
+[; ;mcc_generated_files/system/src/interrupt.c: 177: }
+[e :UE 2426 ]
+}
 "180
-[; ;main.c: 180:            if (grab_switch!= 0x00){
-[e $ ! != -> _grab_switch `ui -> -> 0 `i `ui 2436  ]
-{
+[; ;mcc_generated_files/system/src/interrupt.c: 180: void INT2_CallBack(void)
+[v _INT2_CallBack `(v ~T0 @X0 1 ef ]
 "181
-[; ;main.c: 181:                 DataTx[5] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 5 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
-"182
-[; ;main.c: 182:            }
-}
-[e $U 2437  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 181: {
+{
+[e :U _INT2_CallBack ]
+[f ]
 "183
-[; ;main.c: 183:            else{
-[e :U 2436 ]
-{
+[; ;mcc_generated_files/system/src/interrupt.c: 183:     if(INT2_InterruptHandler)
+[e $ ! != _INT2_InterruptHandler -> -> 0 `i `*F17453 2428  ]
 "184
-[; ;main.c: 184:                 DataTx[5] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 5 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/interrupt.c: 184:     {
+{
 "185
-[; ;main.c: 185:            }
+[; ;mcc_generated_files/system/src/interrupt.c: 185:         INT2_InterruptHandler();
+[e ( *U _INT2_InterruptHandler ..  ]
+"186
+[; ;mcc_generated_files/system/src/interrupt.c: 186:     }
 }
-[e :U 2437 ]
-"188
-[; ;main.c: 188:            if (y_switch_servo!= 0x00){
-[e $ ! != -> _y_switch_servo `ui -> -> 0 `i `ui 2438  ]
-{
+[e :U 2428 ]
+"187
+[; ;mcc_generated_files/system/src/interrupt.c: 187: }
+[e :UE 2427 ]
+}
 "189
-[; ;main.c: 189:                 DataTx[4] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 4 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
+[; ;mcc_generated_files/system/src/interrupt.c: 189: void INT2_SetInterruptHandler(void (* InterruptHandler)(void)){
+[v _INT2_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17455 ]
+{
+[e :U _INT2_SetInterruptHandler ]
+[v _InterruptHandler `*F17457 ~T0 @X0 1 r1 ]
+[f ]
 "190
-[; ;main.c: 190:            }
-}
-[e $U 2439  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 190:     INT2_InterruptHandler = InterruptHandler;
+[e = _INT2_InterruptHandler _InterruptHandler ]
 "191
-[; ;main.c: 191:            else{
-[e :U 2438 ]
-{
-"192
-[; ;main.c: 192:                 DataTx[4] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 4 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/interrupt.c: 191: }
+[e :UE 2429 ]
+}
 "193
-[; ;main.c: 193:            }
-}
-[e :U 2439 ]
-"198
-[; ;main.c: 198:    delta_y_motor = (int)y_axis - (int)y_neutral;
-[e = _delta_y_motor - -> _y_axis `i -> _y_neutral `i ]
-"201
-[; ;main.c: 201:    if (delta_y_motor > limit3) {
-[e $ ! > _delta_y_motor _limit3 2440  ]
+[; ;mcc_generated_files/system/src/interrupt.c: 193: void INT2_DefaultInterruptHandler(void){
+[v _INT2_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
-"202
-[; ;main.c: 202:        DataTx[1] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
-"203
-[; ;main.c: 203:    }
-}
-[e $U 2441  ]
-"204
-[; ;main.c: 204:    else if (delta_y_motor > limit2) {
-[e :U 2440 ]
-[e $ ! > _delta_y_motor _limit2 2442  ]
-{
-"205
-[; ;main.c: 205:        DataTx[1] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
-"206
-[; ;main.c: 206:    }
-}
-[e $U 2443  ]
-"207
-[; ;main.c: 207:    else if (delta_y_motor > limit1) {
-[e :U 2442 ]
-[e $ ! > _delta_y_motor _limit1 2444  ]
-{
-"208
-[; ;main.c: 208:        DataTx[1] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
-"209
-[; ;main.c: 209:    }
-}
-[e $U 2445  ]
-"210
-[; ;main.c: 210:    else if (delta_y_motor < -limit3) {
-[e :U 2444 ]
-[e $ ! < _delta_y_motor -U _limit3 2446  ]
-{
-"211
-[; ;main.c: 211:        DataTx[1] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
-"212
-[; ;main.c: 212:    }
-}
-[e $U 2447  ]
-"213
-[; ;main.c: 213:    else if (delta_y_motor < -limit2) {
-[e :U 2446 ]
-[e $ ! < _delta_y_motor -U _limit2 2448  ]
-{
-"214
-[; ;main.c: 214:        DataTx[1] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
-"215
-[; ;main.c: 215:    }
-}
-[e $U 2449  ]
-"216
-[; ;main.c: 216:    else if (delta_y_motor < -limit1) {
-[e :U 2448 ]
-[e $ ! < _delta_y_motor -U _limit1 2450  ]
-{
-"217
-[; ;main.c: 217:        DataTx[1] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
-"218
-[; ;main.c: 218:    }
-}
-[e $U 2451  ]
-"219
-[; ;main.c: 219:    else {
-[e :U 2450 ]
-{
-"220
-[; ;main.c: 220:        DataTx[1] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 1 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
-"221
-[; ;main.c: 221:    }
-}
-[e :U 2451 ]
-[e :U 2449 ]
-[e :U 2447 ]
-[e :U 2445 ]
-[e :U 2443 ]
-[e :U 2441 ]
-"223
-[; ;main.c: 223:    delta_x_motor = (int)x_axis - (int)x_neutral;
-[e = _delta_x_motor - -> _x_axis `i -> _x_neutral `i ]
-"225
-[; ;main.c: 225:    if (delta_x_motor > limit3x) {
-[e $ ! > _delta_x_motor _limit3x 2452  ]
-{
-"226
-[; ;main.c: 226:        DataTx[0] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
-"227
-[; ;main.c: 227:    }
-}
-[e $U 2453  ]
-"228
-[; ;main.c: 228:    else if (delta_x_motor > limit2x) {
-[e :U 2452 ]
-[e $ ! > _delta_x_motor _limit2x 2454  ]
-{
-"229
-[; ;main.c: 229:        DataTx[0] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
-"230
-[; ;main.c: 230:    }
-}
-[e $U 2455  ]
-"231
-[; ;main.c: 231:    else if (delta_x_motor > limit1x) {
-[e :U 2454 ]
-[e $ ! > _delta_x_motor _limit1x 2456  ]
-{
-"232
-[; ;main.c: 232:        DataTx[0] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
-"233
-[; ;main.c: 233:    }
-}
-[e $U 2457  ]
-"234
-[; ;main.c: 234:    else if (delta_x_motor < -limit3x) {
-[e :U 2456 ]
-[e $ ! < _delta_x_motor -U _limit3x 2458  ]
-{
-"235
-[; ;main.c: 235:        DataTx[0] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
-"236
-[; ;main.c: 236:    }
-}
-[e $U 2459  ]
-"237
-[; ;main.c: 237:    else if (delta_x_motor < -limit2x) {
-[e :U 2458 ]
-[e $ ! < _delta_x_motor -U _limit2x 2460  ]
-{
-"238
-[; ;main.c: 238:        DataTx[0] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
-"239
-[; ;main.c: 239:    }
-}
-[e $U 2461  ]
-"240
-[; ;main.c: 240:    else if (delta_x_motor < -limit1x) {
-[e :U 2460 ]
-[e $ ! < _delta_x_motor -U _limit1x 2462  ]
-{
-"241
-[; ;main.c: 241:        DataTx[0] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
-"242
-[; ;main.c: 242:    }
-}
-[e $U 2463  ]
-"243
-[; ;main.c: 243:    else {
-[e :U 2462 ]
-{
-"244
-[; ;main.c: 244:        DataTx[0] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 0 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
-"245
-[; ;main.c: 245:    }
-}
-[e :U 2463 ]
-[e :U 2461 ]
-[e :U 2459 ]
-[e :U 2457 ]
-[e :U 2455 ]
-[e :U 2453 ]
-"249
-[; ;main.c: 249:    delta_y_servo = (int)y_servo - (int)y_neutral_servo;
-[e = _delta_y_servo - -> _y_servo `i -> _y_neutral_servo `i ]
-"252
-[; ;main.c: 252:    if (delta_y_servo> limit3) {
-[e $ ! > _delta_y_servo _limit3 2464  ]
-{
-"253
-[; ;main.c: 253:        DataTx[3] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
-"254
-[; ;main.c: 254:    }
-}
-[e $U 2465  ]
-"255
-[; ;main.c: 255:    else if (delta_y_servo > limit2) {
-[e :U 2464 ]
-[e $ ! > _delta_y_servo _limit2 2466  ]
-{
-"256
-[; ;main.c: 256:        DataTx[3] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
-"257
-[; ;main.c: 257:    }
-}
-[e $U 2467  ]
-"258
-[; ;main.c: 258:    else if (delta_y_servo > limit1) {
-[e :U 2466 ]
-[e $ ! > _delta_y_servo _limit1 2468  ]
-{
-"259
-[; ;main.c: 259:        DataTx[3] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
-"260
-[; ;main.c: 260:    }
-}
-[e $U 2469  ]
-"261
-[; ;main.c: 261:    else if (delta_y_servo < -limit3) {
-[e :U 2468 ]
-[e $ ! < _delta_y_servo -U _limit3 2470  ]
-{
-"262
-[; ;main.c: 262:        DataTx[3] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
-"263
-[; ;main.c: 263:    }
-}
-[e $U 2471  ]
-"264
-[; ;main.c: 264:    else if (delta_y_servo < -limit2) {
-[e :U 2470 ]
-[e $ ! < _delta_y_servo -U _limit2 2472  ]
-{
-"265
-[; ;main.c: 265:        DataTx[3] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
-"266
-[; ;main.c: 266:    }
-}
-[e $U 2473  ]
-"267
-[; ;main.c: 267:    else if (delta_y_servo < -limit1) {
-[e :U 2472 ]
-[e $ ! < _delta_y_servo -U _limit1 2474  ]
-{
-"268
-[; ;main.c: 268:        DataTx[3] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
-"269
-[; ;main.c: 269:    }
-}
-[e $U 2475  ]
-"270
-[; ;main.c: 270:    else {
-[e :U 2474 ]
-{
-"271
-[; ;main.c: 271:        DataTx[3] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 3 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
-"272
-[; ;main.c: 272:    }
-}
-[e :U 2475 ]
-[e :U 2473 ]
-[e :U 2471 ]
-[e :U 2469 ]
-[e :U 2467 ]
-[e :U 2465 ]
-"275
-[; ;main.c: 275:    delta_x_servo = (int)x_servo - (int)x_neutral_servo;
-[e = _delta_x_servo - -> _x_servo `i -> _x_neutral_servo `i ]
-"278
-[; ;main.c: 278:    if (delta_x_servo > limit3x) {
-[e $ ! > _delta_x_servo _limit3x 2476  ]
-{
-"279
-[; ;main.c: 279:        DataTx[2] = 0xFF;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 255 `i `uc ]
-"280
-[; ;main.c: 280:    }
-}
-[e $U 2477  ]
-"281
-[; ;main.c: 281:    else if (delta_x_servo > limit2x) {
-[e :U 2476 ]
-[e $ ! > _delta_x_servo _limit2x 2478  ]
-{
-"282
-[; ;main.c: 282:        DataTx[2] = 0xE0;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 224 `i `uc ]
-"283
-[; ;main.c: 283:    }
-}
-[e $U 2479  ]
-"284
-[; ;main.c: 284:    else if (delta_x_servo > limit1x) {
-[e :U 2478 ]
-[e $ ! > _delta_x_servo _limit1x 2480  ]
-{
-"285
-[; ;main.c: 285:        DataTx[2] = 0xC0;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 192 `i `uc ]
-"286
-[; ;main.c: 286:    }
-}
-[e $U 2481  ]
-"287
-[; ;main.c: 287:    else if (delta_x_servo < -limit3x) {
-[e :U 2480 ]
-[e $ ! < _delta_x_servo -U _limit3x 2482  ]
-{
-"288
-[; ;main.c: 288:        DataTx[2] = 0x00;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 0 `i `uc ]
-"289
-[; ;main.c: 289:    }
-}
-[e $U 2483  ]
-"290
-[; ;main.c: 290:    else if (delta_x_servo < -limit2x) {
-[e :U 2482 ]
-[e $ ! < _delta_x_servo -U _limit2x 2484  ]
-{
-"291
-[; ;main.c: 291:        DataTx[2] = 0x20;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 32 `i `uc ]
-"292
-[; ;main.c: 292:    }
-}
-[e $U 2485  ]
-"293
-[; ;main.c: 293:    else if (delta_x_servo < -limit1x) {
-[e :U 2484 ]
-[e $ ! < _delta_x_servo -U _limit1x 2486  ]
-{
-"294
-[; ;main.c: 294:        DataTx[2] = 0x40;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 64 `i `uc ]
-"295
-[; ;main.c: 295:    }
-}
-[e $U 2487  ]
-"296
-[; ;main.c: 296:    else {
-[e :U 2486 ]
-{
-"297
-[; ;main.c: 297:        DataTx[2] = 0x80;
-[e = *U + &U _DataTx * -> -> -> 2 `i `ui `ux -> -> # *U &U _DataTx `ui `ux -> -> 128 `i `uc ]
-"298
-[; ;main.c: 298:    }
-}
-[e :U 2487 ]
-[e :U 2485 ]
-[e :U 2483 ]
-[e :U 2481 ]
-[e :U 2479 ]
-[e :U 2477 ]
-"302
-[; ;main.c: 302:    }
-[e :UE 2435 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"304
-[; ;main.c: 304:    int main(void)
-[v _main `(i ~T0 @X0 1 ef ]
-"305
-[; ;main.c: 305:    {
-{
-[e :U _main ]
+[e :U _INT2_DefaultInterruptHandler ]
 [f ]
-"310
-[; ;main.c: 310:        SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"311
-[; ;main.c: 311:         (INTCON0bits.GIE = 1);
-[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"312
-[; ;main.c: 312:        TRISCbits.TRISC0 = 0;
-[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-"313
-[; ;main.c: 313:        LATC0 = 1;
-[e = _LATC0 -> -> 1 `i `b ]
-"318
-[; ;main.c: 318:        SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
-"319
-[; ;main.c: 319:        SPI1_Open(HOST_CONFIG);
-[e ( _SPI1_Open (1 -> . `E17163 0 `uc ]
-"321
-[; ;main.c: 321:        TRISBbits.TRISB1 = 0;
-[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"322
-[; ;main.c: 322:        LATB1 = 1;
-[e = _LATB1 -> -> 1 `i `b ]
-"324
-[; ;main.c: 324:        TRISBbits.TRISB2 = 0;
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-"325
-[; ;main.c: 325:        LATB2 = 0;
-[e = _LATB2 -> -> 0 `i `b ]
-"327
-[; ;main.c: 327:        TRISFbits.TRISF0 = 0;
-[e = . . _TRISFbits 0 0 -> -> 0 `i `uc ]
-"328
-[; ;main.c: 328:        LATFbits.LATF0 = 1;
-[e = . . _LATFbits 0 0 -> -> 1 `i `uc ]
-"330
-[; ;main.c: 330:        TRISFbits.TRISF3 = 0;
-[e = . . _TRISFbits 0 3 -> -> 0 `i `uc ]
-"331
-[; ;main.c: 331:        TRISFbits.TRISF2 = 0;
-[e = . . _TRISFbits 0 2 -> -> 0 `i `uc ]
-"334
-[; ;main.c: 334:    TRISBbits.TRISB0 = 1;
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-"335
-[; ;main.c: 335:    WPUBbits.WPUB0 = 1;
-[e = . . _WPUBbits 0 0 -> -> 1 `i `uc ]
-"336
-[; ;main.c: 336:    TRISFbits.TRISF4 = 1;
-[e = . . _TRISFbits 0 4 -> -> 1 `i `uc ]
-"337
-[; ;main.c: 337:    WPUFbits.WPUF4 = 0;
-[e = . . _WPUFbits 0 4 -> -> 0 `i `uc ]
-"344
-[; ;main.c: 344:        init_NRF();
-[e ( _init_NRF ..  ]
-"345
-[; ;main.c: 345:        NRF_TxMode(TxAddress, 122);
-[e ( _NRF_TxMode (2 , &U _TxAddress -> -> 122 `i `uc ]
-"346
-[; ;main.c: 346:        initADC();
-[e ( _initADC ..  ]
-"347
-[; ;main.c: 347:        ADC_ConversionDoneCallbackRegister(my_adc_conversion_done_handler);
-[e ( _ADC_ConversionDoneCallbackRegister (1 &U _my_adc_conversion_done_handler ]
-"380
-[; ;main.c: 380:        while(1)
-[e :U 2490 ]
-"381
-[; ;main.c: 381:        {
-{
-"382
-[; ;main.c: 382:            if(!sample_neutrals_busy&& !sample_neutrals_done)
-[e $ ! && ! != -> _sample_neutrals_busy `i -> 0 `i ! != -> _sample_neutrals_done `i -> 0 `i 2492  ]
-"383
-[; ;main.c: 383:            {
-{
-"384
-[; ;main.c: 384:                sample_neutral_values(sample_byte);
-[e ( _sample_neutral_values (1 _sample_byte ]
-"385
-[; ;main.c: 385:                sample_neutrals_busy = 1;
-[e = _sample_neutrals_busy -> -> 1 `i `a ]
-"386
-[; ;main.c: 386:            }
-}
-[e :U 2492 ]
-"388
-[; ;main.c: 388:            if(sample_neutrals_done &&!sample_cycle_done && !sample_cycle_busy){
-[e $ ! && && != -> _sample_neutrals_done `i -> 0 `i ! != -> _sample_cycle_done `i -> 0 `i ! != -> _sample_cycle_busy `i -> 0 `i 2493  ]
-{
-"389
-[; ;main.c: 389:                sample_values(sample_byte);
-[e ( _sample_values (1 _sample_byte ]
-"390
-[; ;main.c: 390:                sample_cycle_busy = 1;
-[e = _sample_cycle_busy -> -> 1 `i `a ]
-"391
-[; ;main.c: 391:            }
-}
-[e :U 2493 ]
-"393
-[; ;main.c: 393:            if (conversion_done){
-[e $ ! != -> _conversion_done `i -> 0 `i 2494  ]
-{
-"396
-[; ;main.c: 396:                if (sample_neutrals_busy){
-[e $ ! != -> _sample_neutrals_busy `i -> 0 `i 2495  ]
-{
-"397
-[; ;main.c: 397:                    if(sample_byte == 0){
-[e $ ! == _sample_byte -> 0 `i 2496  ]
-{
-"398
-[; ;main.c: 398:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"399
-[; ;main.c: 399:                        x_neutral = result;
-[e = _x_neutral _result ]
-"400
-[; ;main.c: 400:                        sample_neutrals_busy = 0;
-[e = _sample_neutrals_busy -> -> 0 `i `a ]
-"401
-[; ;main.c: 401:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"402
-[; ;main.c: 402:                    }
-}
-[e $U 2497  ]
-"404
-[; ;main.c: 404:                    else if(sample_byte == 1){
-[e :U 2496 ]
-[e $ ! == _sample_byte -> 1 `i 2498  ]
-{
-"405
-[; ;main.c: 405:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"406
-[; ;main.c: 406:                        y_neutral = result;
-[e = _y_neutral _result ]
-"407
-[; ;main.c: 407:                        sample_neutrals_busy = 0;
-[e = _sample_neutrals_busy -> -> 0 `i `a ]
-"408
-[; ;main.c: 408:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"409
-[; ;main.c: 409:                    }
-}
-[e $U 2499  ]
-"411
-[; ;main.c: 411:                    else if(sample_byte == 2)
-[e :U 2498 ]
-[e $ ! == _sample_byte -> 2 `i 2500  ]
-"412
-[; ;main.c: 412:                    {
-{
-"413
-[; ;main.c: 413:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"414
-[; ;main.c: 414:                        x_neutral_servo = result;
-[e = _x_neutral_servo _result ]
-"415
-[; ;main.c: 415:                        sample_neutrals_busy = 0;
-[e = _sample_neutrals_busy -> -> 0 `i `a ]
-"416
-[; ;main.c: 416:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"417
-[; ;main.c: 417:                    }
-}
-[e $U 2501  ]
-"418
-[; ;main.c: 418:                    else if(sample_byte == 3){
-[e :U 2500 ]
-[e $ ! == _sample_byte -> 3 `i 2502  ]
-{
-"419
-[; ;main.c: 419:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"420
-[; ;main.c: 420:                        y_neutral_servo = result;
-[e = _y_neutral_servo _result ]
-"421
-[; ;main.c: 421:                        sample_neutrals_busy = 0;
-[e = _sample_neutrals_busy -> -> 0 `i `a ]
-"422
-[; ;main.c: 422:                        sample_neutrals_done = 1;
-[e = _sample_neutrals_done -> -> 1 `i `a ]
-"423
-[; ;main.c: 423:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"424
-[; ;main.c: 424:                        sample_byte = 0;
-[e = _sample_byte -> 0 `i ]
-"425
-[; ;main.c: 425:                }
-}
-[e :U 2502 ]
-[e :U 2501 ]
-[e :U 2499 ]
-[e :U 2497 ]
-"426
-[; ;main.c: 426:                }
-}
-[e :U 2495 ]
-"428
-[; ;main.c: 428:                    if (sample_cycle_busy){
-[e $ ! != -> _sample_cycle_busy `i -> 0 `i 2503  ]
-{
-"430
-[; ;main.c: 430:                      if(sample_byte == 0){
-[e $ ! == _sample_byte -> 0 `i 2504  ]
-{
-"431
-[; ;main.c: 431:                          sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"432
-[; ;main.c: 432:                        x_axis = result;
-[e = _x_axis _result ]
-"433
-[; ;main.c: 433:                        sample_cycle_busy = 0;
-[e = _sample_cycle_busy -> -> 0 `i `a ]
-"434
-[; ;main.c: 434:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"435
-[; ;main.c: 435:                    }
-}
-[e $U 2505  ]
-"437
-[; ;main.c: 437:                    else if(sample_byte == 1){
-[e :U 2504 ]
-[e $ ! == _sample_byte -> 1 `i 2506  ]
-{
-"438
-[; ;main.c: 438:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"439
-[; ;main.c: 439:                        y_axis = result;
-[e = _y_axis _result ]
-"440
-[; ;main.c: 440:                        sample_cycle_busy = 0;
-[e = _sample_cycle_busy -> -> 0 `i `a ]
-"441
-[; ;main.c: 441:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"442
-[; ;main.c: 442:                    }
-}
-[e $U 2507  ]
-"444
-[; ;main.c: 444:                    else if(sample_byte == 2)
-[e :U 2506 ]
-[e $ ! == _sample_byte -> 2 `i 2508  ]
-"445
-[; ;main.c: 445:                    {
-{
-"446
-[; ;main.c: 446:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"447
-[; ;main.c: 447:                        x_servo = result;
-[e = _x_servo _result ]
-"448
-[; ;main.c: 448:                        sample_cycle_busy = 0;
-[e = _sample_cycle_busy -> -> 0 `i `a ]
-"449
-[; ;main.c: 449:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"450
-[; ;main.c: 450:                    }
-}
-[e $U 2509  ]
-"451
-[; ;main.c: 451:                    else if(sample_byte == 3){
-[e :U 2508 ]
-[e $ ! == _sample_byte -> 3 `i 2510  ]
-{
-"452
-[; ;main.c: 452:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"453
-[; ;main.c: 453:                        y_servo = result;
-[e = _y_servo _result ]
-"454
-[; ;main.c: 454:                        sample_cycle_busy = 0;
-[e = _sample_cycle_busy -> -> 0 `i `a ]
-"455
-[; ;main.c: 455:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"457
-[; ;main.c: 457:                }
-}
-[e $U 2511  ]
-"459
-[; ;main.c: 459:                    else if (sample_byte == 4 ){
-[e :U 2510 ]
-[e $ ! == _sample_byte -> 4 `i 2512  ]
-{
-"460
-[; ;main.c: 460:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"461
-[; ;main.c: 461:                    y_switch_servo = result;
-[e = _y_switch_servo _result ]
-"462
-[; ;main.c: 462:                        sample_cycle_busy = 0;
-[e = _sample_cycle_busy -> -> 0 `i `a ]
-"463
-[; ;main.c: 463:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"464
-[; ;main.c: 464:                    }
-}
-[e $U 2513  ]
-"466
-[; ;main.c: 466:                    else if (sample_byte == 5 ){
-[e :U 2512 ]
-[e $ ! == _sample_byte -> 5 `i 2514  ]
-{
-"467
-[; ;main.c: 467:                        sample_byte++;
-[e ++ _sample_byte -> 1 `i ]
-"468
-[; ;main.c: 468:                    y_switch_servo = result;
-[e = _y_switch_servo _result ]
-"469
-[; ;main.c: 469:                        sample_cycle_busy = 0;
-[e = _sample_cycle_busy -> -> 0 `i `a ]
-"470
-[; ;main.c: 470:                        sample_cycle_done = 1;
-[e = _sample_cycle_done -> -> 1 `i `a ]
-"471
-[; ;main.c: 471:                        conversion_done = 0;
-[e = _conversion_done -> -> 0 `i `a ]
-"472
-[; ;main.c: 472:                        sample_byte = 0;
-[e = _sample_byte -> 0 `i ]
-"473
-[; ;main.c: 473:                    }
-}
-[e :U 2514 ]
-[e :U 2513 ]
-[e :U 2511 ]
-[e :U 2509 ]
-[e :U 2507 ]
-[e :U 2505 ]
-"479
-[; ;main.c: 479:                    }
-}
-[e :U 2503 ]
-"484
-[; ;main.c: 484:            }
-}
-[e :U 2494 ]
-"489
-[; ;main.c: 489:            if (sample_cycle_done){
-[e $ ! != -> _sample_cycle_done `i -> 0 `i 2515  ]
-{
-"490
-[; ;main.c: 490:                convert();
-[e ( _convert ..  ]
-"491
-[; ;main.c: 491:                sample_cycle_done = 0;
-[e = _sample_cycle_done -> -> 0 `i `a ]
-"492
-[; ;main.c: 492:                nrf_send_data(DataTx);
-[e ( _nrf_send_data (1 &U _DataTx ]
-"494
-[; ;main.c: 494:            }
-}
-[e :U 2515 ]
-"498
-[; ;main.c: 498:        }
-}
-[e :U 2489 ]
-[e $U 2490  ]
-[e :U 2491 ]
-"499
-[; ;main.c: 499:    }
-[e :UE 2488 ]
-}
-"501
-[; ;main.c: 501:    void initADC(void) {
-[v _initADC `(v ~T0 @X0 1 ef ]
-{
-[e :U _initADC ]
-[f ]
-"502
-[; ;main.c: 502:        ADCON0 = 0x00;
-[e = _ADCON0 -> -> 0 `i `uc ]
-"503
-[; ;main.c: 503:        ADREF = 0x00;
-[e = _ADREF -> -> 0 `i `uc ]
-"504
-[; ;main.c: 504:        ADCLK = 0x3F;
-[e = _ADCLK -> -> 63 `i `uc ]
-"505
-[; ;main.c: 505:        ADCON0bits.ADFM = 1;
-[e = . . _ADCON0bits 1 2 -> -> 1 `i `uc ]
-"506
-[; ;main.c: 506:        ADCON0bits.ADON = 1;
-[e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
-"510
-[; ;main.c: 510:    }
-[e :UE 2516 ]
-}
-"514
-[; ;main.c: 514:    void readADC(uint8_t channel) {
-[v _readADC `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _readADC ]
-[v _channel `uc ~T0 @X0 1 r1 ]
-[f ]
-"517
-[; ;main.c: 517:        ADPCH = channel;
-[e = _ADPCH _channel ]
-"518
-[; ;main.c: 518:        ADCON0bits.ADCONT = 0;
-[e = . . _ADCON0bits 1 5 -> -> 0 `i `uc ]
-"519
-[; ;main.c: 519:        ADCON0bits.ADGO = 1;
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"522
-[; ;main.c: 522:    }
-[e :UE 2517 ]
+"196
+[; ;mcc_generated_files/system/src/interrupt.c: 196: }
+[e :UE 2430 ]
 }

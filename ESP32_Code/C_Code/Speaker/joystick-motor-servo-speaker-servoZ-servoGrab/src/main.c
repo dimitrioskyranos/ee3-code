@@ -556,11 +556,11 @@ void control_motors(uint8_t x, uint8_t y) {
             bool car_moving = (joystickX != 0x80 || joystickY != 0x80);  // Check if motors are moving
             siren_active = switch_pressed && car_moving;
 
-                // ESP_LOGI(TAG, "Joystick X: %d, Y: %d", joystickX, joystickY);
-                // ESP_LOGI(TAG, "Servo X: %d, Y: %d", servoX, servoY);
+                ESP_LOGI(TAG, "Joystick X: %d, Y: %d", joystickX, joystickY);
+                ESP_LOGI(TAG, "Servo X: %d, Y: %d", servoX, servoY);
                 // vTaskDelay(pdMS_TO_TICKS(200));
-                ESP_LOGI(TAG, "Servo Grab: %d", grabButton);
-                ESP_LOGI(TAG, "servoSwitch: %d", servoSwitch);
+                // ESP_LOGI(TAG, "Servo Grab: %d", grabButton);
+                // ESP_LOGI(TAG, "servoSwitch: %d", servoSwitch);
 
                 vTaskDelay(pdMS_TO_TICKS(20));
             

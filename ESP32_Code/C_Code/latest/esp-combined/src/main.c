@@ -817,7 +817,7 @@ void handle_nrf_data() {
     //     }
 
     //     // Optional logging
-       ESP_LOGI(TAG, "Joystick X: %d, Y: %d", joystickX, joystickY);
+    //    ESP_LOGI(TAG, "Joystick X: %d, Y: %d", joystickX, joystickY);
     //    ESP_LOGI(TAG, "Servo X: %d, Y: %d", servoX, servoY);
     }
 }
@@ -864,18 +864,9 @@ void siren_task(void *arg) {
 
 void check_switch_toggle()
 {
-    static bool last_switch_state = true;  // true = HIGH (unpressed), false = LOW (pressed)
-
-    bool current_state = gpio_get_level(SWITCH_PIN);  // true if unpressed (pull-up enabled)
-
-    // Detect transition from HIGH -> LOW (button press)
-    if (!current_state && last_switch_state)
-    {
-        switch_pressed = !switch_pressed;  // Toggle siren state
-        ESP_LOGI(TAG, "Toggled switch: %s", switch_pressed ? "ON" : "OFF");
-    }
-
-    last_switch_state = current_state;  // Save for next comparison
+    bool current_state = gpio_get_level(SWITCH_PIN);  // true if open (pull-up), false if connected to GND
+    switch_pressed = !current_state;  // Invert logic: LOW = pressed (connected), HIGH = unpressed (open)
+    // ESP_LOGI(TAG, "Switch is: %s", switch_pressed ? "ON" : "OFF");
 }
 
     void app_main(void)
@@ -937,13 +928,13 @@ if (siren_timer != NULL) {
 xTaskCreatePinnedToCore(siren_task, "siren_task", 2048, NULL, 1, NULL,0);
 
 
-// ESP_LOGI(TAG, "Starting application...");
-//     ESP_ERROR_CHECK(nvs_flash_init());
-//     wifi_init();
-//     ESP_LOGI(TAG, "Waiting for Wi-Fi...");
-//     xEventGroupWaitBits(s_wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdTRUE, portMAX_DELAY);
-//     start_http_server();
-//     uart_init();
+ESP_LOGI(TAG, "Starting application...");
+    ESP_ERROR_CHECK(nvs_flash_init());
+    wifi_init();
+    ESP_LOGI(TAG, "Waiting for Wi-Fi...");
+    xEventGroupWaitBits(s_wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdTRUE, portMAX_DELAY);
+    start_http_server();
+    uart_init();
 
 
         while(1)
