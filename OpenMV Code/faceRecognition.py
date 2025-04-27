@@ -13,7 +13,7 @@ sensor.set_framesize(sensor.QVGA)
 sensor.skip_frames(time=2000)
 
 # === Initialize UART (P4=TX, P5=RX) ===
-uart = UART(3, 115200, timeout_char=1000)
+uart = UART(3, 921600, timeout_char=1000)
 
 # === Initialize FOMO model ===
 min_confidence = 0.4
@@ -83,24 +83,24 @@ while True:
         continue
 
     # 🔹 Send start signal
-    time.sleep(0.05)
+    time.sleep_ms(1)
     uart.write("IMG_START".encode())
-    time.sleep(0.05)
+    time.sleep_ms(1)
 
     # 🔹 Send image size
     uart.write(img_size.to_bytes(4, 'little'))
-    time.sleep(0.05)
+    time.sleep_ms(1)
 
     # 🔹 Send image data in chunks
     chunk_size = 1024
     for i in range(0, img_size, chunk_size):
         uart.write(jpg[i:i+chunk_size])
-        time.sleep(0.05)
+        time.sleep_ms(1)
 
     # 🔹 Send end signal
-    time.sleep(0.1)
+    time.sleep_ms(1)
     uart.write("IMG_END".encode())
-    time.sleep(0.1)
+    time.sleep_ms(1)
     print("✅ Image sent successfully.")
 
     # 🔁 Check response from ESP32 (optional)

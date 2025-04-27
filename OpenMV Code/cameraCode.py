@@ -3,22 +3,20 @@ import sensor
 import image
 from pyb import UART
 
-# Initialize camera
 sensor.reset()
-sensor.set_pixformat(sensor.GRAYSCALE)  # or sensor.RGB565
-sensor.set_framesize(sensor.QVGA)       # 320x240 resolution
-sensor.skip_frames(time=2000)           # Allow auto-adjustment
+sensor.set_pixformat(sensor.GRAYSCALE)
+sensor.set_framesize(sensor.QVGA)
+sensor.skip_frames(time=2000)
 
-# Initialize UART (P4=TX, P5=RX)
-uart = UART(3, 115200, timeout_char=1000)
+uart = UART(3, 250000, timeout_char=1000)
 
 while True:
     print("📷 Taking picture...")
+    img = sensor.snapshot()
 
-    img = sensor.snapshot()  # Capture an image
     if img is None:
         print("❌ Error: Image capture failed!")
-        continue  # Skip this loop iteration
+        continue
 
     jpg = img.compress(quality=10).bytearray()
     img_size = len(jpg)
@@ -28,31 +26,25 @@ while True:
         print("❌ Error: Image compression failed!")
         continue
 
-    # 🔹 Send Start Signal
-    time.sleep(0.05)
-
     uart.write("IMG_START".encode())
-    time.sleep(0.05)
+    time.sleep(0.005)
 
-    # 🔹 Send Image Size
     uart.write(img_size.to_bytes(4, 'little'))
-    time.sleep(0.05)
+    time.sleep(0.005)
 
-    # 🔹 Send Image in Chunks
-    chunk_size = 1024
+    chunk_size = 512
     for i in range(0, img_size, chunk_size):
         uart.write(jpg[i:i+chunk_size])
-        time.sleep(0.05)
+        time.sleep(0.002)
 
-    # 🔹 Send End Signal
-    time.sleep(0.1)  # longer delay to ensure all data is sent out
+    time.sleep(0.01)
     uart.write("IMG_END".encode())
-    time.sleep(0.1)
+    time.sleep(0.01)
+
     print("✅ Image sent successfully.")
 
-    # 🔹 Check for Response from ESP32
     if uart.any():
         response = uart.read()
         print("🔁 Response from ESP32:", response)
 
-    time.sleep(15)  # Wait before taking the next image
+    time.sleep(0.05)  # Wait before taking the next picture

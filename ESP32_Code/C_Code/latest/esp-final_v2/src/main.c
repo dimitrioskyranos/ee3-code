@@ -360,7 +360,7 @@ static void uart_event_task(void *arg) {
             }
         }
 
-        vTaskDelay(pdMS_TO_TICKS(20));  // Yield
+        // vTaskDelay(pdMS_TO_TICKS(20));  // Yield
     }
 
     free(data);
@@ -369,7 +369,7 @@ static void uart_event_task(void *arg) {
 
 static void uart_init(void) {
     uart_config_t uart_config = {
-        .baud_rate = 115200,
+        .baud_rate = 250000,
         .data_bits = UART_DATA_8_BITS,
         .parity    = UART_PARITY_DISABLE,
         .stop_bits = UART_STOP_BITS_1,
@@ -377,7 +377,7 @@ static void uart_init(void) {
     };
     uart_param_config(UART_NUM, &uart_config);
     uart_set_pin(UART_NUM, 8, 18, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
-    uart_driver_install(UART_NUM, BUF_SIZE * 2, 0, QUEUE_SIZE, &uart_queue, 0);
+    uart_driver_install(UART_NUM, BUF_SIZE * 4, BUF_SIZE * 4, QUEUE_SIZE, &uart_queue, 0);
 
     // Run UART task on Core 1
     xTaskCreatePinnedToCore(uart_event_task, "uart_event_task", 8192, NULL, 1, NULL, 1);
