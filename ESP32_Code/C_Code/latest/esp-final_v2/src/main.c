@@ -60,7 +60,7 @@
 #define SERVO_G_CHANNEL LEDC_CHANNEL_7 
 
 // Adjust how fast the servo moves (tune this value as needed)
-#define SERVO_SPEED_SCALING 6  // Higher = faster movement
+//#define SERVO_SPEED_SCALING 6  // Higher = faster movement
 
 int servoX_pos = 10;  // Start neutral
 int servoY_pos = 10;  // Start neutral
@@ -592,21 +592,49 @@ void setup_switch() {
 
 
     void control_servo(uint8_t servo_value, sg90_servo_t *servo, int *current_pos) {
+        // if (servo_value == 0x80) {
+        //     // Joystick is centered -> no movement
+        //     return;
+        // }
+    
+        // int step = (servo_value - 0x80) / SERVO_SPEED_SCALING;  // Calculate speed (can be negative)
+    
+        // // Update the current position
+        // *current_pos += step;
+    
+        // // Clamp between 1 and 20
+        // if (*current_pos < 1) *current_pos = 1;
+        // if (*current_pos > 20) *current_pos = 20;
+    
+        // // Update servo
+        // servo_pos(servo, *current_pos);
+
+        int step = 0;  // Step size to move per call
+    
         if (servo_value == 0x80) {
-            // Joystick is centered -> no movement
+            // Center position: no movement
             return;
+        } 
+        else if (servo_value == 0x40 || servo_value == 0xC0) {
+            step = 1;  // Small step
+        } 
+        else if (servo_value == 0x20 || servo_value == 0xE0) {
+            step = 2;  // Medium step
+        } 
+        else if (servo_value == 0x00 || servo_value == 0xFF) {
+            step = 3;  // Big step
         }
     
-        int step = (servo_value - 0x80) / SERVO_SPEED_SCALING;  // Calculate speed (can be negative)
+        // Determine direction
+        if (servo_value < 0x80) {
+            *current_pos -= step;  // Move left or up
+        } else if (servo_value > 0x80) {
+            *current_pos += step;  // Move right or down
+        }
     
-        // Update the current position
-        *current_pos += step;
-    
-        // Clamp between 1 and 20
+        // Clamp the servo position between 1 and 20
         if (*current_pos < 1) *current_pos = 1;
         if (*current_pos > 20) *current_pos = 20;
-    
-        // Update servo
         servo_pos(servo, *current_pos);
     }
 
