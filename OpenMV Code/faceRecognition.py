@@ -13,7 +13,7 @@ sensor.set_framesize(sensor.QVGA)
 sensor.skip_frames(time=2000)
 
 # === Initialize UART (P4=TX, P5=RX) ===
-uart = UART(3, 921600, timeout_char=1000)
+uart = UART(3, 500000, timeout_char=1000)
 
 # === Initialize FOMO model ===
 min_confidence = 0.4
@@ -108,4 +108,4 @@ while True:
         response = uart.read()
         print("🔁 Response from ESP32:", response)
 
-    # time.sleep(15)  # Wait 15 seconds before next capture
+    time.sleep(0.2)  # Wait 15 seconds before next capture

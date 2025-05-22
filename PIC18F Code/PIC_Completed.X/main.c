@@ -118,10 +118,21 @@
        conversion_done = true;
 
    }
+   
+   /*
+    Motor Joystick: SW = D1 0x19 , VRy = D2 0x1A , VRx = D3 0x1B
+    * 
+    * Servo Joystick: SW = D4 0x1C , VRy = D5 0x1D , VRx = D6 0x1E
+    * 
+    * 
+    * NRF: CE = B1, CSN = B2, SCK = C3, MISO = C4, MOSI = C5
+
+
+    */
 
    void sample_neutral_values(int sample_byte_nr){
        if (sample_byte_nr == 0){
-           readADC(0x1F); // x joystick neutral value
+           readADC(0x1b); // x joystick neutral value
        }
        else if(sample_byte_nr == 1){
            readADC(0x1A);// y joystick neutral value
@@ -136,7 +147,7 @@
 
    void sample_values( int sample_byte_nr){
    if (sample_byte_nr == 0){
-           readADC(0x1B); // x joystick value
+           readADC(0x1b); // x joystick value
        }
        else if(sample_byte_nr == 1){
            readADC(0x1A); // y joystick value
@@ -364,9 +375,9 @@
    //    TMR0_TMRInterruptEnable();
 
    /*
-    Motor Joystick: SW = D1 , VRy = D2 , VRx = D3
+    Motor Joystick: SW = D1 0x19 , VRy = D2 0x1A , VRx = D3 0x1B
     * 
-    * Servo Joystick: SW = D4, VRy = D5, VRx = D6
+    * Servo Joystick: SW = D4 0x1C , VRy = D5 0x1D , VRx = D6 0x1E
     * 
     * 
     * NRF: CE = B1, CSN = B2, SCK = C3, MISO = C4, MOSI = C5
@@ -458,14 +469,14 @@
 
                    else if (sample_byte == 4 ){
                        sample_byte++;
-                   y_switch_servo = result;
+                       y_switch_servo = result;
                        sample_cycle_busy = false;
                        conversion_done = false;
                    }
 
                    else if (sample_byte == 5 ){
                        sample_byte++;
-                   y_switch_servo = result;
+                       grab_switch = result;
                        sample_cycle_busy = false;
                        sample_cycle_done = true;
                        conversion_done = false;

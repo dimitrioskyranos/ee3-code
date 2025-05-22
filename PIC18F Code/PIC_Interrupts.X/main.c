@@ -100,9 +100,19 @@ uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
 uint8_t DataTx[32];
 uint16_t baselineValue = 0;
 
+ /*
+    Motor Joystick: SW = D1 0x19 , VRy = D2 0x1A , VRx = D3 0x1B
+    * 
+    * Servo Joystick: SW = D4 0x1C , VRy = D5 0x1D , VRx = D6 0x1E
+    * 
+    * 
+    * NRF: CE = B1, CSN = B2, SCK = C3, MISO = C4, MOSI = C5
+
+
+    */
 
 void sample_and_send(){
-         x_axis = readADC(0x1F); // Joystick X-axis connected to D7
+         x_axis = readADC(0x1b); // Joystick X-axis connected to D7
 //        __delay_ms(20);
          y_axis = readADC(0x1a); // Joystick Y-axis connected to D2
 //        __delay_ms(20);
@@ -299,7 +309,7 @@ WPUFbits.WPUF4 = 0;
     initADC();
     
    
-    x_neutral = readADC(0x1F); // Calibrate X-axis neutral value
+    x_neutral = readADC(0x1b); // Calibrate X-axis neutral value
 //    __delay_ms(20);
     y_neutral = readADC(0x1A); // Calibrate Y-axis neutral value
 //    __delay_ms(20);

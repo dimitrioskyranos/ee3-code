@@ -30118,10 +30118,10 @@ void SYSTEM_Initialize(void);
        conversion_done = 1;
 
    }
-
+# 133 "main.c"
    void sample_neutral_values(int sample_byte_nr){
        if (sample_byte_nr == 0){
-           readADC(0x1F);
+           readADC(0x1b);
        }
        else if(sample_byte_nr == 1){
            readADC(0x1A);
@@ -30136,7 +30136,7 @@ void SYSTEM_Initialize(void);
 
    void sample_values( int sample_byte_nr){
    if (sample_byte_nr == 0){
-           readADC(0x1B);
+           readADC(0x1b);
        }
        else if(sample_byte_nr == 1){
            readADC(0x1A);
@@ -30161,7 +30161,7 @@ void SYSTEM_Initialize(void);
 
 
    void convert(){
-# 180 "main.c"
+# 191 "main.c"
            if (grab_switch!= 0x00){
                 DataTx[5] = 0xFF;
            }
@@ -30330,7 +30330,7 @@ void SYSTEM_Initialize(void);
        NRF_TxMode(TxAddress, 122);
        initADC();
        ADC_ConversionDoneCallbackRegister(my_adc_conversion_done_handler);
-# 380 "main.c"
+# 391 "main.c"
        while(1)
        {
            if(!sample_neutrals_busy&& !sample_neutrals_done)
@@ -30412,14 +30412,14 @@ void SYSTEM_Initialize(void);
 
                    else if (sample_byte == 4 ){
                        sample_byte++;
-                   y_switch_servo = result;
+                       y_switch_servo = result;
                        sample_cycle_busy = 0;
                        conversion_done = 0;
                    }
 
                    else if (sample_byte == 5 ){
                        sample_byte++;
-                   y_switch_servo = result;
+                       grab_switch = result;
                        sample_cycle_busy = 0;
                        sample_cycle_done = 1;
                        conversion_done = 0;

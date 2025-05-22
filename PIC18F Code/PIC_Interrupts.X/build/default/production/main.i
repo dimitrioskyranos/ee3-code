@@ -30056,10 +30056,9 @@ int delta_y_servo;
 uint8_t TxAddress[] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
 uint8_t DataTx[32];
 uint16_t baselineValue = 0;
-
-
+# 114 "main.c"
 void sample_and_send(){
-         x_axis = readADC(0x1F);
+         x_axis = readADC(0x1b);
 
          y_axis = readADC(0x1a);
 
@@ -30194,7 +30193,7 @@ else if (delta_x_servo < -limit1x) {
 else {
     DataTx[2] = 0x80;
 }
-# 248 "main.c"
+# 258 "main.c"
      if(nrf_send_data(DataTx) == 1)
         {
             LATFbits.LATF3 =1;
@@ -30249,7 +30248,7 @@ WPUFbits.WPUF4 = 0;
     initADC();
 
 
-    x_neutral = readADC(0x1F);
+    x_neutral = readADC(0x1b);
 
     y_neutral = readADC(0x1A);
 
@@ -30265,7 +30264,7 @@ WPUFbits.WPUF4 = 0;
     (INTCON0bits.GIE = 1);
     TMR0_Start();
     TMR0_TMRInterruptEnable();
-# 333 "main.c"
+# 343 "main.c"
     while(1)
     {
         if(time_to_sample){

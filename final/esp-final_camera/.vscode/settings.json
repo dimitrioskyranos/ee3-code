@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "esp_err.h": "c",
+        "random": "c",
+        "freertos.h": "c",
+        "uart.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "esp_http_server.h": "c"
+    }
+}

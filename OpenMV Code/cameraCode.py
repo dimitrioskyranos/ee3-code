@@ -8,7 +8,7 @@ sensor.set_pixformat(sensor.GRAYSCALE)
 sensor.set_framesize(sensor.QVGA)
 sensor.skip_frames(time=2000)
 
-uart = UART(3, 250000, timeout_char=1000)
+uart = UART(3, 200000, timeout_char=1000)
 
 while True:
     print("📷 Taking picture...")

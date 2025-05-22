@@ -7,10 +7,10 @@ Linker command line:
   -pivt0x8=08h -cn \
   -h+dist/default/production\PIC_PCB_Setup.X.production.sym \
   --cmf=dist/default/production\PIC_PCB_Setup.X.production.cmf -z \
-  -Q18F57Q43 -oC:\Users\dimk2\AppData\Local\Temp\xcAsrg0.\driver_tmp_3.o \
+  -Q18F57Q43 -oC:\Users\dimk2\AppData\Local\Temp\xcAslbo.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/PIC_PCB_Setup.X.production.map \
-  --md=C:\Users\dimk2\AppData\Local\Temp\xcAsrg0.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\dimk2\AppData\Local\Temp\xcAslbo.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
   -ASMALLCONST=02600h-026FFhx474 \
   -AMEDIUMCONST=02600h-0FFFFh,012600h-01FFFFh -ACOMRAM=0501h-055Fh \
@@ -36,7 +36,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\dimk2\AppData\Local\Temp\xcAsrg0.\driver_tmp_9.o \
+  C:\Users\dimk2\AppData\Local\Temp\xcAslbo.\driver_tmp_9.o \
   dist/default/production\PIC_PCB_Setup.X.production.o 
 
 Object code version is 3.11
@@ -46,7 +46,7 @@ Machine type is 18F57Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\dimk2\AppData\Local\Temp\xcAsrg0.\driver_tmp_9.o
+C:\Users\dimk2\AppData\Local\Temp\xcAslbo.\driver_tmp_9.o
                 config                           300000   300000        A        0       4
                 init                                102      102        4        4       0
                 reset_vec                             0        0        4        0       0

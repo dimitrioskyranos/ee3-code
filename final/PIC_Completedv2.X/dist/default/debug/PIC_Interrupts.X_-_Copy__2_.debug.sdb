@@ -1,0 +1,1338 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"139 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/adc/src/adc.c
+[e E17119 . `uc
+ADC_CHANNEL_VSS 59
+ADC_CHANNEL_TEMP 60
+ADC_CHANNEL_DAC1 61
+ADC_CHANNEL_FVR_BUFFER1 62
+ADC_CHANNEL_FVR_BUFFER2 63
+ADC_CHANNEL_AND2 26
+ADC_CHANNEL_AND3 27
+ADC_CHANNEL_AND6 30
+ADC_CHANNEL_AND5 29
+]
+"164
+[e E17130 . `uc
+ADC_BASIC 0
+ADC_SERIES_ACCUMULATE 1
+ADC_SERIES_AVERAGE 2
+ADC_BURST_AVERAGE 3
+ADC_LOW_PASS_FILTER 4
+]
+"169
+[e E17144 . `uc
+ADC_NEVER_INTERRUPT 0
+ADC_BELOW_LOWER_THRESHOLD 1
+ADC_ABOVE_LOWER_THRESHOLD 2
+ADC_INSIDE_LOWER_AND_UPPER_THRESHOLD 3
+ADC_OUTSIDE_LOWER_AND_UPPER_THRESHOLD 4
+ADC_BELOW_UPPER_THRESHOLD 5
+ADC_ABOVE_UPPER_THRESHOLD 6
+ADC_ALWAYS_INTERRUPT 7
+]
+"308
+[e E17192 . `uc
+ADC_NOT_CONVERTING 0
+ADC_1ST_PRECHARGE 1
+ADC_1ST_ACQUISITION 2
+ADC_1ST_CONVERSION 3
+ADC_SUSPENDED_BETWEEN_1ST_AND_2ND_SAMPLE 4
+ADC_2ND_PRECHARGE 5
+ADC_2ND_ACQUISITION 6
+ADC_2ND_CONVERSION 7
+]
+"313
+[e E17154 . `uc
+ADC_TRIGGER_SOURCE_DISABLED 0
+ADC_TRIGGER_SOURCE_ADACTPPS 1
+ADC_TRIGGER_SOURCE_TMR0 2
+ADC_TRIGGER_SOURCE_TMR1 3
+ADC_TRIGGER_SOURCE_TMR2 4
+ADC_TRIGGER_SOURCE_TMR3 5
+ADC_TRIGGER_SOURCE_TMR4 6
+ADC_TRIGGER_SOURCE_TMR5 7
+ADC_TRIGGER_SOURCE_TMR6 8
+ADC_TRIGGER_SOURCE_SMT1_OVERFLOW 14
+ADC_TRIGGER_SOURCE_CCP1 15
+ADC_TRIGGER_SOURCE_CCP2 16
+ADC_TRIGGER_SOURCE_CCP3 17
+ADC_TRIGGER_SOURCE_PWM1_OUT1 18
+ADC_TRIGGER_SOURCE_PWM1_OUT2 19
+ADC_TRIGGER_SOURCE_PWM2_OUT1 20
+ADC_TRIGGER_SOURCE_PWM2_OUT2 21
+ADC_TRIGGER_SOURCE_PWM3_OUT1 22
+ADC_TRIGGER_SOURCE_PWM3_OUT2 23
+ADC_TRIGGER_SOURCE_NCO1 26
+ADC_TRIGGER_SOURCE_NCO2 27
+ADC_TRIGGER_SOURCE_NCO3 28
+ADC_TRIGGER_SOURCE_CMP1 29
+ADC_TRIGGER_SOURCE_CMP2 30
+ADC_TRIGGER_SOURCE_LOGICAL_OR_OF_ALL_IOC_FLAGS 31
+ADC_TRIGGER_SOURCE_CLC1 32
+ADC_TRIGGER_SOURCE_CLC2 33
+ADC_TRIGGER_SOURCE_CLC3 34
+ADC_TRIGGER_SOURCE_CLC4 35
+ADC_TRIGGER_SOURCE_CLC5 36
+ADC_TRIGGER_SOURCE_CLC6 37
+ADC_TRIGGER_SOURCE_CLC7 38
+ADC_TRIGGER_SOURCE_CLC8 39
+ADC_TRIGGER_SOURCE_ADERRH 61
+ADC_TRIGGER_SOURCE_ADRESH 62
+ADC_TRIGGER_SOURCE_ADPCH 63
+]
+"318
+[e E17137 . `uc
+ADC_FIRST_DERIVATIVE_OF_SINGLE_MEASUREMENT 0
+ADC_ACTUAL_RESULT_VS_SETPOINT 1
+ADC_ACTUAL_RESULT_VS_FILTERED_VALUE 2
+ADC_FIRST_DERIVATIVE_OF_FILTERED_VALUE 4
+ADC_FILTERED_VALUE_VS_SETPOINT 5
+]
+"319 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\main.c
+[e E17163 . `uc
+HOST_CONFIG 0
+SPI1_DEFAULT 1
+]
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"113 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\main.c
+[v _my_adc_conversion_done_handler my_adc_conversion_done_handler `(v  1 e 1 0 ]
+"122
+[v _sample_neutral_values sample_neutral_values `(v  1 e 1 0 ]
+"137
+[v _sample_values sample_values `(v  1 e 1 0 ]
+"163
+[v _convert convert `(v  1 e 1 0 ]
+"304
+[v _main main `(i  1 e 2 0 ]
+"504
+[v _initADC initADC `(v  1 e 1 0 ]
+"517
+[v _readADC readADC `(v  1 e 1 0 ]
+"47 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"378
+[v _ADC_ConversionDoneCallbackRegister ADC_ConversionDoneCallbackRegister `(v  1 e 1 0 ]
+"408
+[v _ADC_ISR ADC_ISR `IIH(v  1 e 1 0 ]
+"422
+[v _ADC_ThresholdISR ADC_ThresholdISR `IIH(v  1 e 1 0 ]
+"44 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/clkref/src/clkref.c
+[v _CLKREF_Initialize CLKREF_Initialize `(v  1 e 1 0 ]
+"68 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"85
+[v _SPI1_Deinitialize SPI1_Deinitialize `(v  1 e 1 0 ]
+"90
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+"111
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"119
+[v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
+"150
+[v _SPI1_BufferWrite SPI1_BufferWrite `(v  1 e 1 0 ]
+"179
+[v _SPI1_BufferRead SPI1_BufferRead `(v  1 e 1 0 ]
+"208
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+"231
+[v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+"243
+[v _SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+"256
+[v _SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+"270
+[v _SPI1_IsRxReady SPI1_IsRxReady `(a  1 e 1 0 ]
+"39 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"42 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"90
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+"103
+[v _INT0_ISR INT0_ISR `IIH(v  1 e 1 0 ]
+"112
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"121
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"125
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"137
+[v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
+"146
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"155
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"159
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"171
+[v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
+"180
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"189
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"193
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"38 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"49 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"142
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+"159
+[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
+"3 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\nrf24.c
+[v _CS_unselect CS_unselect `(v  1 e 1 0 ]
+"8
+[v _CS_select CS_select `(v  1 e 1 0 ]
+"13
+[v _CE_disable CE_disable `(v  1 e 1 0 ]
+"18
+[v _CE_enable CE_enable `(v  1 e 1 0 ]
+"23
+[v _nrf24_writeReg nrf24_writeReg `(v  1 e 1 0 ]
+"36
+[v _nrf24_writeRegMulti nrf24_writeRegMulti `(v  1 e 1 0 ]
+"52
+[v _nrf24_readReg nrf24_readReg `(uc  1 e 1 0 ]
+"65
+[v _nrfsendCmd nrfsendCmd `(v  1 e 1 0 ]
+"72
+[v _init_NRF init_NRF `(v  1 e 1 0 ]
+"102
+[v _NRF_TxMode NRF_TxMode `(v  1 e 1 0 ]
+"122
+[v _nrf_send_data nrf_send_data `(uc  1 e 1 0 ]
+"42 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)/mcc_generated_files/adc/adc.h
+[v _conversion_done conversion_done `VEa  1 e 1 0 ]
+"274 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)/mcc_generated_files/timer/tmr0.h
+[v _time_to_sample time_to_sample `VEa  1 e 1 0 ]
+"326 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[v _CLKRCON CLKRCON `VEuc  1 e 1 @57 ]
+"430
+[v _CLKRCLK CLKRCLK `VEuc  1 e 1 @58 ]
+"3338
+[v _SPI1RXB SPI1RXB `VEuc  1 e 1 @128 ]
+"3408
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @129 ]
+"3485
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @130 ]
+"3505
+[v _SPI1TCNTH SPI1TCNTH `VEuc  1 e 1 @131 ]
+"3525
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @132 ]
+[s S873 . 1 `uc 1 BMODE 1 0 :1:0 
+`uc 1 MST 1 0 :1:1 
+`uc 1 LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"3546
+[s S879 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
+`uc 1 SPI1MST 1 0 :1:1 
+`uc 1 SPI1LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 SPI1SPIEN 1 0 :1:7 
+]
+[u S885 . 1 `S873 1 . 1 0 `S879 1 . 1 0 ]
+[v _SPI1CON0bits SPI1CON0bits `VES885  1 e 1 @132 ]
+"3591
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @133 ]
+"3693
+[v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @134 ]
+[s S833 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 CLRBF 1 0 :1:2 
+`uc 1 RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 TXWE 1 0 :1:7 
+]
+"3798
+[s S842 . 1 `uc 1 SPI1RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 SPI1CLRBF 1 0 :1:2 
+`uc 1 SPI1RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 SPI1TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 SPI1TXWE 1 0 :1:7 
+]
+[u S851 . 1 `S833 1 . 1 0 `S842 1 . 1 0 ]
+[v _SPI1STATUSbits SPI1STATUSbits `VES851  1 e 1 @135 ]
+"3893
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @137 ]
+[s S922 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TXUIF 1 0 :1:1 
+`uc 1 RXOIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 EOSIF 1 0 :1:4 
+`uc 1 SOSIF 1 0 :1:5 
+`uc 1 TCZIF 1 0 :1:6 
+`uc 1 SRMTIF 1 0 :1:7 
+]
+"3990
+[s S931 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SPI1TXUIF 1 0 :1:1 
+`uc 1 SPI1RXOIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SPI1EOSIF 1 0 :1:4 
+`uc 1 SPI1SOSIF 1 0 :1:5 
+`uc 1 SPI1TCZIF 1 0 :1:6 
+`uc 1 SPI1SRMTIF 1 0 :1:7 
+]
+[u S940 . 1 `S922 1 . 1 0 `S931 1 . 1 0 ]
+[v _SPI1INTFbits SPI1INTFbits `VES940  1 e 1 @138 ]
+"4147
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @140 ]
+"5140
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"9708
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @532 ]
+"9820
+[v _RC5PPS RC5PPS `VEuc  1 e 1 @534 ]
+"14250
+[v _SPI1SCKPPS SPI1SCKPPS `VEuc  1 e 1 @618 ]
+"14316
+[v _SPI1SDIPPS SPI1SDIPPS `VEuc  1 e 1 @619 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"23298
+[v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23436
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+"23690
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+[s S1450 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23724
+[s S1456 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S1462 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[s S1468 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S1473 . 1 `S1450 1 . 1 0 `S1456 1 . 1 0 `S1462 1 . 1 0 `S1468 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES1473  1 e 1 @794 ]
+"23814
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
+[s S1192 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+`uc 1 SPI1TXIP 1 0 :1:1 
+`uc 1 SPI1IP 1 0 :1:2 
+`uc 1 TMR2IP 1 0 :1:3 
+`uc 1 TMR1IP 1 0 :1:4 
+`uc 1 TMR1GIP 1 0 :1:5 
+`uc 1 CCP1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"32039
+[u S1201 . 1 `S1192 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES1201  1 e 1 @869 ]
+"35996
+[v _ADCP ADCP `VEuc  1 e 1 @984 ]
+[s S472 . 1 `uc 1 CPRDY 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 ON 1 0 :1:7 
+]
+"36061
+[s S476 . 1 `uc 1 ADCPRDY 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 CPON 1 0 :1:7 
+]
+"36061
+[s S480 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 ADCPON 1 0 :1:7 
+]
+"36061
+[u S483 . 1 `S472 1 . 1 0 `S476 1 . 1 0 `S480 1 . 1 0 ]
+"36061
+"36061
+[v _ADCPbits ADCPbits `VES483  1 e 1 @984 ]
+"36098
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @985 ]
+"36226
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @986 ]
+"36361
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @987 ]
+"36489
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @988 ]
+"36624
+[v _ADERRL ADERRL `VEuc  1 e 1 @989 ]
+"36752
+[v _ADERRH ADERRH `VEuc  1 e 1 @990 ]
+"36887
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @991 ]
+"37015
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @992 ]
+"37150
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @993 ]
+"37278
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @994 ]
+"37415
+[v _ADACCL ADACCL `VEuc  1 e 1 @995 ]
+"37543
+[v _ADACCH ADACCH `VEuc  1 e 1 @996 ]
+"37671
+[v _ADACCU ADACCU `VEuc  1 e 1 @997 ]
+"37799
+[v _ADCNT ADCNT `VEuc  1 e 1 @998 ]
+"37927
+[v _ADRPT ADRPT `VEuc  1 e 1 @999 ]
+"38062
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @1000 ]
+"38190
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @1001 ]
+"38325
+[v _ADRESL ADRESL `VEuc  1 e 1 @1002 ]
+"38453
+[v _ADRESH ADRESH `VEuc  1 e 1 @1003 ]
+"38573
+[v _ADPCH ADPCH `VEuc  1 e 1 @1004 ]
+"38638
+[v _ADACQL ADACQL `VEuc  1 e 1 @1006 ]
+"38766
+[v _ADACQH ADACQH `VEuc  1 e 1 @1007 ]
+"38858
+[v _ADCAP ADCAP `VEuc  1 e 1 @1008 ]
+"38917
+[v _ADPREL ADPREL `VEuc  1 e 1 @1009 ]
+"39045
+[v _ADPREH ADPREH `VEuc  1 e 1 @1010 ]
+"39137
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @1011 ]
+[s S26 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM 1 0 :2:2 
+`uc 1 CS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CONT 1 0 :1:6 
+`uc 1 ON 1 0 :1:7 
+]
+"39175
+[s S34 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"39175
+[s S42 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM0 1 0 :1:2 
+]
+"39175
+[s S46 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+]
+"39175
+[s S48 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+]
+"39175
+[u S52 . 1 `S26 1 . 1 0 `S34 1 . 1 0 `S42 1 . 1 0 `S46 1 . 1 0 `S48 1 . 1 0 ]
+"39175
+"39175
+[v _ADCON0bits ADCON0bits `VES52  1 e 1 @1011 ]
+"39255
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @1012 ]
+[s S392 . 1 `uc 1 DSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 GPOL 1 0 :1:5 
+`uc 1 IPEN 1 0 :1:6 
+`uc 1 PPOL 1 0 :1:7 
+]
+"39276
+[s S398 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+"39276
+[u S404 . 1 `S392 1 . 1 0 `S398 1 . 1 0 ]
+"39276
+"39276
+[v _ADCON1bits ADCON1bits `VES404  1 e 1 @1012 ]
+"39321
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @1013 ]
+[s S204 . 1 `uc 1 MD 1 0 :3:0 
+`uc 1 ACLR 1 0 :1:3 
+`uc 1 CRS 1 0 :3:4 
+`uc 1 PSIS 1 0 :1:7 
+]
+"39358
+[s S209 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+"39358
+[s S218 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+]
+"39358
+[s S222 . 1 `uc 1 MD0 1 0 :1:0 
+`uc 1 MD1 1 0 :1:1 
+`uc 1 MD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CRS0 1 0 :1:4 
+`uc 1 CRS1 1 0 :1:5 
+`uc 1 CRS2 1 0 :1:6 
+]
+"39358
+[u S230 . 1 `S204 1 . 1 0 `S209 1 . 1 0 `S218 1 . 1 0 `S222 1 . 1 0 ]
+"39358
+"39358
+[v _ADCON2bits ADCON2bits `VES230  1 e 1 @1013 ]
+"39463
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @1014 ]
+[s S271 . 1 `uc 1 TMD 1 0 :3:0 
+`uc 1 SOI 1 0 :1:3 
+`uc 1 CALC 1 0 :3:4 
+]
+"39498
+[s S275 . 1 `uc 1 ADTMD0 1 0 :1:0 
+`uc 1 ADTMD1 1 0 :1:1 
+`uc 1 ADTMD2 1 0 :1:2 
+`uc 1 ADSOI 1 0 :1:3 
+`uc 1 ADCALC0 1 0 :1:4 
+`uc 1 ADCALC1 1 0 :1:5 
+`uc 1 ADCALC2 1 0 :1:6 
+]
+"39498
+[s S283 . 1 `uc 1 ADTMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCALC 1 0 :3:4 
+]
+"39498
+[s S287 . 1 `uc 1 TMD0 1 0 :1:0 
+`uc 1 TMD1 1 0 :1:1 
+`uc 1 TMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CALC0 1 0 :1:4 
+`uc 1 CALC1 1 0 :1:5 
+`uc 1 CALC2 1 0 :1:6 
+]
+"39498
+[u S295 . 1 `S271 1 . 1 0 `S275 1 . 1 0 `S283 1 . 1 0 `S287 1 . 1 0 ]
+"39498
+"39498
+[v _ADCON3bits ADCON3bits `VES295  1 e 1 @1014 ]
+"39593
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @1015 ]
+[s S328 . 1 `uc 1 STAT 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 MATH 1 0 :1:4 
+`uc 1 LTHR 1 0 :1:5 
+`uc 1 UTHR 1 0 :1:6 
+`uc 1 AOV 1 0 :1:7 
+]
+"39630
+[s S335 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+`uc 1 ADSTAT1 1 0 :1:1 
+`uc 1 ADSTAT2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADMATH 1 0 :1:4 
+`uc 1 ADLTHR 1 0 :1:5 
+`uc 1 ADUTHR 1 0 :1:6 
+`uc 1 ADAOV 1 0 :1:7 
+]
+"39630
+[s S344 . 1 `uc 1 ADSTAT 1 0 :3:0 
+`uc 1 . 1 0 :4:3 
+`uc 1 ADOV 1 0 :1:7 
+]
+"39630
+[s S348 . 1 `uc 1 STAT0 1 0 :1:0 
+`uc 1 STAT1 1 0 :1:1 
+`uc 1 STAT2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 OV 1 0 :1:7 
+]
+"39630
+[u S354 . 1 `S328 1 . 1 0 `S335 1 . 1 0 `S344 1 . 1 0 `S348 1 . 1 0 ]
+"39630
+"39630
+[v _ADSTATbits ADSTATbits `VES354  1 e 1 @1015 ]
+"39725
+[v _ADREF ADREF `VEuc  1 e 1 @1016 ]
+"39807
+[v _ADACT ADACT `VEuc  1 e 1 @1017 ]
+"39911
+[v _ADCLK ADCLK `VEuc  1 e 1 @1018 ]
+"40015
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"40077
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"40139
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"40201
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"40263
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"40325
+[v _IOCAP IOCAP `VEuc  1 e 1 @1029 ]
+"40387
+[v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
+"40449
+[v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
+"40511
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"40573
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+[s S1646 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+"40590
+[u S1655 . 1 `S1646 1 . 1 0 ]
+"40590
+"40590
+[v _WPUBbits WPUBbits `VES1655  1 e 1 @1033 ]
+"40635
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"40697
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"40759
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40821
+[v _IOCBP IOCBP `VEuc  1 e 1 @1037 ]
+"40883
+[v _IOCBN IOCBN `VEuc  1 e 1 @1038 ]
+"40945
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"41007
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"41069
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"41131
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"41193
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"41255
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"41317
+[v _IOCCP IOCCP `VEuc  1 e 1 @1045 ]
+"41379
+[v _IOCCN IOCCN `VEuc  1 e 1 @1046 ]
+"41441
+[v _IOCCF IOCCF `VEuc  1 e 1 @1047 ]
+"41503
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"41565
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41627
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"41689
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"41751
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"41813
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"41845
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"41883
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41915
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41947
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41985
+[v _IOCEP IOCEP `VEuc  1 e 1 @1061 ]
+"42006
+[v _IOCEN IOCEN `VEuc  1 e 1 @1062 ]
+"42027
+[v _IOCEF IOCEF `VEuc  1 e 1 @1063 ]
+"42048
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"42110
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+[s S1667 . 1 `uc 1 WPUF0 1 0 :1:0 
+`uc 1 WPUF1 1 0 :1:1 
+`uc 1 WPUF2 1 0 :1:2 
+`uc 1 WPUF3 1 0 :1:3 
+`uc 1 WPUF4 1 0 :1:4 
+`uc 1 WPUF5 1 0 :1:5 
+`uc 1 WPUF6 1 0 :1:6 
+`uc 1 WPUF7 1 0 :1:7 
+]
+"42127
+[u S1676 . 1 `S1667 1 . 1 0 ]
+"42127
+"42127
+[v _WPUFbits WPUFbits `VES1676  1 e 1 @1065 ]
+"42172
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"42234
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"42296
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"45052
+[v _IVTLOCK IVTLOCK `VEuc  1 e 1 @1113 ]
+[s S1182 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
+]
+"45062
+[u S1184 . 1 `S1182 1 . 1 0 ]
+"45062
+"45062
+[v _IVTLOCKbits IVTLOCKbits `VES1184  1 e 1 @1113 ]
+"45258
+[v _IVTBASEL IVTBASEL `VEuc  1 e 1 @1117 ]
+"45320
+[v _IVTBASEH IVTBASEH `VEuc  1 e 1 @1118 ]
+"45382
+[v _IVTBASEU IVTBASEU `VEuc  1 e 1 @1119 ]
+[s S130 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 ZCDIE 1 0 :1:1 
+`uc 1 ADIE 1 0 :1:2 
+`uc 1 ACTIE 1 0 :1:3 
+`uc 1 C1IE 1 0 :1:4 
+`uc 1 SMT1IE 1 0 :1:5 
+`uc 1 SMT1PRAIE 1 0 :1:6 
+`uc 1 SMT1PWAIE 1 0 :1:7 
+]
+"47182
+[u S139 . 1 `S130 1 . 1 0 ]
+"47182
+"47182
+[v _PIE1bits PIE1bits `VES139  1 e 1 @1183 ]
+[s S168 . 1 `uc 1 ADTIE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 DMA1SCNTIE 1 0 :1:4 
+`uc 1 DMA1DCNTIE 1 0 :1:5 
+`uc 1 DMA1ORIE 1 0 :1:6 
+`uc 1 DMA1AIE 1 0 :1:7 
+]
+"47242
+[u S175 . 1 `S168 1 . 1 0 ]
+"47242
+"47242
+[v _PIE2bits PIE2bits `VES175  1 e 1 @1184 ]
+[s S807 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"47289
+[u S816 . 1 `S807 1 . 1 0 ]
+"47289
+"47289
+[v _PIE3bits PIE3bits `VES816  1 e 1 @1185 ]
+[s S109 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"48056
+[u S118 . 1 `S109 1 . 1 0 ]
+"48056
+"48056
+[v _PIR1bits PIR1bits `VES118  1 e 1 @1199 ]
+[s S151 . 1 `uc 1 ADTIF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 DMA1SCNTIF 1 0 :1:4 
+`uc 1 DMA1DCNTIF 1 0 :1:5 
+`uc 1 DMA1ORIF 1 0 :1:6 
+`uc 1 DMA1AIF 1 0 :1:7 
+]
+"48116
+[u S158 . 1 `S151 1 . 1 0 ]
+"48116
+"48116
+[v _PIR2bits PIR2bits `VES158  1 e 1 @1200 ]
+[s S965 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"48163
+[u S974 . 1 `S965 1 . 1 0 ]
+"48163
+"48163
+[v _PIR3bits PIR3bits `VES974  1 e 1 @1201 ]
+[s S1235 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"48333
+[u S1244 . 1 `S1235 1 . 1 0 ]
+"48333
+"48333
+[v _PIR6bits PIR6bits `VES1244  1 e 1 @1204 ]
+[s S1266 . 1 `uc 1 INT2IF 1 0 :1:0 
+`uc 1 CLC5IF 1 0 :1:1 
+`uc 1 CWG2IF 1 0 :1:2 
+`uc 1 NCO2IF 1 0 :1:3 
+`uc 1 DMA3SCNTIF 1 0 :1:4 
+`uc 1 DMA3DCNTIF 1 0 :1:5 
+`uc 1 DMA3ORIF 1 0 :1:6 
+`uc 1 DMA3AIF 1 0 :1:7 
+]
+"48559
+[u S1275 . 1 `S1266 1 . 1 0 ]
+"48559
+"48559
+[v _PIR10bits PIR10bits `VES1275  1 e 1 @1208 ]
+"48861
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"48923
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+[s S1836 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"48940
+[u S1845 . 1 `S1836 1 . 1 0 ]
+"48940
+"48940
+[v _LATBbits LATBbits `VES1845  1 e 1 @1215 ]
+"48985
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"49047
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"49109
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"49141
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+[s S1625 . 1 `uc 1 LATF0 1 0 :1:0 
+`uc 1 LATF1 1 0 :1:1 
+`uc 1 LATF2 1 0 :1:2 
+`uc 1 LATF3 1 0 :1:3 
+`uc 1 LATF4 1 0 :1:4 
+`uc 1 LATF5 1 0 :1:5 
+`uc 1 LATF6 1 0 :1:6 
+`uc 1 LATF7 1 0 :1:7 
+]
+"49158
+[u S1634 . 1 `S1625 1 . 1 0 ]
+"49158
+"49158
+[v _LATFbits LATFbits `VES1634  1 e 1 @1219 ]
+"49203
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"49265
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+[s S1581 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"49282
+[u S1590 . 1 `S1581 1 . 1 0 ]
+"49282
+"49282
+[v _TRISBbits TRISBbits `VES1590  1 e 1 @1223 ]
+"49327
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+[s S901 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"49344
+[u S910 . 1 `S901 1 . 1 0 ]
+"49344
+"49344
+[v _TRISCbits TRISCbits `VES910  1 e 1 @1224 ]
+"49389
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"49451
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"49483
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+[s S1604 . 1 `uc 1 TRISF0 1 0 :1:0 
+`uc 1 TRISF1 1 0 :1:1 
+`uc 1 TRISF2 1 0 :1:2 
+`uc 1 TRISF3 1 0 :1:3 
+`uc 1 TRISF4 1 0 :1:4 
+`uc 1 TRISF5 1 0 :1:5 
+`uc 1 TRISF6 1 0 :1:6 
+`uc 1 TRISF7 1 0 :1:7 
+]
+"49500
+[u S1613 . 1 `S1604 1 . 1 0 ]
+"49500
+"49500
+[v _TRISFbits TRISFbits `VES1613  1 e 1 @1227 ]
+[s S1154 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"49913
+[s S1162 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"49913
+[u S1165 . 1 `S1154 1 . 1 0 `S1162 1 . 1 0 ]
+"49913
+"49913
+[v _INTCON0bits INTCON0bits `VES1165  1 e 1 @1238 ]
+"55087
+[v _GIE GIE `VEb  1 e 0 @9911 ]
+"55876
+[v _LATB1 LATB1 `VEb  1 e 0 @9721 ]
+"55879
+[v _LATB2 LATB2 `VEb  1 e 0 @9722 ]
+"55897
+[v _LATC0 LATC0 `VEb  1 e 0 @9728 ]
+"48 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\main.c
+[v _result result `us  1 e 2 0 ]
+"49
+[v _sample_byte sample_byte `i  1 e 2 0 ]
+"50
+[v _sample_neutrals_done sample_neutrals_done `a  1 e 1 0 ]
+"51
+[v _sample_neutrals_busy sample_neutrals_busy `a  1 e 1 0 ]
+"52
+[v _sample_cycle_done sample_cycle_done `a  1 e 1 0 ]
+"53
+[v _sample_cycle_busy sample_cycle_busy `a  1 e 1 0 ]
+"58
+[v _delta_y_motor delta_y_motor `i  1 e 2 0 ]
+"59
+[v _delta_x_motor delta_x_motor `i  1 e 2 0 ]
+"60
+[v _delta_x_servo delta_x_servo `i  1 e 2 0 ]
+"61
+[v _delta_y_servo delta_y_servo `i  1 e 2 0 ]
+"64
+[v _x_neutral x_neutral `us  1 e 2 0 ]
+"66
+[v _y_neutral y_neutral `us  1 e 2 0 ]
+"69
+[v _x_neutral_servo x_neutral_servo `us  1 e 2 0 ]
+"71
+[v _y_neutral_servo y_neutral_servo `us  1 e 2 0 ]
+"72
+[v _x_axis x_axis `us  1 e 2 0 ]
+"74
+[v _y_axis y_axis `us  1 e 2 0 ]
+"77
+[v _x_servo x_servo `us  1 e 2 0 ]
+"79
+[v _y_servo y_servo `us  1 e 2 0 ]
+"81
+[v _y_switch_servo y_switch_servo `us  1 e 2 0 ]
+"110
+[v _TxAddress TxAddress `[5]uc  1 e 5 0 ]
+"111
+[v _DataTx DataTx `[32]uc  1 e 32 0 ]
+"43 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/adc/src/adc.c
+[v _ADC_ConversionDoneCallback ADC_ConversionDoneCallback `*.38(v  1 s 3 ADC_ConversionDoneCallback ]
+"44
+[v _ADC_ThresholdCallback ADC_ThresholdCallback `*.38(v  1 s 3 ADC_ThresholdCallback ]
+"45
+[v _adc_busy_status adc_busy_status `a  1 s 1 adc_busy_status ]
+[s S801 . 5 `uc 1 con0 1 0 `uc 1 con1 1 1 `uc 1 con2 1 2 `uc 1 baud 1 3 `uc 1 clksel 1 4 ]
+"63 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/spi/src/spi1.c
+[v _spi1_configuration spi1_configuration `C[2]S801  1 s 10 spi1_configuration ]
+"38 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/interrupt.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"39
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"40 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/timer/src/tmr0.c
+[v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
+"41
+[v _TMR0_OverflowCallback TMR0_OverflowCallback `*.38(v  1 s 3 TMR0_OverflowCallback ]
+"304 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"502
+} 0
+"137
+[v _sample_values sample_values `(v  1 e 1 0 ]
+{
+[v sample_values@sample_byte_nr sample_byte_nr `i  1 p 2 13 ]
+"159
+} 0
+"122
+[v _sample_neutral_values sample_neutral_values `(v  1 e 1 0 ]
+{
+[v sample_neutral_values@sample_byte_nr sample_byte_nr `i  1 p 2 13 ]
+"135
+} 0
+"517
+[v _readADC readADC `(v  1 e 1 0 ]
+{
+[v readADC@channel channel `uc  1 p 1 wreg ]
+[v readADC@channel channel `uc  1 p 1 wreg ]
+[v readADC@channel channel `uc  1 p 1 12 ]
+"523
+} 0
+"122 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\nrf24.c
+[v _nrf_send_data nrf_send_data `(uc  1 e 1 0 ]
+{
+"133
+[v nrf_send_data@i i `i  1 a 2 5 ]
+"142
+[v nrf_send_data@fifostatus fifostatus `uc  1 a 1 4 ]
+"122
+[v nrf_send_data@data data `*.39uc  1 p 2 2 ]
+"152
+} 0
+"65
+[v _nrfsendCmd nrfsendCmd `(v  1 e 1 0 ]
+{
+[v nrfsendCmd@cmd cmd `uc  1 p 1 wreg ]
+[v nrfsendCmd@cmd cmd `uc  1 p 1 wreg ]
+"67
+[v nrfsendCmd@cmd cmd `uc  1 p 1 14 ]
+"70
+} 0
+"72
+[v _init_NRF init_NRF `(v  1 e 1 0 ]
+{
+"82
+[v init_NRF@t t `uc  1 a 1 3 ]
+"100
+} 0
+"504 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\main.c
+[v _initADC initADC `(v  1 e 1 0 ]
+{
+"513
+} 0
+"163
+[v _convert convert `(v  1 e 1 0 ]
+{
+"302
+} 0
+"38 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"47
+} 0
+"49 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"67
+} 0
+"68 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"38 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"142
+} 0
+"42 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"46
+[v INTERRUPT_Initialize@state state `a  1 a 1 0 ]
+"88
+} 0
+"189
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+"191
+} 0
+"155
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+"157
+} 0
+"121
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+"123
+} 0
+"39 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"44 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/clkref/src/clkref.c
+[v _CLKREF_Initialize CLKREF_Initialize `(v  1 e 1 0 ]
+{
+"51
+} 0
+"47 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"95
+} 0
+"90 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+{
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 wreg ]
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 wreg ]
+"93
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 14 ]
+"109
+} 0
+"102 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\nrf24.c
+[v _NRF_TxMode NRF_TxMode `(v  1 e 1 0 ]
+{
+"114
+[v NRF_TxMode@config config `uc  1 a 1 12 ]
+"102
+[v NRF_TxMode@Address Address `*.39uc  1 p 2 9 ]
+[v NRF_TxMode@channel channel `uc  1 p 1 11 ]
+"120
+} 0
+"36
+[v _nrf24_writeRegMulti nrf24_writeRegMulti `(v  1 e 1 0 ]
+{
+[v nrf24_writeRegMulti@reg reg `uc  1 p 1 wreg ]
+"44
+[v nrf24_writeRegMulti@i i `i  1 a 2 7 ]
+"38
+[v nrf24_writeRegMulti@buf buf `[2]uc  1 a 2 4 ]
+"36
+[v nrf24_writeRegMulti@reg reg `uc  1 p 1 wreg ]
+[v nrf24_writeRegMulti@data data `*.39uc  1 p 2 0 ]
+[v nrf24_writeRegMulti@size size `ui  1 p 2 2 ]
+"39
+[v nrf24_writeRegMulti@reg reg `uc  1 p 1 6 ]
+"50
+} 0
+"23
+[v _nrf24_writeReg nrf24_writeReg `(v  1 e 1 0 ]
+{
+[v nrf24_writeReg@reg reg `uc  1 p 1 wreg ]
+"25
+[v nrf24_writeReg@buf buf `[2]uc  1 a 2 1 ]
+"23
+[v nrf24_writeReg@reg reg `uc  1 p 1 wreg ]
+[v nrf24_writeReg@data data `uc  1 p 1 14 ]
+"26
+[v nrf24_writeReg@reg reg `uc  1 p 1 0 ]
+"35
+} 0
+"52
+[v _nrf24_readReg nrf24_readReg `(uc  1 e 1 0 ]
+{
+[v nrf24_readReg@reg reg `uc  1 p 1 wreg ]
+"54
+[v nrf24_readReg@data_read data_read `uc  1 a 1 1 ]
+"52
+[v nrf24_readReg@reg reg `uc  1 p 1 wreg ]
+[v nrf24_readReg@reg reg `uc  1 p 1 0 ]
+"63
+} 0
+"208 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/spi/src/spi1.c
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+{
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 wreg ]
+"210
+[v SPI1_ByteExchange@returnValue returnValue `uc  1 a 1 13 ]
+"208
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 wreg ]
+"212
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 12 ]
+"229
+} 0
+"3 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\nrf24.c
+[v _CS_unselect CS_unselect `(v  1 e 1 0 ]
+{
+"6
+} 0
+"8
+[v _CS_select CS_select `(v  1 e 1 0 ]
+{
+"11
+} 0
+"18
+[v _CE_enable CE_enable `(v  1 e 1 0 ]
+{
+"21
+} 0
+"13
+[v _CE_disable CE_disable `(v  1 e 1 0 ]
+{
+"16
+} 0
+"378 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/adc/src/adc.c
+[v _ADC_ConversionDoneCallbackRegister ADC_ConversionDoneCallbackRegister `(v  1 e 1 0 ]
+{
+[v ADC_ConversionDoneCallbackRegister@callback callback `*.38(v  1 p 3 12 ]
+"381
+} 0
+"408
+[v _ADC_ISR ADC_ISR `IIH(v  1 e 1 0 ]
+{
+"420
+} 0
+"113 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\main.c
+[v _my_adc_conversion_done_handler my_adc_conversion_done_handler `(v  1 e 1 0 ]
+{
+"120
+} 0
+"422 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/adc/src/adc.c
+[v _ADC_ThresholdISR ADC_ThresholdISR `IIH(v  1 e 1 0 ]
+{
+"434
+} 0
+"90 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/system/src/interrupt.c
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+{
+"92
+} 0
+"103
+[v _INT0_ISR INT0_ISR `IIH(v  1 e 1 0 ]
+{
+"109
+} 0
+"112
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+{
+"119
+} 0
+"125
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"128
+} 0
+"137
+[v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
+{
+"143
+} 0
+"146
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+{
+"153
+} 0
+"159
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"162
+} 0
+"171
+[v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
+{
+"177
+} 0
+"180
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+{
+"187
+} 0
+"193
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"196
+} 0
+"142 C:\Users\dimk2\Desktop\EE3\PIC18F Code\PIC_Interrupts.X - Copy (2)\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+{
+"152
+} 0
+"159
+[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
+{
+"163
+} 0
