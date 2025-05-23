@@ -54,5 +54,5 @@ This source was consulted for the making of the various event and task implement
 
 ## Notes
 
-NRF code for both the PIC and ESP was implemented in collaboration with Mykyta Chunikhin from Robot 1. 
-Part of the code was refined using ChatGPT-4o (OpenAI, 2025) to debug issues during development.
+-NRF code for both the PIC and ESP was implemented in collaboration with Mykyta Chunikhin from Robot 1. 
+-Part of the code was refined using ChatGPT-4o (OpenAI, 2025) to debug issues during development.
