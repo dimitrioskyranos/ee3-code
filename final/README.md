@@ -30,7 +30,7 @@ These sources were consulted in the making the files nrf24.h and nrf24.c
 https://www.youtube.com/watch?v=X5XDSWQYYvU&list=PLfIJKC1ud8giTKW0nzHN71hud_238d-JO&ab_channel=ControllersTech
 
 
--Http Server and Uart Transmission Code on ESP(can be found on this folder under esp-final_camera)
+- Http Server and Uart Transmission Code on ESP(can be found on this folder under esp-final_camera)
 
 These sources were consulted in the making of the file main.c 
 
@@ -45,7 +45,7 @@ https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/periph
 [9] Esp32 Tutorials, ESP32 Timer Interrupt using ESP-IDF
 https://esp32tutorials.com/esp32-timer-interrupt-esp-idf/#more-1700
 
--General: FreeRTOS Tasks on ESP
+- General: FreeRTOS Tasks on ESP
 
 This source was consulted for the making of the various event and task implementations in all ESP code. 
 [4] Esp32 Tutorials, ESP32 FreeRTOS Event Groups with ESP-IDF
@@ -54,5 +54,5 @@ This source was consulted for the making of the various event and task implement
 
 ## Notes
 
--NRF code for both the PIC and ESP was implemented in collaboration with Mykyta Chunikhin from Robot 1. 
--Part of the code was refined using ChatGPT-4o (OpenAI, 2025) to debug issues during development.
+- NRF code for both the PIC and ESP was implemented in collaboration with Mykyta Chunikhin from Robot 1. 
+- Part of the code was refined using ChatGPT-4o (OpenAI, 2025) to debug issues during development.
